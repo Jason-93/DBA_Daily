@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-14</title>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .why { font-size:14px; margin:6px 0 10px; }
+  .why b { color:var(--accent); }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
+  a.link::before { content:"🔗 "; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-14 周一 · 晚间版</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 32 条 · 入选 9 条 · 生成于 19:45 · 同日重生成,替代 19:01 样例版</div>
+</header>
+
+<nav>
+  <a href="#tech">🛠 技术 4</a>
+  <a href="#phil">🏛 哲学与辩论 3</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 1</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术(AI4DB / 稳定性)</h2>
+
+<div class="card">
+  <h3>1. 隐形却致命:云 OLTP 数据库中内核 I/O 机制的大停顿</h3>
+  <div class="orig">Invisible Yet Dominant: Big Stalls of Kernel I/O Mechanisms in Cloud OLTP Databases</div>
+  <div class="tags">arXiv cs.DB · 论文/云数据库/稳定性 · 扫摘要 5 分钟(精读约 40) · <span class="score">★4.7</span></div>
+  <p class="why"><b>为什么适合你:</b>你在途虎面对的正是云上 OLTP 的稳定性。这篇直接拆解 PostgreSQL、RocksDB 等在云块存储上把写回委托给内核 buffered I/O 造成的"大停顿"——既有"瓶颈在内核而非引擎"的行业判断,也有可带回团队的诊断路径,云原生与稳定性双命中。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.12597">arxiv.org/abs/2609.12597</a>
+</div>
+
+<div class="card">
+  <h3>2. QEmbed:基于深度学习的基数估计器,面向高效查询处理</h3>
+  <div class="orig">QEmbed: A Deep Learning Based Cardinality Estimator for Efficient Query Processing</div>
+  <div class="tags">arXiv cs.DB · 论文/AI4DB/查询优化 · 扫摘要 5 分钟 · <span class="score">★4.5</span></div>
+  <p class="why"><b>为什么适合你:</b>AI4DB 是你技术兴趣的第一优先,学习型基数估计是"AI 进优化器"最成熟的落点,适合跟踪该方向的工程化进展。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.12535">arxiv.org/abs/2609.12535</a>
+</div>
+
+<div class="card">
+  <h3>3. 基于提交日志的机器可验证双写恢复</h3>
+  <div class="orig">Machine-Checked Dual-Write Recovery from a Commit Log</div>
+  <div class="tags">arXiv cs.DB · 论文/分布式/一致性/形式化验证 · 扫摘要 5 分钟 · <span class="score">★4.0</span></div>
+  <p class="why"><b>为什么适合你:</b>双写一致性(DB/缓存、DB/MQ)是 DBA 日常痛点,正对稳定性工程方向。用机器检查的证明约束恢复协议,是"用数学换睡眠"的思路,可作团队方案评审时的参照。</p>
+  <a class="link" href="https://arxiv.org/abs/2608.00501">arxiv.org/abs/2608.00501</a>
+</div>
+
+<div class="card">
+  <h3>4. SRE Weekly 第 534 期</h3>
+  <div class="orig">SRE Weekly Issue #534</div>
+  <div class="tags">SRE Weekly · 稳定性/周刊速览 · 扫读 10 分钟 · <span class="score">★3.9</span></div>
+  <p class="why"><b>为什么适合你:</b>稳定性方向的每周固定扫读项——curated 故障复盘与运维文章合集,本期涉及 PlanetScale 的 Postgres 水平分片方案 Neki(在线改表、无停机升级、重分片)等动态。</p>
+  <a class="link" href="https://sreweekly.com/sre-weekly-issue-534/">sreweekly.com/sre-weekly-issue-534</a>
+</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="card">
+  <h3>5. 我叫安娜贝尔</h3>
+  <div class="orig">My name is Annabel</div>
+  <div class="tags">Psyche · 具体的人/身份与尊严/纪录短片 · 约 15 分钟(视频) · <span class="score">★4.0</span></div>
+  <p class="why"><b>为什么适合你:</b>正是你要的"矛盾处境中的具体的人"——一位唐氏综合征表演者,既是"被观看的对象",又是主动表达自我的创作者。可直接作价值辩素材(尊严、代表性、他者的凝视)。</p>
+  <a class="link" href="https://psyche.co/videos/step-into-the-joyful-world-of-annabel-a-performer-with-down-syndrome">psyche.co/videos/…annabel</a>
+</div>
+
+<div class="card">
+  <h3>6. 童年的轰炸</h3>
+  <div class="orig">The bombarding of childhood</div>
+  <div class="tags">Aeon · 媒介批判/技术哲学/长文 · 约 15-20 分钟 · <span class="score">★3.9</span></div>
+  <p class="why"><b>为什么适合你:</b>问题不只是屏幕时长——儿童媒体已变得狂躁、吵闹、刺眼。"媒介如何塑造具体的人"是价值辩母题,可与你原典计划里的海德格尔《技术的追问》对读。</p>
+  <a class="link" href="https://aeon.co/essays/its-not-just-screen-time-kids-are-bombarded-by-hectic-media">aeon.co/essays/…bombarded-by-hectic-media</a>
+</div>
+
+<div class="card">
+  <h3>7. 银幕之上:爆炸性的悖论</h3>
+  <div class="orig">Once upon a screen: explosive paradox</div>
+  <div class="tags">Aeon · 记忆/家族/种族/视频散文 · 约 10 分钟(视频) · <span class="score">★3.9</span></div>
+  <p class="why"><b>为什么适合你:</b>《野战排》的观影记忆如何在一个家庭里搅动代际创伤与种族主义——"具体的人的两难"典型样本,涉及记忆伦理,可支撑立论。</p>
+  <a class="link" href="https://aeon.co/videos/are-we-ever-really-done-seeing-a-movie-on-platoon-and-memory">aeon.co/videos/…platoon-and-memory</a>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3>8. Nature 每日简报:OpenAI 宣称取得数学重大突破,荣誉归属引争议</h3>
+  <div class="orig">Daily briefing: OpenAI claims a huge maths breakthrough</div>
+  <div class="tags">Nature News(搜索兜底,09-10) · 科学新闻/AI×数学/伦理争议 · 约 5 分钟 · <span class="score">★3.4</span></div>
+  <p class="why"><b>为什么适合你:</b>是你"看科学资讯 → 回溯原始论文"阅读模式的入口;OpenAI 宣称攻克数学难题后"荣誉该归谁"的争议,正合你偏好的科技伦理事件,可与今日热点层"25 位菲尔兹奖得主警告 AI 侵入数学"对读。注:条目页面被浏览器验证拦截,原始论文链接未能核实,按规则不附。</p>
+  <a class="link" href="https://www.nature.com/articles/d41586-026-02867-w">nature.com/articles/d41586-026-02867-w</a>
+</div>
+
+<div class="note">科学层不足配额说明:本窗口 Quanta 等科学 feed 无更新(多为周末原因);三个无 feed 科学源各搜索 1 次,仅 Nature News 补到本条,返朴、知识分子未见近期达标内容。宁缺毋滥,不凑数。</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="card">
+  <h3>9. 8点1氪:25 位菲尔兹奖得主就 AI 侵入数学联合发出警告;月之暗面被造谣已报案;智谱宣布融资 50 亿美元</h3>
+  <div class="tags">36氪 · 每日导览/AI 行业 · 约 3-5 分钟 · <span class="score">★3.4</span></div>
+  <p class="why"><b>为什么适合你:</b>一条过完今日要点。"菲尔兹奖得主警告 AI 侵入数学"横跨你的科学与哲学两层——数学真理与人类理解的关系可作哲理辩引子;智谱 50 亿美元融资、OpenAI 年内不 IPO、DeepSeek 灰度测试 AI 语音,是你职业转型关注的行业判断素材。</p>
+  <a class="link" href="https://36kr.com/p/3982504266349314?f=rss">36kr.com/p/3982504266349314</a>
+</div>
+
+<div class="note">其余快讯(比亚迪固态电池、铠侠拟赴美上市、胖东来四年合同制回应等)打分均低于 3.4,宁缺毋滥,不入选。</div>
+
+<footer>
+  <p><b>缺席源:</b>虎嗅(读取超时,明日自动重试);返朴、知识分子(搜索 1 次未见近期达标内容);窗口内无更新:Percona、AWS DB Blog、CMU DB、PingCAP、Pragmatic Engineer、阮一峰、Quanta(多为周末原因);其余无 feed 源(墨天轮、OceanBase、dbaplus、晚点、南周、人物、冰点、正面连接、看理想、哲学园)按限时原则本次未启用搜索。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话",例如"3 有用 双写正是我们的痛点;5 无用 不想看视频"</p>
+</footer>
+
+</body>
+</html>

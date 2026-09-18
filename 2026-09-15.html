@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-15</title>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .why { font-size:14px; margin:6px 0 10px; }
+  .why b { color:var(--accent); }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
+  a.link::before { content:"🔗 "; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-15 周二</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 36 条 · 入选 4 条 · 生成于 10:25 · 昨日已入选条目不重复推荐</div>
+</header>
+
+<nav>
+  <a href="#tech">🛠 技术 2</a>
+  <a href="#phil">🏛 哲学与辩论 0</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 1</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术(AI4DB / 稳定性)</h2>
+
+<div class="card">
+  <h3>1. Amazon Aurora PostgreSQL 行锁竞争排查(上):理解 PostgreSQL 行锁竞争</h3>
+  <div class="orig">Troubleshooting row lock contention in Amazon Aurora PostgreSQL: Part 1 – Understanding row lock contention in PostgreSQL</div>
+  <div class="tags">AWS Database Blog · 云数据库/PostgreSQL/锁与性能诊断 · 约 15-20 分钟 · <span class="score">★4.3</span></div>
+  <p class="why"><b>为什么适合你:</b>秒杀场景下行锁竞争让吞吐崩塌、CPU 和 I/O 却看起来健康——这正是你稳定性工程方向最经典的疑难症候。上篇讲清 PostgreSQL 行锁机制,并给出系统视图、pgrowlocks 等可带回途虎团队的监控手段。</p>
+  <a class="link" href="https://aws.amazon.com/blogs/database/troubleshooting-row-lock-contention-in-amazon-aurora-postgresql-part-1-understanding-row-lock-contention-in-postgresql/">aws.amazon.com/blogs/database/…part-1</a>
+</div>
+
+<div class="card">
+  <h3>2. Amazon Aurora PostgreSQL 行锁竞争排查(下):用 Database Insights 定位并化解锁竞争</h3>
+  <div class="orig">Resolve Amazon Aurora PostgreSQL lock contention with Database Insights: Part 2</div>
+  <div class="tags">AWS Database Blog · 云数据库/可观测性/故障处置 · 约 15-20 分钟 · <span class="score">★4.3</span></div>
+  <p class="why"><b>为什么适合你:</b>下篇是可操作性拉满的处置手册——用 CloudWatch Database Insights 的 Lock Tree 定位阻塞会话,再以查询终止、超时参数、SKIP LOCKED 等架构模式化解,直接可作团队故障处置预案的参照。</p>
+  <a class="link" href="https://aws.amazon.com/blogs/database/resolve-amazon-aurora-postgresql-lock-contention-with-database-insights-part-2/">aws.amazon.com/blogs/database/…part-2</a>
+</div>
+
+<div class="note">技术层不足配额说明:配额 4-6 条,今日仅 2 条达标。窗口内 Percona 的 Oracle 迁移合作文为厂商公关稿(评分 2.9,不达标);arXiv 与 SRE Weekly 候选均为昨日已评条目,去重后不重复推荐。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+<div class="empty">本窗口 Aeon / Psyche 共 4 条候选全部为昨日(09-14)已评条目,去重后无新增;对无 feed 的「人物」「冰点周刊」各搜索 1 次兜底,仅见第三方转述与评论、无可核实的源站原文链接,故列入缺席源。该层无达标候选,按规则如实留空,不凑数。</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3>3. 黑洞,还是"黑洞恒星"?天文学家为韦布望远镜的"小红点"争翻了</h3>
+  <div class="orig">Black Holes or Black Hole Stars? Astronomers Spar Over Webb Telescope's 'Little Red Dots.'</div>
+  <div class="tags">Quanta Magazine · 科学长文/天体物理/科学争论 · 约 25-30 分钟 · <span class="score">★4.1</span></div>
+  <p class="why"><b>为什么适合你:</b>正合你"物理方向 + 回溯原始论文"的科学阅读模式——JWST"小红点"究竟是裸超大质量黑洞还是氢壳包裹的"黑洞恒星",两派用奥卡姆剃刀互相攻击,是观察科学共同体如何处理证据与解释之争的绝佳样本。注:文内多处链接原始论文,但抓取文本未能核实具体论文地址,按规则不附。</p>
+  <a class="link" href="https://www.quantamagazine.org/black-holes-or-black-hole-stars-astronomers-spar-over-webb-telescopes-little-red-dots-20260914/">quantamagazine.org/…little-red-dots-20260914</a>
+</div>
+
+<div class="note">科学层不足配额说明:配额 2-3 条,今日 Quanta 仅更新此 1 篇;无 feed 科学源昨日已各搜 1 次(仅 Nature 补到 1 条),今日未重复搜索。</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="card">
+  <h3>4. 8点1氪:选手赛中失禁污染赛道 HYROX 中国宣布整改;机构预计美股明年将暴跌 21%;苹果推出 Siri 人工智能</h3>
+  <div class="tags">36氪 · 每日导览/体育伦理/AI 行业 · 约 3-5 分钟 · <span class="score">★3.4</span></div>
+  <p class="why"><b>为什么适合你:</b>一条过完今日要点。HYROX 事件是现成的辩题素材——选手突发身体状况坚持完赛夺冠,全球竞赛规则却无处置条款,"规则缺位时如何对待具体的人"正是你关注的价值辩切口;另含苹果 Siri AI、美股暴跌预期等行业与宏观背景。</p>
+  <a class="link" href="https://36kr.com/p/3983906594257667?f=rss">36kr.com/p/3983906594257667</a>
+</div>
+
+<div class="note">其余快讯(8 月经济数据、台积电先进制程供不应求、中科曙光气象模式、铠侠上市声明等)打分均低于 3.4,宁缺毋滥,不入选。</div>
+
+<footer>
+  <p><b>缺席源:</b>虎嗅(连续两日读取超时,建议检查 RSS);人物、冰点周刊、晚点LatePost(各搜索 1 次,仅见第三方转述,无源站原文链接);窗口内无更新:CMU DB、PingCAP、Pragmatic Engineer、阮一峰;其余无 feed 源(墨天轮、OceanBase、dbaplus、南周、正面连接、看理想、哲学园、Nature News、返朴、知识分子)按限时原则本次未启用搜索。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话",例如"1 有用 锁竞争正是我们的痛点;3 无用 天体物理离我太远了"</p>
+</footer>
+
+</body>
+</html>

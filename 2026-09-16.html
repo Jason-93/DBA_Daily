@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-16</title>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .why { font-size:14px; margin:6px 0 10px; }
+  .why b { color:var(--accent); }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
+  a.link::before { content:"🔗 "; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-16 周三</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 24 条 · 入选 10 条 · 生成于 10:27 · 已对照前两期去重</div>
+</header>
+
+<nav>
+  <a href="#tech">🛠 技术 6</a>
+  <a href="#phil">🏛 哲学与辩论 2</a>
+  <a href="#sci">🔬 科学 2</a>
+  <a href="#news">⚡ 热点 0</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术(AI4DB / 稳定性)</h2>
+
+<div class="card">
+  <h3>1. 大模型语义排序算子的访问路径:LLM ORDER BY 的系统化实现研究</h3>
+  <div class="orig">Access Paths for Efficient Ordering with Large Language Models</div>
+  <div class="tags">arXiv cs.DB · 论文/AI4DB/语义算子/查询处理 · 扫摘要 5 分钟(精读约 40) · <span class="score">★4.3</span></div>
+  <p class="why"><b>为什么适合你:</b>AI4DB 第一优先方向的硬核落点——把 LLM 变成查询计划里的语义算子(ORDER BY),并系统比较其物理实现,正是"AI 进数据库内核"最工程化的形态,可跟踪也可在团队内做概念验证。</p>
+  <a class="link" href="https://arxiv.org/abs/2509.00303">arxiv.org/abs/2509.00303</a>
+</div>
+
+<div class="card">
+  <h3>2. 迈向"预判式"数据库:共享数据语义与工作负载语义</h3>
+  <div class="orig">Towards Anticipatory Databases Through Shared Data and Workload Semantics</div>
+  <div class="tags">arXiv cs.DB · 论文/AI4DB/自治数据库 · 扫摘要 5 分钟 · <span class="score">★4.2</span></div>
+  <p class="why"><b>为什么适合你:</b>自治数据库是你 AI4DB 关注的核心命题——现有 DBMS 决策仍靠 recency/frequency 等低级信号,此文主张让系统理解"数据是什么、负载要什么",是从"被动调优"走向"主动预判"的路线宣言。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.14255">arxiv.org/abs/2609.14255</a>
+</div>
+
+<div class="card">
+  <h3>3. 自然语言知识图谱查询执行:让受控语义进入 LLM 上下文窗口</h3>
+  <div class="orig">Natural Language Knowledge Graph Query Execution: Leveraging Controlled Semantics in the LLM Context Window</div>
+  <div class="tags">arXiv cs.DB · 论文/AI4DB/Text2SQL/知识图谱 · 扫摘要 5 分钟 · <span class="score">★4.2</span></div>
+  <p class="why"><b>为什么适合你:</b>正中你的 Text2SQL 关注——作者证明数据模型概念通过受控语义(而非随手写的 prompt 散文)传给 LLM 效果更好,对"自然语言查库"的落地方式有直接参考。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.14652">arxiv.org/abs/2609.14652</a>
+</div>
+
+<div class="card">
+  <h3>4. DiaLSM:基于分片的 LSM-tree,迈向无写停顿性能</h3>
+  <div class="orig">DiaLSM: Towards Write-Stall-Free Performance via Shard-based LSM-tree</div>
+  <div class="tags">arXiv cs.DB · 论文/存储引擎/稳定性/性能 · 扫摘要 5 分钟 · <span class="score">★4.1</span></div>
+  <p class="why"><b>为什么适合你:</b>LSM 写停顿是 RocksDB 类存储引擎在持续写入压力下的经典稳定性杀手,此文先量化停顿概率与时长再给分片方案——方法论本身就可带回团队做存储引擎稳定性评估。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.14370">arxiv.org/abs/2609.14370</a>
+</div>
+
+<div class="card">
+  <h3>5. Percona Server 8.4.11-11 的性能改进</h3>
+  <div class="orig">Performance improvements in Percona Server 8.4.11-11</div>
+  <div class="tags">Percona Blog · MySQL/性能优化/版本升级 · 约 15 分钟 · <span class="score">★4.1</span></div>
+  <p class="why"><b>为什么适合你:</b>DBA 的版本升级决策输入——基于基准测试拆解 MySQL 8.4 分支最新小版本的性能变化,升级评估时可直接引用。</p>
+  <a class="link" href="https://www.percona.com/blog/performance-improvements-in-percona-server-8-4-11-11/">percona.com/blog/…8-4-11-11</a>
+</div>
+
+<div class="card">
+  <h3>6. COMPASS:用科学知识图谱引导分布式向量检索</h3>
+  <div class="orig">COMPASS: Steering Distributed Vector Search with Scientific Knowledge Graphs</div>
+  <div class="tags">arXiv cs.DB · 论文/DB4AI/向量数据库/分布式 · 扫摘要 5 分钟 · <span class="score">★4.0</span></div>
+  <p class="why"><b>为什么适合你:</b>你 AI4DB 兴趣里 DB4AI(向量数据库、RAG 底座)的一翼——哈希分片破坏语义局部性导致 scatter-gather 受制于最慢分片,此文用语义聚类重新布局,对向量库规模化有借鉴。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.13452">arxiv.org/abs/2609.13452</a>
+</div>
+
+<div class="note">已达配额上限 6 条;同档未入选:Chronos(智能体状态分支,4.0)、智能体-工具边界异常(4.0)等,因配额让位。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="card">
+  <h3>7. 追逐"甜蜜生活"</h3>
+  <div class="orig">Chasing la dolce vita</div>
+  <div class="tags">Aeon · 身份/离散/思想长文 · 约 20 分钟 · <span class="score">★3.8</span></div>
+  <p class="why"><b>为什么适合你:</b>归乡、幻想、食物与幽灵——"永恒回归"的神话如何让意大利离散群体活在渴念之中。具体的人的身份撕扯,可与你原典计划里的乡愁/归属主题对读,亦可作价值辩中"根与流动"的立论素材。</p>
+  <a class="link" href="https://aeon.co/essays/italianness-is-a-state-of-travelling-in-both-directions">aeon.co/essays/…travelling-in-both-directions</a>
+</div>
+
+<div class="card">
+  <h3>8. 对遗憾说"是"</h3>
+  <div class="orig">Say yes to regret</div>
+  <div class="tags">Psyche · 哀伤/存在主义/具体的人 · 约 10 分钟 · <span class="score">★3.7</span></div>
+  <p class="why"><b>为什么适合你:</b>丈夫去世后陷入反刍 spiral,出路始于"明天下午两点"的一个待办——第一人称的哀伤叙事,是存在主义式的"处境中的具体的人"样本,可与加缪、克尔凯郭尔对读。</p>
+  <a class="link" href="https://psyche.co/turning-points/how-a-to-do-task-stopped-the-ruminative-loop-of-my-grief">psyche.co/turning-points/…ruminative-loop</a>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3>9. 数学家汤涛专访邓煜:一位原创力极强的数学家,写诗熬过人生低谷</h3>
+  <div class="tags">返朴(网易号频道页,搜索兜底) · 科学人物/数学/专访 · 约 20 分钟 · <span class="score">★3.6</span></div>
+  <p class="why"><b>为什么适合你:</b>"看具体的人如何走到数学前沿"——新晋菲尔兹奖得主邓煜的原创力与低谷期,是你"具体的人"偏好在科学层的对应物;频道页另列《纳维-斯托克斯方程:人类的攀升,AI 的终结?》等近作可顺读。注:返朴文章经网易号频道页核实存在,单篇直链无法取得,故附频道页。</p>
+  <a class="link" href="https://m.163.com/news/sub/T1551235486149.html">m.163.com/news/sub/…(返朴频道页)</a>
+</div>
+
+<div class="card">
+  <h3>10. 诺奖风向标:2026 拉斯克奖揭晓,四位日本科学家获奖</h3>
+  <div class="tags">知识分子(财新博客,搜索兜底,09-10) · 生命科学/睡眠机制/奖项深度报道 · 约 20 分钟 · <span class="score">★3.5</span></div>
+  <p class="why"><b>为什么适合你:</b>正合"生命科学 + 回溯原始发现"的阅读模式——基础医学奖授予食欲素(orexin)发现者:从下丘脑多肽到发作性睡病机理,再到刚获 FDA 批准的新药,一条完整的"发现→机制→疗法"链条。</p>
+  <a class="link" href="https://zhishifenzi.blog.caixin.com/archives/288566">zhishifenzi.blog.caixin.com/archives/288566</a>
+</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+<div class="empty">36氪 RSS 本次抓取解析失败(XML 格式错误),虎嗅连续三日超时,热点层无候选来源。按规则:抓取失败的源列入缺席源,搜索兜底仅适用于无 feed 源,故该层今日留空,不凑数。</div>
+
+<h2 class="tech" id="vibe">🤖 加餐:vibe coding / AI 工具小特辑(手动增补)</h2>
+<div class="empty" style="margin-bottom:12px">你 11:24 要求新增该方向后,用 72 小时窗口内 58 条候选手动补选。明早起该方向并入每日正常打分,不再单列。</div>
+
+<div class="card">
+  <h3>特 1. 现场教学:Simon Willison 用 GPT-6 手搓 Gemini Live 测试台</h3>
+  <div class="orig">Gemini Live audio</div>
+  <div class="tags">Simon Willison's Weblog · vibe coding 实录/语音模型 · 约 10 分钟 · <span class="score">★4.2</span></div>
+  <p class="why"><b>为什么适合你:</b>vibe coding 的标准动作示范——Google 刚发布 Gemini 3.8 Live 语音模型,他直接把文档丢给 GPT-6 Astra 现写了一个网页测试台。看他"什么任务值得当场 vibecode 一个工具"的判断标准,比看十篇方法论都有用。</p>
+  <a class="link" href="https://simonwillison.net/2026/Sep/15/gemini-live/">simonwillison.net/2026/Sep/15/gemini-live</a>
+</div>
+
+<div class="card">
+  <h3>特 2. 代码成本崩塌之后,软件业还剩下什么</h3>
+  <div class="orig">Quoting Laurie Voss</div>
+  <div class="tags">Simon Willison's Weblog · 行业判断/职业 · 2 分钟 · <span class="score">★4.0</span></div>
+  <p class="why"><b>为什么适合你:</b>一句话级别的密度——"写代码的成本已经崩塌,审查、修复、运维的成本正在跟上;剩下的只有搞清人们到底要什么、精确定义它、让它好用。"这正是你职业转型思考需要锚定的判断:未来值钱的是定义问题和运维兜底,两者都指向你稳定性工程的家底。</p>
+  <a class="link" href="https://simonwillison.net/2026/Sep/14/laurie-voss/">simonwillison.net/2026/Sep/14/laurie-voss</a>
+</div>
+
+<div class="card">
+  <h3>特 3. 实战:清理 coding agent 留下的"渣滓"</h3>
+  <div class="orig">commit-rewriter 0.1</div>
+  <div class="tags">Simon Willison's Weblog · vibe coding 工作流/工具 · 约 8 分钟 · <span class="score">★3.9</span></div>
+  <p class="why"><b>为什么适合你:</b>agent 写的提交信息全是"agent 味"(内部 issue 号、冗余说明),他 vibecode 了一个小工具专门重写提交记录。这是 agent 时代的真实工作流——产出快,但收尾要人工+小工具,你自建初筛工具时一定会遇到同样的场景。</p>
+  <a class="link" href="https://simonwillison.net/2026/Sep/14/commit-rewriter/">simonwillison.net/2026/Sep/14/commit-rewriter</a>
+</div>
+
+<div class="card">
+  <h3>特 4. 工具:shot-scraper 1.12,命令行网页截图</h3>
+  <div class="orig">shot-scraper 1.12</div>
+  <div class="tags">Simon Willison's Weblog · 工具/自动化 · 5 分钟 · <span class="score">★3.5</span></div>
+  <p class="why"><b>为什么适合你:</b>一条命令给网页截图(新增 WebP 支持)。以后想给晨报附原文预览图、或给辩论赛存档网页资料,直接能用,不用自己写。</p>
+  <a class="link" href="https://simonwillison.net/2026/Sep/13/shot-scraper/">simonwillison.net/2026/Sep/13/shot-scraper</a>
+</div>
+
+<div class="card">
+  <h3>特 5. 当工具调用全部成功、工作流却失败了</h3>
+  <div class="orig">When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary</div>
+  <div class="tags">arXiv cs.DB · agent 可靠性/稳定性 · 扫摘要 5 分钟 · <span class="score">★4.0</span></div>
+  <p class="why"><b>为什么适合你:</b>今早技术层的"遗珠"——重试、投机执行、并发、部分失败下,agent 的每次工具调用都"成功"了,外部状态却不一致。把稳定性工程的故障学平移到 agent 时代的第一手分类学,你带团队做 AI 落地时绕不开。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.15397">arxiv.org/abs/2609.15397</a>
+</div>
+
+<div class="card">
+  <h3>附赠两条</h3>
+  <p class="why"><b>The contagion of fear</b>(Simon Willison 转 Bryan Cantrill):Anthropic 研究员"AI 十年内可能杀死我们所有人"vs 工程派对末日论的警惕——AI 风险话语的证据标准,现成的哲理辩素材。<a class="link" href="https://simonwillison.net/2026/Sep/14/the-contagion-of-fear/">链接</a></p>
+  <p class="why"><b>影响最深的博客文</b>:Simon 提名《抽象泄漏定律》——"永远向抽象层之下多看一层",这条直觉大概就是 DBA 的职业本能。<a class="link" href="https://simonwillison.net/2026/Sep/14/influences/">链接</a></p>
+</div>
+
+<footer>
+  <p><b>缺席源:</b>36氪(RSS 解析错误);虎嗅(连续三日超时,建议检查);Nature News(搜索 1 次未见达标独立条目);窗口内无更新:AWS DB Blog、CMU DB、PingCAP、SRE Weekly、Pragmatic Engineer、阮一峰、Quanta;其余无 feed 源(墨天轮、OceanBase、dbaplus、晚点、南周、人物、冰点、正面连接、看理想、哲学园)按限时原则本次未启用搜索。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话",例如"4 有用 写停顿正是我们的痛点;9 无用 不想看人物专访"</p>
+</footer>
+
+</body>
+</html>

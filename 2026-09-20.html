@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-20</title>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .why { font-size:14px; margin:6px 0 10px; }
+  .why b { color:var(--accent); }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
+  a.link::before { content:"🔗 "; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:13px;
+           border:1px dashed #2c3340; margin-bottom:12px; }
+  .empty b { color:var(--text); }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-20 周日</small></h1>
+  <div class="meta">生成于 12:15 · 抓取窗口 30 小时 · 候选 23 条 + 搜索兜底 5 次 · 入选 4 条 · 已对照前六期去重</div>
+</header>
+
+<nav>
+  <a href="#tech">🛠 技术 4</a>
+  <a href="#phil">🏛 哲学与辩论 0</a>
+  <a href="#sci">🔬 科学 0</a>
+  <a href="#news">⚡ 热点 0</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / 稳定性 / vibe coding）</h2>
+
+<div class="card">
+  <h3>1. Claude 如何加速生物分子建模：4 周优化 30+ 模型，平均提速 4 倍</h3>
+  <div class="orig">How Claude is uplifting biomolecular modeling</div>
+  <div class="tags">Anthropic（搜索兜底）· vibe coding/AI 编程能力边界/性能优化 · 约 10 分钟 · <span class="score">★4.4</span></div>
+  <p class="why"><b>为什么适合你:</b>Claude 4 周内优化 30+ 个生物分子模型、平均提速 4x——写出 FlashPairformer 内核、Big 模式单卡放下 &gt;10,000 token 序列、约 150 美元算力达到原先 100 倍 GPU 的效果,代码开源。vibe coding「充满实用性」方向的硬样本:AI 编程在真实高性能计算场景的能力边界被实质性外推,"让模型改内核而非调参数"的方法可直接借鉴。</p>
+  <a class="link" href="https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling">anthropic.com/research/claude-uplifts-biomolecular-modeling</a>
+</div>
+
+<div class="card">
+  <h3>2. OceanBase PowerContext 1.0.0 正式发布：Agent 的工作上下文基础设施</h3>
+  <div class="tags">OceanBase 技术博客（搜索兜底）· AI4DB/Agent 上下文工程/开源基建 · 约 8 分钟 · <span class="score">★4.2</span></div>
+  <p class="why"><b>为什么适合你:</b>给 Agent 做上下文管理与 Handoff 的开源基础设施——12 个框架集成、LoCoMo 长期记忆 +37.88pt、SWE-bench Pro 从 82.35% 提到 86.73%,Apache 2.0。国产数据库厂商切入 AI4DB 相邻赛道的实作样本,「充满实用性」命中:多 Agent 协作的上下文工程正是你团队接下来绕不开的问题。</p>
+  <a class="link" href="https://oceanbase.csdn.net/6aab541e8f401d362660d5d0.html">oceanbase.csdn.net/6aab541e8f401d362660d5d0.html</a>
+</div>
+
+<div class="card">
+  <h3>3. Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1：同一模型、两档安全策略</h3>
+  <div class="orig">Introducing Claude Fable 5.1 and Claude Mythos 5.1</div>
+  <div class="tags">Anthropic（搜索兜底）· vibe coding/AI 工具链/行业判断 · 约 6 分钟 · <span class="score">★4.0</span></div>
+  <p class="why"><b>为什么适合你:</b>编程能力刷新标杆,价格便宜 25%(agentic 场景至约 45%),且首次以「同一模型、两档安全策略」区分企业与高风险场景版本——直接影响你日常 AI 编程工具的成本结构与选型判断,是 vibe coding 方向必看的版本信号。</p>
+  <a class="link" href="https://www.anthropic.com/claude-fable-and-mythos-5-1">anthropic.com/claude-fable-and-mythos-5-1</a>
+</div>
+
+<div class="card">
+  <h3>4. 如何度量 AI 发展的速度：Anthropic 给出 AL0-5 量表</h3>
+  <div class="orig">Measurements for understanding the pace of AI development</div>
+  <div class="tags">Anthropic（搜索兜底）· 行业判断/AI R&D 自动化/度量框架 · 约 8 分钟 · <span class="score">★3.6</span></div>
+  <p class="why"><b>为什么适合你:</b>一套 AI 研发自动化程度的分级量表(AL0-5),自测数据:Claude 在 Anthropic 内部 AI 研发中「主导」26%、「协作及以上」超 90%——既是评估"AI 自我加速"叙事是否属实的标尺,也为你的职业转型判断提供可复用的行业坐标系。</p>
+  <a class="link" href="https://www.anthropic.com/institute/measuring-pace-of-ai-development">anthropic.com/institute/measuring-pace-of-ai-development</a>
+</div>
+
+<div class="note">技术层说明:30 小时窗口内 18 个 feed 源仅 Simon Willison 有 3 条更新(发版说明未达线、海狮照片、与 09-19 重复的 Gemini hacked,均排除);Qdrant/Weaviate/Vespa/Timescale/Elastic 五个新增 DB4AI feed 窗口内零更新。本期 4 条全部来自按规则的搜索兜底(Anthropic ×3、OceanBase ×1)。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="empty"><b>本期留空。</b>配额 2-4 条,无达标候选:Aeon / Psyche feed 窗口内零更新;无 feed 的正面连接搜索 1 次未见可核实的窗口内新文章(列入缺席源);看理想 / 哲学园本期未启用搜索(每源限搜 1 次,从严)。按规则如实留空,不凑数。</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="empty"><b>本期留空。</b>配额 2-3 条,无达标候选:Quanta Magazine feed 窗口内零更新;无 feed 的 Nature News、返朴各搜索 1 次未见达标的窗口内新内容(列入缺席源);知识分子本期未启用搜索。按规则如实留空,不凑数。</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="empty"><b>本期留空。</b>36氪 feed 窗口内 20 条快讯全部未达入选线(≥3.4):多为会议致辞、融资、行业数据通报,与 PROFILE 方向距离较远。按规则留空。</div>
+
+<div class="note">热点提示(未达线仅作背景):「8点1氪」汇总(约 ★3.25)含三条值得扫一眼——Anthropic 今年年化收入预计超 1000 亿美元、黄仁勋出售约 4.6 万股英伟达股票、西贝倒闭传闻最新回应。<a class="link" href="https://36kr.com/p/3990979197303555?f=rss">36kr.com/p/3990979197303555</a></div>
+
+<footer>
+  <p><b>缺席源:</b>正面连接 / Nature News / 返朴(各搜索 1 次无果);Percona/AWS DB/CMU/arXiv/PingCAP/SRE Weekly/Pragmatic Engineer/阮一峰/GitHub Blog/Qdrant/Weaviate/Vespa/Timescale/Elastic/Aeon/Psyche/Quanta 窗口内无更新;其余无 feed 源本期未启用搜索(每源限搜 1 次,从严)。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话",例如"2 有用 混沌工程正想推;7 无用 太抽象"</p>
+</footer>
+
+</body>
+</html>

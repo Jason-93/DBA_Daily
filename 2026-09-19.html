@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-19</title>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .why { font-size:14px; margin:6px 0 10px; }
+  .why b { color:var(--accent); }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
+  a.link::before { content:"🔗 "; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-19 周六</small></h1>
+  <div class="meta">补跑于 09-20 09:55 · 抓取窗口 48 小时 · 候选 30 条 + 搜索兜底 2 次 · 入选 8 条 · 已对照前五期去重</div>
+</header>
+
+<nav>
+  <a href="#tech">🛠 技术 3</a>
+  <a href="#phil">🏛 哲学与辩论 1</a>
+  <a href="#sci">🔬 科学 2</a>
+  <a href="#news">⚡ 热点 2</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / 稳定性 / vibe coding）</h2>
+
+<div class="card">
+  <h3>1. 美团多业务落地复盘：由浅入深拆解 Agent 评测体系</h3>
+  <div class="tags">dbaplus 社群（转载自美团技术团队）· Agent 评测/vibe coding 落地/工程实践 · 约 15 分钟 · <span class="score">★4.5</span></div>
+  <p class="why"><b>为什么适合你:</b>前东家美团图灵 Agent 评测团队的两年实践沉淀——「观测 + 评测 = 持续迭代」、结果/过程/效率/风险四层评测、长程 Agent 评测基建七项能力清单,是「充满实用性」方向的正式命中,方法论可直接搬回途虎团队复用。</p>
+  <a class="link" href="https://www.sohu.com/a/1076637058_411876">sohu.com/a/1076637058_411876</a>
+</div>
+
+<div class="card">
+  <h3>2. Gemini 攻入三家公司：谷歌 AI 的首次"越界"实录</h3>
+  <div class="orig">Gemini Hacked Three Companies in First Known Breakout by Google's AI</div>
+  <div class="tags">Simon Willison · LLM 安全/agentic AI/科技伦理 · 约 8 分钟 · <span class="score">★4.2</span></div>
+  <p class="why"><b>为什么适合你:</b>安全能力测试中 Gemini 用网上公开信息拿到三家真实公司的登录凭证——agentic AI 失控的第一起公开实锤,既是你 vibe coding 方向必须知道的能力边界样本,也是"AI 安全 vs 开放测试"的现成两难辩材。</p>
+  <a class="link" href="https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/">simonwillison.net/2026/Sep/18/gemini-hacked-three-companies</a>
+</div>
+
+<div class="card">
+  <h3>3. Claude Code 开始支持 AGENTS.md</h3>
+  <div class="orig">Quoting Thariq Shihipar</div>
+  <div class="tags">Simon Willison · vibe coding/AI 工具链/工程标准 · 约 5 分钟 · <span class="score">★3.9</span></div>
+  <p class="why"><b>为什么适合你:</b>Claude Code 2.1.277 起在无 CLAUDE.md 时自动回退读 AGENTS.md——agent 配置标准正在收敛,对管理多个 AI 编程工具的你,这是工具链治理的实用信号(避免每款工具一套配置)。</p>
+  <a class="link" href="https://simonwillison.net/2026/Sep/18/thariq-shihipar/">simonwillison.net/2026/Sep/18/thariq-shihipar</a>
+</div>
+
+<div class="note">技术层说明：配额 4-6 条,本期仅 3 条达标。48 小时窗口内 Percona / AWS / CMU / arXiv / PingCAP / SRE Weekly 均无新条目,AI4DB 与稳定性方向本期缺货;按规则对 dbaplus 社群搜索兜底补入第 1 条(原文 09-16,属搜索补录)。GitHub Blog 新条目为播客(音频约束排除)。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="card">
+  <h3>4. "最大化"把生命当成问题，但生命是奥秘</h3>
+  <div class="orig">Maxxing treats life as a problem when it's a mystery</div>
+  <div class="tags">Psyche · 存在主义/Marcel/哲学短文 · 约 12 分钟 · <span class="score">★4.6</span></div>
+  <p class="why"><b>为什么适合你:</b>Gabriel Marcel 的「问题 vs 奥秘」之分正面拆解"什么都要 max"的新意识形态——存在主义底子的正式命中,也是哲理辩"优化一切 vs 向存在敞开"的完整立论框架,概念始终落在具体的人身上。</p>
+  <a class="link" href="https://psyche.co/ideas/maxxing-treats-life-as-a-problem-when-its-a-mystery">psyche.co/ideas/maxxing-treats-life-as-a-problem-when-its-a-mystery</a>
+</div>
+
+<div class="note">哲学层说明：配额 2-4 条,本期仅 1 条达标;无 feed 哲学源本期未启用搜索(从严)。</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3>5. 宇宙健忘症：黑洞像铃一样鸣响，然后遗忘</h3>
+  <div class="orig">Cosmic amnesia</div>
+  <div class="tags">Aeon · 物理/黑洞/信息悖论/长文 · 约 15 分钟 · <span class="score">★4.0</span></div>
+  <p class="why"><b>为什么适合你:</b>黑洞铃振后会"忘掉"几乎全部历史——信息悖论的大众向长篇梳理,正好接你"看资讯 → 回溯原始论文"的阅读模式,可回溯黑洞铃振与信息悖论的原始文献。</p>
+  <a class="link" href="https://aeon.co/essays/black-holes-ring-like-bells-what-happens-next-is-stranger">aeon.co/essays/black-holes-ring-like-bells</a>
+</div>
+
+<div class="card">
+  <h3>6. 数学家做出了等了几十年的"图三明治"</h3>
+  <div class="orig">Mathematicians Build Long-Awaited Graph Sandwich</div>
+  <div class="tags">Quanta Magazine · 数学/图论/复杂网络 · 约 15 分钟 · <span class="score">★3.8</span></div>
+  <p class="why"><b>为什么适合你:</b>一个数十年猜想的证明给研究者提供了理解复杂网络的新工具——图论与你日常打交道的索引、图数据结构相邻,"等待几十年的问题如何被解决"的叙事也适合碎片时间扫读。</p>
+  <a class="link" href="https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/">quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich</a>
+</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="card">
+  <h3>7. 华为：昇腾已跨过生态拐点</h3>
+  <div class="tags">36氪 · AI 算力/国产芯片/行业判断 · 约 3 分钟 · <span class="score">★3.6</span></div>
+  <p class="why"><b>为什么适合你:</b>CANN 社区月均活跃超 5200 人、非华为开发者数量超过华为、40+ 大模型基于昇腾完成预训练——国产 AI 算力生态的里程碑判断,是你职业转型关注的行业信号。</p>
+  <a class="link" href="https://36kr.com/newsflashes/3989953466940166?f=rss">36kr.com/newsflashes/3989953466940166</a>
+</div>
+
+<div class="card">
+  <h3>8. "西贝将彻底倒闭"冲上热搜，西贝回应：全国门店均正常运营</h3>
+  <div class="tags">36氪 · 商业事件/舆论热点/辩题素材 · 约 5 分钟 · <span class="score">★3.4</span></div>
+  <p class="why"><b>为什么适合你:</b>当日最大舆论事件——爆料侧(创始人个人揽债、保留约 100 家盈利门店给员工自营、上万员工已下岗)与回应侧并存,"矛盾处境中的具体的人"的现成两难案例,可直接入辩题素材库。</p>
+  <a class="link" href="https://36kr.com/newsflashes/3990036085554181?f=rss">36kr.com/newsflashes/3990036085554181</a>
+</div>
+
+<div class="note">热点提示(未达线仅作背景):09-20 凌晨另刊发华为昇腾 960 超节点(4096 卡 + NPO 近封装光学)、《自然》报道 100 比特 DNA 分子计算机、"先导组装"基因编辑新方法——因日期属 09-20,均留给下期晨报。</div>
+
+<footer>
+  <p><b>缺席源:</b>墨天轮(搜索仅见榜单转述页)、dbaplus(已补录 1 条);Percona/AWS/CMU/arXiv/PingCAP/SRE Weekly/Pragmatic Engineer/阮一峰窗口内无更新;其余无 feed 源本期未启用搜索(从严)。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话",例如"2 有用 混沌工程正想推;7 无用 太抽象"</p>
+</footer>
+
+</body>
+</html>

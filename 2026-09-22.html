@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-22</title>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .why { font-size:14px; margin:6px 0 10px; }
+  .why b { color:var(--accent); }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
+  a.link::before { content:"🔗 "; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:13px;
+           border:1px dashed #2c3340; margin-bottom:12px; }
+  .empty b { color:var(--text); }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-22 周二</small></h1>
+  <div class="meta">午间兜底场 12:12（早场未触发）· 抓取窗口 30 小时 · 候选 51 条 + 搜索兜底 2 次 · 入选 8 条 · 已对照前七期去重</div>
+</header>
+
+<nav>
+  <a href="#tech">🛠 技术 5</a>
+  <a href="#phil">🏛 哲学与辩论 2</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 0</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+
+<div class="card">
+  <h3>1. Data Agents：迈向智能体化的数据系统（综述/愿景）</h3>
+  <div class="orig">Data Agents: Agentic Data Systems</div>
+  <div class="tags">arXiv cs.DB · AI4DB/数据系统/Agent 架构综述 · 约 25 分钟 · <span class="score">★4.4</span></div>
+  <p class="why"><b>为什么适合你:</b>直指传统数据系统三大局限(人工 pipeline、缺语义理解、被动处理)并给出 Agentic Data System 的完整架构愿景——正中你第 1 优先级 AI4DB 的方向定义问题,适合当作梳理"数据库 + Agent"版图的总纲,再回溯其中引用的原始工作。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.24137">arxiv.org/abs/2609.24137</a>
+</div>
+
+<div class="card">
+  <h3>2. MySQL 里原生算向量距离：Percona Server 支持 DISTANCE()/VECTOR_DISTANCE()</h3>
+  <div class="orig">DISTANCE() and VECTOR_DISTANCE(): Vector Similarity in Percona Server for MySQL</div>
+  <div class="tags">Percona Blog · DB4AI/MySQL/向量检索 · 约 10 分钟 · <span class="score">★4.3</span></div>
+  <p class="why"><b>为什么适合你:</b>Percona Server for MySQL 9.7.2-2 在 SQL 里原生支持 COSINE/EUCLIDEAN/MANHATTAN/DOT 四种向量距离——你第 2 优先级 DB4AI 的正式命中,且是可直接在测试环境验证的功能("充满实用性"方向),MySQL 生态做 RAG 底座又多一个不用引入新组件的选项。</p>
+  <a class="link" href="https://www.percona.com/blog/vector-distance-vector-similarity-search-in-percona-server-for-mysql/">percona.com/blog/vector-distance-vector-similarity-search</a>
+</div>
+
+<div class="card">
+  <h3>3. 给 LLM Agent 上图记忆，代价是什么？图数据库用于 Agent 记忆的横向评测</h3>
+  <div class="orig">Graph Memory for LLM Agents: At What Cost? A Comparative Evaluation of Query, Indexing, and Data-Readiness Costs</div>
+  <div class="tags">arXiv cs.DB · AI4DB/Agent 记忆/系统评测 · 约 20 分钟 · <span class="score">★4.2</span></div>
+  <p class="why"><b>为什么适合你:</b>不空谈"图数据库对关联数据必不可少",而是从查询规划、索引、数据就绪成本三个系统维度横向实测——正好接昨天 PowerContext(Agent 上下文基建)那条,给"Agent 记忆该用什么底座"提供可带回团队的技术选型依据。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.23315">arxiv.org/abs/2609.23315</a>
+</div>
+
+<div class="card">
+  <h3>4. Text-to-SQL 的上下文层，到底是哪一部分在起作用？</h3>
+  <div class="orig">Which Part of the Context Layer Does the Work? Separating Semantic Content from ...</div>
+  <div class="tags">arXiv cs.DB · AI4DB/Text2SQL/上下文工程 · 约 15 分钟 · <span class="score">★4.2</span></div>
+  <p class="why"><b>为什么适合你:</b>上下文层(查询时喂给分析 Agent 的精选文档)能让 text-to-SQL 大涨分,但"有/无"对比说不清功臣是谁——这篇把语义内容单独拆开度量,对你做 Text2SQL 落地(AI4DB 第 1 优先级)的上下文工程设计是直接可复用的方法论。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.22259">arxiv.org/abs/2609.22259</a>
+</div>
+
+<div class="card">
+  <h3>5. io_uring 进入 Oracle 数据库：生产级混合存储 I/O 架构实录</h3>
+  <div class="orig">io_uring in Oracle Database: A Hybrid Storage I/O Architecture at Production Scale</div>
+  <div class="tags">arXiv cs.DB · 数据库内核/存储 I/O/生产实践 · 约 20 分钟 · <span class="score">★3.9</span></div>
+  <p class="why"><b>为什么适合你:</b>Oracle 把 io_uring 装进多进程 RDBMS 存储层的工程决策全记录(每进程独立 ring context 等)——生产级内核 I/O 改造的一手经验,是你稳定性与数据库内核视野的稀缺样本,值得回溯原文看架构权衡。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.22781">arxiv.org/abs/2609.22781</a>
+</div>
+
+<div class="note">技术层说明:配额 4-6 条,本期 5 条达标(AI4DB 方向 3 条 ≥ 要求)。其余候选:AWS SQL Server→PG 迁移(3.2)、Simon 的 Jev"决策模型"(3.6,主题偏新闻)、SRE Weekly #535(3.35)未入选;新增 Qdrant/Weaviate/Vespa/Timescale/Elastic 五个 DB4AI feed 窗口内仍零更新。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="card">
+  <h3>6. 他可能是对的：西塞罗与"或然性"的智慧</h3>
+  <div class="orig">He was probably right</div>
+  <div class="tags">Aeon · 怀疑论/西塞罗/哲学短文 · 约 12 分钟 · <span class="score">★3.8</span></div>
+  <p class="why"><b>为什么适合你:</b>Massimo Pigliucci 写西塞罗的 probabilia——对信念保持自信但永不确信,怀疑论不是虚无而是一种行动哲学;概念落在西塞罗具体的人生处境上(符合你"反感纯概念游戏"的口味),也是价值辩"确定性 vs 存疑行动"的现成认识论框架。</p>
+  <a class="link" href="https://aeon.co/essays/a-good-sceptic-has-more-than-doubt-and-less-than-certainty">aeon.co/essays/a-good-sceptic-has-more-than-doubt-and-less-than-certainty</a>
+</div>
+
+<div class="card">
+  <h3>7. 更少的选择：1969 年墨西哥城，一次非法堕胎的母女口述（短片）</h3>
+  <div class="orig">Lesser choices</div>
+  <div class="tags">Psyche(短片) · 具体的人/堕胎权/辩题素材 · 约 15 分钟 · <span class="score">★3.6</span></div>
+  <p class="why"><b>为什么适合你:</b>母亲 Estelle 回忆被蒙眼、恐惧的非法堕胎经历,由女儿执导——"矛盾处境中的具体的人"的正式命中,堕胎权议题的真实两难素材可直接入辩题库。注意:本条为短片,建议放在午休时段看。</p>
+  <a class="link" href="https://psyche.co/videos/an-intimate-account-of-illegal-abortion-in-1969-from-mother-to-daughter">psyche.co/videos/an-intimate-account-of-illegal-abortion-in-1969</a>
+</div>
+
+<div class="note">哲学层说明:配额 2-4 条,本期 2 条达标。Aeon《Sound guardians》为视频且主题偏远、Psyche《The softness of metal》系名人告别演出随笔(临近负面清单边缘),均未入选。</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3>8. 半个基因组都是"跳跃基因"：病毒般的转座子如何成为演化的合伙人</h3>
+  <div class="orig">How Virus-like 'Jumping Genes' Became Our Partners in Evolution</div>
+  <div class="tags">Quanta Magazine · 生命科学/演化/基因组/长文 · 约 18 分钟 · <span class="score">★4.0</span></div>
+  <p class="why"><b>为什么适合你:</b>我们基因组的一半由能自我复制移动的转座子构成,它们不只是寄生垃圾——Quanta 长篇梳理正接你"看资讯 → 回溯原始论文"的阅读模式,可沿文内线索回读转座子与基因调控演化的原始文献。</p>
+  <a class="link" href="https://www.quantamagazine.org/how-virus-like-jumping-genes-became-our-partners-in-evolution-20260921/">quantamagazine.org/how-virus-like-jumping-genes</a>
+</div>
+
+<div class="note">科学层说明:配额 2-3 条,本期仅 1 条达标。无 feed 的 Nature News、返朴各搜索 1 次未见窗口内达标新内容(列入缺席源);知识分子本期未启用搜索(每源限搜 1 次,从严)。</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="empty"><b>本期留空。</b>36氪 feed 窗口内 20 条快讯全部未达入选线(≥3.4):多为出海大会圆桌、融资、盘中行情与政策通报。按规则留空,宁缺毋滥。</div>
+
+<div class="note">热点提示(未达线仅作背景):「8点1氪」汇总含——AMD 总市值首次突破 1 万亿美元、西贝被传倒闭后贾国龙最新发声、闲鱼回应"暗藏涉黄产业链"。<a class="link" href="https://36kr.com/p/3993831103347713?f=rss">36kr.com/p/3993831103347713</a></div>
+
+<footer>
+  <p><b>缺席源:</b>Nature News / 返朴(各搜索 1 次无果);CMU/Qdrant/Weaviate/Vespa/Timescale/Elastic/阮一峰/GitHub Blog 窗口内无更新;其余无 feed 源本期未启用搜索(每源限搜 1 次,本期兜底额度用于科学层)。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话",例如"2 有用 混沌工程正想推;7 无用 太抽象"</p>
+</footer>
+
+</body>
+</html>

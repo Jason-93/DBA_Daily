@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jason-93.github.io/DBA_Daily/sitemap.xml

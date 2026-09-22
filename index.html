@@ -3,54 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DBA Daily · 每日信息晨报</title>
+<title>DBA Daily · 每日信息晨报 | AI4DB / DB4AI / 稳定性工程精选</title>
+<meta name="description" content="DBA Daily：一线 DBA 精选的每日信息晨报与周日专题。覆盖 AI4DB、向量数据库与 RAG 底座（DB4AI）、稳定性工程、vibe coding/AI 工具链、云原生与职业转型，附相关度评分、推荐理由与原文链接；每周日专题含辩题素材包与论文精读。">
+<meta name="keywords" content="DBA,AI4DB,DB4AI,向量数据库,RAG,稳定性工程,SRE,vibe coding,Text2SQL,数据库,晨报">
+<meta name="author" content="DBA Daily">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="DBA Daily · 每日信息晨报">
+<meta property="og:description" content="一线 DBA 精选的每日信息晨报：AI4DB / DB4AI / 稳定性工程 / vibe coding，附评分与推荐理由；周日专题含辩题素材包与论文精读。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DBA Daily · 每日信息晨报">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选，附评分与推荐理由。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "DBA Daily",
+  "url": "https://jason-93.github.io/DBA_Daily/",
+  "description": "一线 DBA 精选的每日信息晨报与周日专题",
+  "inLanguage": "zh-CN"
+}
+</script>
 <style>
-  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2; --accent:#6ea8fe; --tech:#4cc38a; }
+  :root { --bg:#0d1017; --bg2:#11151f; --card:#171c28; --card2:#1c2230; --line:#262e40;
+          --text:#e9edf5; --dim:#94a0b5; --faint:#6b7690;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; --gold:#ffd479; }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
-         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
-  header { padding:18px 4px 10px; }
-  h1 { font-size:22px; }
-  h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
-  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
-  .intro { background:var(--card); border-radius:12px; padding:14px 18px; margin:14px 0 20px; color:var(--dim); font-size:13.5px; }
-  .intro b { color:var(--text); }
-  ul { list-style:none; }
-  li { background:var(--card); border-radius:12px; margin-bottom:10px; }
-  li a { display:block; padding:16px 18px; color:var(--text); text-decoration:none; font-size:15.5px; font-weight:600; }
-  li a span { display:block; font-size:12.5px; color:var(--dim); font-weight:normal; margin-top:4px; }
-  li a:hover { color:var(--accent); }
-  li a::after { content:"→"; float:right; color:var(--accent); }
-  .new::before { content:"NEW"; background:var(--tech); color:#0f1115; font-size:10.5px; font-weight:700;
-                 border-radius:4px; padding:1px 6px; margin-right:8px; vertical-align:2px; }
-  .sec { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
-  footer { color:var(--dim); font-size:12px; text-align:center; padding:24px 0 12px; }
+  html { scroll-behavior:smooth; }
+  body { background:radial-gradient(1200px 600px at 70% -10%, #141a2a 0%, var(--bg) 55%);
+         color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Noto Sans SC",sans-serif;
+         line-height:1.7; padding:0 16px 40px; max-width:760px; margin:0 auto; }
+  header.hero { padding:44px 4px 6px; }
+  .badge { display:inline-block; font-size:11.5px; letter-spacing:2px; color:var(--accent);
+           border:1px solid #2a3a5e; border-radius:999px; padding:3px 12px; margin-bottom:14px;
+           background:rgba(110,168,254,.06); }
+  h1 { font-size:30px; letter-spacing:.5px; }
+  h1 .dot { color:var(--accent); }
+  .tagline { color:var(--dim); font-size:14.5px; margin-top:10px; max-width:560px; }
+  .stats { display:flex; gap:10px; margin:22px 0 6px; flex-wrap:wrap; }
+  .stat { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 16px; }
+  .stat b { display:block; font-size:19px; color:var(--gold); }
+  .stat span { font-size:12px; color:var(--faint); }
+  h2.sec { font-size:15px; margin:30px 4px 14px; padding-left:11px; border-left:3px solid var(--accent);
+           letter-spacing:1px; display:flex; align-items:baseline; gap:10px; }
+  h2.sec small { color:var(--faint); font-size:12px; font-weight:normal; letter-spacing:0; }
+  ul.list { list-style:none; }
+  li.item { background:var(--card); border:1px solid var(--line); border-radius:14px; margin-bottom:10px;
+            transition:border-color .15s, transform .15s; }
+  li.item:hover { border-color:#3a4a6e; transform:translateY(-1px); }
+  li.item a { display:flex; align-items:center; gap:12px; padding:15px 18px; color:var(--text);
+              text-decoration:none; font-size:15px; font-weight:600; }
+  li.item .date { font-variant-numeric:tabular-nums; color:var(--dim); font-weight:500; font-size:13px; min-width:88px; }
+  li.item .arr { margin-left:auto; color:var(--faint); }
+  li.item:hover .arr { color:var(--accent); }
+  .chip { font-size:10.5px; font-weight:700; border-radius:5px; padding:2px 7px; letter-spacing:.5px; white-space:nowrap; }
+  .chip.new { background:var(--tech); color:#0d1017; }
+  .chip.backfill { background:#2a3350; color:var(--dim); }
+  .chip.weekly { background:var(--phil); color:#0d1017; }
+  footer { color:var(--faint); font-size:12.5px; text-align:center; padding:34px 0 10px; border-top:1px solid var(--line); margin-top:36px; }
+  footer a { color:var(--dim); }
 </style>
 </head>
 <body>
-<header>
-  <h1>DBA Daily <small>· 每日信息晨报</small></h1>
-  <div class="meta">个人精选的信息筛选与摘要 · 每日更新</div>
+
+<header class="hero">
+  <span class="badge">每日更新 · GENERATED BY KIMI WORK</span>
+  <h1>DBA Daily<span class="dot">.</span></h1>
+  <p class="tagline">一线 DBA 的信息筛选与摘要：AI4DB · 向量数据库与 RAG 底座（DB4AI）· 稳定性工程 · vibe coding · 云原生 · 职业转型，以及哲学、科学等通识方向。每期按相关度打分排序，附推荐理由与原文链接。</p>
+  <div class="stats">
+    <div class="stat"><b>9</b><span>期晨报</span></div>
+    <div class="stat"><b>1</b><span>周日专题</span></div>
+    <div class="stat"><b>36</b><span>信息源</span></div>
+    <div class="stat"><b>09-22</b><span>最近更新</span></div>
+  </div>
 </header>
-<div class="intro">
-  <b>关于本站：</b>由 Kimi Work 每日自动生成。内容覆盖 AI4DB、稳定性工程、vibe coding/AI 工具链、云原生、职业转型（技术类），以及哲学、科学等通识方向。每期晨报按相关度打分排序，附推荐理由与原文链接。
-</div>
-<h2 class="sec">周日专题 · 每周日更新</h2>
-<ul id="weekly">
-  <li><a class="new" href="weekly/2026-W38.html">专题 · 2026-W38<span>辩题：可以让 AI 攻击真实企业吗 · 09-20 补跑</span></a></li>
-</ul>
-<h2 class="sec">每日晨报</h2>
-<ul id="daily">
-  <li><a class="new" href="2026-09-22.html">晨报 · 2026-09-22<span>最新一期</span></a></li>
-  <li><a href="2026-09-21.html">晨报 · 2026-09-21</a></li>
-  <li><a href="2026-09-20.html">晨报 · 2026-09-20</a></li>
-  <li><a href="2026-09-19.html">晨报 · 2026-09-19</a></li>
-  <li><a href="2026-09-18.html">晨报 · 2026-09-18</a></li>
-  <li><a href="2026-09-17.html">晨报 · 2026-09-17</a></li>
-  <li><a href="2026-09-16.html">晨报 · 2026-09-16</a></li>
-  <li><a href="2026-09-15.html">晨报 · 2026-09-15</a></li>
-  <li><a href="2026-09-14.html">晨报 · 2026-09-14</a></li>
-</ul>
-<footer>DBA Daily · generated by Kimi Work</footer>
+
+<main>
+  <h2 class="sec">周日专题 <small>雷达 · 辩题素材包 · 论文精读 · 反馈回顾</small></h2>
+  <ul class="list" id="weekly">
+    <li class="item"><a href="weekly/2026-W38.html"><span class="chip weekly">专题</span><span class="date">2026-W38</span><span>辩题：可以让 AI 攻击真实企业吗</span><span class="arr">→</span></a></li>
+  </ul>
+
+  <h2 class="sec">每日晨报 <small>按日期新→旧</small></h2>
+  <ul class="list" id="daily">
+    <li class="item"><a href="2026-09-22.html"><span class="chip new">NEW</span><span class="date">09-22</span><span>晨报 · 2026-09-22（周二）</span><span class="arr">→</span></a></li>
+    <li class="item"><a href="2026-09-21.html"><span class="date">09-21</span><span>晨报 · 2026-09-21（周一）</span><span class="arr">→</span></a></li>
+    <li class="item"><a href="2026-09-20.html"><span class="date">09-20</span><span>晨报 · 2026-09-20（周日）</span><span class="arr">→</span></a></li>
+    <li class="item"><a href="2026-09-19.html"><span class="chip backfill">补跑</span><span class="date">09-19</span><span>晨报 · 2026-09-19（周六）</span><span class="arr">→</span></a></li>
+    <li class="item"><a href="2026-09-18.html"><span class="date">09-18</span><span>晨报 · 2026-09-18（周五）</span><span class="arr">→</span></a></li>
+    <li class="item"><a href="2026-09-17.html"><span class="date">09-17</span><span>晨报 · 2026-09-17（周四）</span><span class="arr">→</span></a></li>
+    <li class="item"><a href="2026-09-16.html"><span class="date">09-16</span><span>晨报 · 2026-09-16（周三）</span><span class="arr">→</span></a></li>
+    <li class="item"><a href="2026-09-15.html"><span class="date">09-15</span><span>晨报 · 2026-09-15（周二）</span><span class="arr">→</span></a></li>
+    <li class="item"><a href="2026-09-14.html"><span class="date">09-14</span><span>晨报 · 2026-09-14（周一）</span><span class="arr">→</span></a></li>
+  </ul>
+</main>
+
+<footer>
+  <p>DBA Daily · 内容由 Kimi Work 每日自动生成 · <a href="https://github.com/Jason-93/DBA_Daily">GitHub 仓库</a></p>
+</footer>
+
 </body>
 </html>

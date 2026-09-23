@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-23</title>
+<meta name="description" content="每日晨报 · 2026-09-23：入选 7 条精选——Claude Opus 5.5 发布、方言感知 NL2SQL、图索引跨模型迁移、AI 共同科学家等，附相关度评分、推荐理由与原文链接。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-09-23.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-09-23">
+<meta property="og:description" content="每日晨报 · 2026-09-23：入选 7 条精选，附评分与推荐理由。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-09-23.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-09-23">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 7 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-09-23",
+  "description": "每日晨报 · 2026-09-23：入选 7 条精选，附评分与推荐理由。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-09-23.html",
+  "datePublished": "2026-09-23",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .why { font-size:14px; margin:6px 0 10px; }
+  .why b { color:var(--accent); }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
+  a.link::before { content:"🔗 "; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-23 周三</small></h1>
+  <div class="meta">午间兜底场 12:14（早场抓取超时未完成）· 抓取窗口 30 小时 · 候选 48 条 + 搜索兜底 4 次 · 入选 7 条 · 已对照前七期去重</div>
+</header>
+
+<nav>
+  <a href="#tech">🛠 技术 5</a>
+  <a href="#phil">🏛 哲学与辩论 1</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 0</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+
+<div class="card">
+  <h3>1. Anthropic 发布 Claude Opus 5.5：Fable 5.1 级性能，成本再降 40%</h3>
+  <div class="orig">Introducing Claude Opus 5.5</div>
+  <div class="tags">Anthropic（搜索兜底 · 09-23 当日）· vibe coding/AI 工具链/行业判断 · 约 15 分钟 · <span class="score">★4.4</span></div>
+  <p class="why"><b>为什么适合你:</b>5.5 系列首个模型——多数任务对标 Fable 5.1、成本比 Opus 5 低 40%(输入 $4/输出 $20 每百万 token),实测 68 万行代码迁移一天完成、HAProxy C→Rust 翻译比 Fable 5.1 快 21% 且便宜 51%,FrontierCode 上以约 1/5 成本击败 GPT-6 Astra——直接改变你 vibe coding 工具链的成本结构与选型判断,附 System Card 可深挖对齐评估。</p>
+  <a class="link" href="https://www.anthropic.com/claude-opus-5-5">anthropic.com/claude-opus-5-5</a>
+</div>
+
+<div class="card">
+  <h3>2. Dial：面向企业异构数据库的方言感知 NL2SQL 系统</h3>
+  <div class="orig">Dial: A Knowledge-Grounded Dialect-Specific NL2SQL System</div>
+  <div class="tags">arXiv cs.DB · AI4DB/Text2SQL/企业落地 · 约 18 分钟 · <span class="score">★3.7</span></div>
+  <p class="why"><b>为什么适合你:</b>企业普遍部署多种数据库、各方言语法/函数/执行约束不同,现有 NL2SQL 大多忽略方言差异——Dial 用知识接地的方式生成方言正确的 SQL,正中你 AI4DB 第 1 优先级里 Text2SQL 落地最现实的坑(途虎多库并存场景可直接对照)。</p>
+  <a class="link" href="https://arxiv.org/abs/2603.07449">arxiv.org/abs/2603.07449</a>
+</div>
+
+<div class="card">
+  <h3>3. 图索引跨模型迁移：利用残余可达性复用旧索引</h3>
+  <div class="orig">Exploiting Residual Reachability for Cross-Model Migration of Graph-Based Indexes</div>
+  <div class="tags">arXiv cs.DB · DB4AI/向量检索/图索引 · 约 18 分钟 · <span class="score">★3.7</span></div>
+  <p class="why"><b>为什么适合你:</b>向量检索(DB4AI 第 2 优先级)里换嵌入模型就要重建 ANN 图索引,这篇研究如何榨取旧索引的"残余可达性"低成本迁移到新模型——向量库选型与升级时非常实际的工程问题,可回溯原文方法。</p>
+  <a class="link" href="https://arxiv.org/abs/2609.23036">arxiv.org/abs/2609.23036</a>
+</div>
+
+<div class="card">
+  <h3>4. Simon Willison 发布 llm-typesafe：给 LLM CLI 接上 Jev"决策模型"</h3>
+  <div class="orig">llm-typesafe 0.1a0</div>
+  <div class="tags">Simon Willison's Weblog · vibe coding/AI 工具/LLM 插件 · 约 6 分钟 · <span class="score">★3.6</span></div>
+  <p class="why"><b>为什么适合你:</b>`llm install llm-typesafe` 即可调用 TypeSafe AI 新模型 Jev(System One/决策模型)——vibe coding 工具链里"新模型即插即用"的实操样本,5 分钟可上手验证,符合你"充满实用性"的偏好。</p>
+  <a class="link" href="https://simonwillison.net/2026/Sep/22/llm-typesafe/">simonwillison.net/2026/Sep/22/llm-typesafe</a>
+</div>
+
+<div class="card">
+  <h3>5. PingCAP 详解 AI Agent State：无状态是 Agent 的实际成本</h3>
+  <div class="orig">AI Agent State Explained</div>
+  <div class="tags">PingCAP Blog · DB4AI/Agent 状态/基础设施 · 约 10 分钟 · <span class="score">★3.5</span></div>
+  <p class="why"><b>为什么适合你:</b>"调用间遗忘一切的 Agent 无法完成多步任务、无法从崩溃中恢复"——数据库厂商视角讲 Agent 状态管理,接续前两天 PowerContext 与图记忆评测那条线,为你评估 Agent 基础设施补齐概念层拼图。</p>
+  <a class="link" href="https://www.pingcap.com/blog/ai-agent-state/">pingcap.com/blog/ai-agent-state</a>
+</div>
+
+<div class="note">技术层说明:配额 4-6 条,本期 5 条;AI4DB/稳定性子配额仅 1 条达标(Dial)——窗口内 arXiv 为昨日同批(强条目昨日已选),Percona/CMU/SRE Weekly 等零更新,如实说明不凑数。未入选:AWS Neptune+Linkurious(3.3)、Jev 模型介绍(3.6,与第 4 条同主题取可操作者)、Cloudflare Python Workers(3.1)。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="card">
+  <h3>6. 毒蝇伞软糖调查：合法灰色地带里的危险剂量</h3>
+  <div class="orig">Toadstools and toxins</div>
+  <div class="tags">Aeon · 科技伦理/监管两难/调查叙事 · 约 14 分钟 · <span class="score">★3.8</span></div>
+  <p class="why"><b>为什么适合你:</b>一位科学家发现毒蝇伞被包进糖果纸售卖,一路追查揭开法律漏洞与危险剂量——第一人称调查叙事,"监管滞后 vs 公众安全"的真实两难,既是科技伦理辩题素材,概念也始终落在具体的调查者身上。</p>
+  <a class="link" href="https://aeon.co/essays/a-scientists-search-for-answers-about-amanita-muscaria-gummies">aeon.co/essays/a-scientists-search-for-answers-about-amanita-muscaria-gummies</a>
+</div>
+
+<div class="note">哲学层说明:配额 2-4 条,本期仅 1 条达标。Psyche《关系矛盾心理》(3.3)未达线;无 feed 的正面连接搜索 1 次未见窗口内可核实新文章(列入缺席源);看理想/哲学园本期未启用搜索(从严)。</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3>7. AI 共同科学家正在改变科研方式</h3>
+  <div class="orig">AI co-scientists are revolutionizing how research is done</div>
+  <div class="tags">Nature News（搜索兜底 · 09-21）· 科学资讯/AI for Science/Nature 特写 · 约 12 分钟 · <span class="score">★3.7</span></div>
+  <p class="why"><b>为什么适合你:</b>AI 系统开始生成假设、设计实验——Nature 新闻特写梳理"AI co-scientist"进展,正接你"看资讯 → 回溯原始论文"的阅读模式,且与你关注的 AI4DB(AI 进入数据与科研工作流)互为印证。</p>
+  <a class="link" href="https://www.nature.com/articles/d41586-026-02931-5">nature.com/articles/d41586-026-02931-5</a>
+</div>
+
+<div class="note">科学层说明:配额 2-3 条,本期仅 1 条达标。Quanta feed 窗口内零更新;无 feed 的知识分子搜索 1 次仅见 09-10 拉斯克奖旧文(09-16 已选),列入缺席源;返朴本期未启用搜索。</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="empty"><b>本期留空。</b>36氪 feed 窗口内 20 条快讯全部未达入选线(≥3.4):多为出海大会、融资、行情与政策通报;Anthropic/OpenAI 降价新模型两条快讯已被第 1 条原文覆盖。按规则留空,宁缺毋滥。</div>
+
+<div class="note">热点提示(未达线仅作背景):SpaceX 被曝逐步淘汰猎鹰 9 号转向星舰 <a class="link" href="https://36kr.com/newsflashes/3995189683441792?f=rss">36kr.com/newsflashes/3995189683441792</a>;Anthropic 预告未来几周推出 Claude Sonnet 5.5 与 Haiku 5.5 <a class="link" href="https://36kr.com/newsflashes/3995169000918921?f=rss">36kr.com/newsflashes/3995169000918921</a></div>
+
+<footer>
+  <p><b>缺席源:</b>正面连接(搜索 1 次无果)/ 知识分子(搜索 1 次仅见旧文);Anthropic Engineering 与 Nature News 搜索兜底各入选 1 条;Percona/CMU/SRE Weekly/Pragmatic Engineer/阮一峰/GitHub Blog/Qdrant/Weaviate/Vespa/Timescale/Elastic/Quanta 窗口内无更新;其余无 feed 源本期未启用搜索(每源限搜 1 次,从严)。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话",例如"2 有用 混沌工程正想推;7 无用 太抽象"</p>
+</footer>
+
+</body>
+</html>

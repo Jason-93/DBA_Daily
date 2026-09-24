@@ -83,42 +83,42 @@
   <h3><a href="https://arxiv.org/abs/2509.00303">1. 大模型语义排序算子的访问路径:LLM ORDER BY 的系统化实现研究</a></h3>
   <div class="orig">Access Paths for Efficient Ordering with Large Language Models</div>
   <div class="tags">arXiv cs.DB · 论文/AI4DB/语义算子/查询处理 · 扫摘要 5 分钟(精读约 40) · <span class="score">★4.3</span></div>
-  <p class="abstract"><b>摘要:</b>论文系统研究把 LLM 作为语义排序算子（ORDER BY）接进查询计划，并比较其多种物理实现路径——「AI 进入数据库内核」的工程化形态。</p>
+  <p class="abstract"><b>摘要:</b>论文系统研究把 LLM 作为语义排序算子（ORDER BY）接进查询计划，并比较其多种物理实现路径——「AI 进入数据库内核」的工程化形态。 AI4DB 第一优先方向的硬核落点——把 LLM 变成查询计划里的语义算子（ORDER BY），并系统比较其物理实现，正是"AI 进数据库内核"最工程化的形态，可跟踪也可在团队内做概念验证。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://arxiv.org/abs/2609.14255">2. 迈向"预判式"数据库:共享数据语义与工作负载语义</a></h3>
   <div class="orig">Towards Anticipatory Databases Through Shared Data and Workload Semantics</div>
   <div class="tags">arXiv cs.DB · 论文/AI4DB/自治数据库 · 扫摘要 5 分钟 · <span class="score">★4.2</span></div>
-  <p class="abstract"><b>摘要:</b>宣言式论文：现有 DBMS 依赖 recency/frequency 等低级信号做决策，本文主张让系统理解「数据是什么、负载要什么」，从被动调优走向主动预判。</p>
+  <p class="abstract"><b>摘要:</b>宣言式论文：现有 DBMS 依赖 recency/frequency 等低级信号做决策，本文主张让系统理解「数据是什么、负载要什么」，从被动调优走向主动预判。 自治数据库是你 AI4DB 关注的核心命题——现有 DBMS 决策仍靠 recency/frequency 等低级信号，此文主张让系统理解"数据是什么、负载要什么"，是从"被动调优"走向"主动预判"的路线宣言。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://arxiv.org/abs/2609.14652">3. 自然语言知识图谱查询执行:让受控语义进入 LLM 上下文窗口</a></h3>
   <div class="orig">Natural Language Knowledge Graph Query Execution: Leveraging Controlled Semantics in the LLM Context Window</div>
   <div class="tags">arXiv cs.DB · 论文/AI4DB/Text2SQL/知识图谱 · 扫摘要 5 分钟 · <span class="score">★4.2</span></div>
-  <p class="abstract"><b>摘要:</b>论文证明：把数据模型的受控语义（而非随手写的 prompt 散文）注入 LLM 上下文窗口，自然语言知识图谱查询执行效果更好。</p>
+  <p class="abstract"><b>摘要:</b>论文证明：把数据模型的受控语义（而非随手写的 prompt 散文）注入 LLM 上下文窗口，自然语言知识图谱查询执行效果更好。 正中你的 Text2SQL 关注——作者证明数据模型概念通过受控语义（而非随手写的 prompt 散文）传给 LLM 效果更好，对"自然语言查库"的落地方式有直接参考。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://arxiv.org/abs/2609.14370">4. DiaLSM:基于分片的 LSM-tree,迈向无写停顿性能</a></h3>
   <div class="orig">DiaLSM: Towards Write-Stall-Free Performance via Shard-based LSM-tree</div>
   <div class="tags">arXiv cs.DB · 论文/存储引擎/稳定性/性能 · 扫摘要 5 分钟 · <span class="score">★4.1</span></div>
-  <p class="abstract"><b>摘要:</b>先量化 LSM-tree 在高写入压力下的停顿概率与时长，再给出基于分片的无写停顿方案——存储引擎稳定性评估的方法论样本。</p>
+  <p class="abstract"><b>摘要:</b>先量化 LSM-tree 在高写入压力下的停顿概率与时长，再给出基于分片的无写停顿方案——存储引擎稳定性评估的方法论样本。 LSM 写停顿是 RocksDB 类存储引擎在持续写入压力下的经典稳定性杀手，此文先量化停顿概率与时长再给分片方案——方法论本身就可带回团队做存储引擎稳定性评估。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://www.percona.com/blog/performance-improvements-in-percona-server-8-4-11-11/">5. Percona Server 8.4.11-11 的性能改进</a></h3>
   <div class="orig">Performance improvements in Percona Server 8.4.11-11</div>
   <div class="tags">Percona Blog · MySQL/性能优化/版本升级 · 约 15 分钟 · <span class="score">★4.1</span></div>
-  <p class="abstract"><b>摘要:</b>基于基准测试拆解 Percona Server 8.4.11-11 相对前版的性能变化——MySQL 8.4 分支版本升级决策的一手输入。</p>
+  <p class="abstract"><b>摘要:</b>基于基准测试拆解 Percona Server 8.4.11-11 相对前版的性能变化——MySQL 8.4 分支版本升级决策的一手输入。 DBA 的版本升级决策输入——基于基准测试拆解 MySQL 8.4 分支最新小版本的性能变化，升级评估时可直接引用。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://arxiv.org/abs/2609.13452">6. COMPASS:用科学知识图谱引导分布式向量检索</a></h3>
   <div class="orig">COMPASS: Steering Distributed Vector Search with Scientific Knowledge Graphs</div>
   <div class="tags">arXiv cs.DB · 论文/DB4AI/向量数据库/分布式 · 扫摘要 5 分钟 · <span class="score">★4.0</span></div>
-  <p class="abstract"><b>摘要:</b>向量检索中哈希分片破坏语义局部性、scatter-gather 受制于最慢分片；本文用语义聚类重新布局数据，引导分布式向量检索。</p>
+  <p class="abstract"><b>摘要:</b>向量检索中哈希分片破坏语义局部性、scatter-gather 受制于最慢分片；本文用语义聚类重新布局数据，引导分布式向量检索。 你 AI4DB 兴趣里 DB4AI（向量数据库、RAG 底座）的一翼——哈希分片破坏语义局部性导致 scatter-gather 受制于最慢分片，此文用语义聚类重新布局，对向量库规模化有借鉴。</p>
 </div>
 
 <div class="note">已达配额上限 6 条;同档未入选:Chronos(智能体状态分支,4.0)、智能体-工具边界异常(4.0)等,因配额让位。</div>
@@ -129,14 +129,14 @@
   <h3><a href="https://aeon.co/essays/italianness-is-a-state-of-travelling-in-both-directions">7. 追逐"甜蜜生活"</a></h3>
   <div class="orig">Chasing la dolce vita</div>
   <div class="tags">Aeon · 身份/离散/思想长文 · 约 20 分钟 · <span class="score">★3.8</span></div>
-  <p class="abstract"><b>摘要:</b>Aeon 长文：归乡、幻想、食物与幽灵——「永恒回归」的神话如何让意大利离散群体活在渴念之中。</p>
+  <p class="abstract"><b>摘要:</b>Aeon 长文：归乡、幻想、食物与幽灵——「永恒回归」的神话如何让意大利离散群体活在渴念之中。 归乡、幻想、食物与幽灵——"永恒回归"的神话如何让意大利离散群体活在渴念之中。具体的人的身份撕扯，可与你原典计划里的乡愁/归属主题对读，亦可作价值辩中"根与流动"的立论素材。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://psyche.co/turning-points/how-a-to-do-task-stopped-the-ruminative-loop-of-my-grief">8. 对遗憾说"是"</a></h3>
   <div class="orig">Say yes to regret</div>
   <div class="tags">Psyche · 哀伤/存在主义/具体的人 · 约 10 分钟 · <span class="score">★3.7</span></div>
-  <p class="abstract"><b>摘要:</b>Psyche 第一人称叙事：丈夫去世后陷入反刍 spiral，出路始于「明天下午两点」的一个待办。</p>
+  <p class="abstract"><b>摘要:</b>Psyche 第一人称叙事：丈夫去世后陷入反刍 spiral，出路始于「明天下午两点」的一个待办。 丈夫去世后陷入反刍 spiral，出路始于"明天下午两点"的一个待办——第一人称的哀伤叙事，是存在主义式的"处境中的具体的人"样本，可与加缪、克尔凯郭尔对读。</p>
 </div>
 
 <h2 class="sci" id="sci">🔬 科学</h2>
@@ -144,13 +144,13 @@
 <div class="card">
   <h3><a href="https://m.163.com/news/sub/T1551235486149.html">9. 数学家汤涛专访邓煜:一位原创力极强的数学家,写诗熬过人生低谷</a></h3>
   <div class="tags">返朴(网易号频道页,搜索兜底) · 科学人物/数学/专访 · 约 20 分钟 · <span class="score">★3.6</span></div>
-  <p class="abstract"><b>摘要:</b>返朴频道页（单篇直链不可得）：数学家汤涛专访新晋菲尔兹奖得主邓煜——谈原创力从何而来、如何写诗熬过人生低谷。</p>
+  <p class="abstract"><b>摘要:</b>返朴频道页（单篇直链不可得）：数学家汤涛专访新晋菲尔兹奖得主邓煜——谈原创力从何而来、如何写诗熬过人生低谷。 "看具体的人如何走到数学前沿"——新晋菲尔兹奖得主邓煜的原创力与低谷期，是你"具体的人"偏好在科学层的对应物；频道页另列《纳维-斯托克斯方程：人类的攀升，AI 的终结？》等近作可顺读。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://zhishifenzi.blog.caixin.com/archives/288566">10. 诺奖风向标:2026 拉斯克奖揭晓,四位日本科学家获奖</a></h3>
   <div class="tags">知识分子(财新博客,搜索兜底,09-10) · 生命科学/睡眠机制/奖项深度报道 · 约 20 分钟 · <span class="score">★3.5</span></div>
-  <p class="abstract"><b>摘要:</b>2026 拉斯克奖揭晓：基础医学奖授予食欲素（orexin）发现者——从下丘脑多肽到发作性睡病机理再到新药获批，「发现→机制→疗法」的完整链条。</p>
+  <p class="abstract"><b>摘要:</b>2026 拉斯克奖揭晓：基础医学奖授予食欲素（orexin）发现者——从下丘脑多肽到发作性睡病机理再到新药获批，「发现→机制→疗法」的完整链条。 正合"生命科学 + 回溯原始发现"的阅读模式——基础医学奖授予食欲素（orexin）发现者：从下丘脑多肽到发作性睡病机理，再到刚获 FDA 批准的新药，一条完整的"发现→机制→疗法"链条。</p>
 </div>
 
 <h2 class="news" id="news">⚡ 热点保底</h2>
@@ -163,35 +163,35 @@
   <h3><a href="https://simonwillison.net/2026/Sep/15/gemini-live/">特 1. 现场教学:Simon Willison 用 GPT-6 手搓 Gemini Live 测试台</a></h3>
   <div class="orig">Gemini Live audio</div>
   <div class="tags">Simon Willison's Weblog · vibe coding 实录/语音模型 · 约 10 分钟 · <span class="score">★4.2</span></div>
-  <p class="abstract"><b>摘要:</b>Gemini 3.8 Live 发布当天，Simon 直接把文档丢给 GPT-6 Astra 现写了一个语音测试台网页——「什么任务值得当场 vibecode 一个工具」的示范。</p>
+  <p class="abstract"><b>摘要:</b>Gemini 3.8 Live 发布当天，Simon 直接把文档丢给 GPT-6 Astra 现写了一个语音测试台网页——「什么任务值得当场 vibecode 一个工具」的示范。 vibe coding 的标准动作示范——Google 刚发布 Gemini 3.8 Live 语音模型，他直接把文档丢给 GPT-6 Astra，让它现写了一个网页测试台。看他"什么任务值得当场 vibecode 一个工具"的判断标准，比看十篇方法论都有用。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://simonwillison.net/2026/Sep/14/laurie-voss/">特 2. 代码成本崩塌之后,软件业还剩下什么</a></h3>
   <div class="orig">Quoting Laurie Voss</div>
   <div class="tags">Simon Willison's Weblog · 行业判断/职业 · 2 分钟 · <span class="score">★4.0</span></div>
-  <p class="abstract"><b>摘要:</b>引述 Laurie Voss：写代码的成本已经崩塌，审查、修复、运维的成本正在跟上——未来值钱的是搞清人们到底要什么、精确定义它、让它好用。</p>
+  <p class="abstract"><b>摘要:</b>引述 Laurie Voss：写代码的成本已经崩塌，审查、修复、运维的成本正在跟上——未来值钱的是搞清人们到底要什么、精确定义它、让它好用。 一句话级别的密度——"写代码的成本已经崩塌，审查、修复、运维的成本正在跟上；剩下的只有搞清人们到底要什么、精确定义它、让它好用。"这正是你职业转型思考需要锚定的判断：未来值钱的是定义问题和运维兜底，两者都指向你稳定性工程的家底。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://simonwillison.net/2026/Sep/14/commit-rewriter/">特 3. 实战:清理 coding agent 留下的"渣滓"</a></h3>
   <div class="orig">commit-rewriter 0.1</div>
   <div class="tags">Simon Willison's Weblog · vibe coding 工作流/工具 · 约 8 分钟 · <span class="score">★3.9</span></div>
-  <p class="abstract"><b>摘要:</b>agent 写的提交信息全是「agent 味」，Simon vibecode 了小工具 commit-rewriter 专门重写提交记录——产出快、收尾要人工+小工具的真实工作流。</p>
+  <p class="abstract"><b>摘要:</b>agent 写的提交信息全是「agent 味」，Simon vibecode 了小工具 commit-rewriter 专门重写提交记录——产出快、收尾要人工+小工具的真实工作流。 agent 写的提交信息里全是"agent 味"（内部 issue 号、冗余说明），他 vibecode 了一个小 web 工具专门重写提交记录。这是 agent 时代的真实工作流——产出快，但收尾要人工+小工具。你之后自建初筛工具时一定会遇到同样的"给 agent 擦屁股"场景。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://simonwillison.net/2026/Sep/13/shot-scraper/">特 4. 工具:shot-scraper 1.12,命令行网页截图</a></h3>
   <div class="orig">shot-scraper 1.12</div>
   <div class="tags">Simon Willison's Weblog · 工具/自动化 · 5 分钟 · <span class="score">★3.5</span></div>
-  <p class="abstract"><b>摘要:</b>命令行网页截图/录屏/抓取工具 shot-scraper 1.12 发布，新增 WebP 支持。</p>
+  <p class="abstract"><b>摘要:</b>命令行网页截图/录屏/抓取工具 shot-scraper 1.12 发布，新增 WebP 支持。 一条命令给网页截图（新增 WebP 支持）。你的初筛工具如果以后想做"晨报里附原文预览图"，或者给辩论赛做网页资料存档，这个直接能用，不用自己写。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://arxiv.org/abs/2609.15397">特 5. 当工具调用全部成功、工作流却失败了</a></h3>
   <div class="orig">When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary</div>
   <div class="tags">arXiv cs.DB · agent 可靠性/稳定性 · 扫摘要 5 分钟 · <span class="score">★4.0</span></div>
-  <p class="abstract"><b>摘要:</b>arXiv 论文：重试、投机执行、并发、部分失败之下，agent 的每次工具调用都「成功」了、外部状态却不一致——把稳定性故障学平移到 agent 时代的分类学。</p>
+  <p class="abstract"><b>摘要:</b>arXiv 论文：重试、投机执行、并发、部分失败之下，agent 的每次工具调用都「成功」了、外部状态却不一致——把稳定性故障学平移到 agent 时代的分类学。 今早技术层的"遗珠"，放进特辑正合适——重试、投机执行、并发、部分失败下，agent 的每次工具调用都"成功"了，外部状态却不一致。这是把稳定性工程的故障学平移到 agent 时代的第一手分类学，你带团队做 AI 落地时绕不开。</p>
 </div>
 
 <div class="card">

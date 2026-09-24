@@ -42,6 +42,7 @@
   .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
   nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
   nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
   h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
   h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
   h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
@@ -52,6 +53,10 @@
   .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
   .tags { margin:8px 0; font-size:12px; color:var(--dim); }
   .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
   .why { font-size:14px; margin:6px 0 10px; }
   .why b { color:var(--accent); }
   a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
@@ -71,6 +76,7 @@
 </header>
 
 <nav>
+  <a href="./" class="home">← 主页</a>
   <a href="#tech">🛠 技术 4</a>
   <a href="#phil">🏛 哲学与辩论 3</a>
   <a href="#sci">🔬 科学 1</a>
@@ -84,6 +90,7 @@
   <div class="orig">Invisible Yet Dominant: Big Stalls of Kernel I/O Mechanisms in Cloud OLTP Databases</div>
   <div class="tags">arXiv cs.DB · 论文/云数据库/稳定性 · 扫摘要 5 分钟(精读约 40) · <span class="score">★4.7</span></div>
   <p class="abstract"><b>摘要:</b>arXiv 论文实测云块存储上的 OLTP 数据库：PostgreSQL、RocksDB 等把写回委托给内核 buffered I/O 会引发秒级「大停顿」，瓶颈在内核而非引擎，文中给出完整诊断路径。 你在途虎面对的正是云上 OLTP 的稳定性。这篇直接拆解 PostgreSQL、RocksDB 等在云块存储上把写回委托给内核 buffered I/O 所造成的"大停顿"——既有"瓶颈在内核而非引擎"的行业判断，也有可带回团队的诊断路径，云原生与稳定性双命中。</p>
+  <p class="action"><b>落地:</b>把文中的诊断路径整理成一页「CPU 健康但吞吐掉」排查 runbook，在云库出现秒级抖动时对照执行。</p>
 </div>
 
 <div class="card">
@@ -91,6 +98,7 @@
   <div class="orig">QEmbed: A Deep Learning Based Cardinality Estimator for Efficient Query Processing</div>
   <div class="tags">arXiv cs.DB · 论文/AI4DB/查询优化 · 扫摘要 5 分钟 · <span class="score">★4.5</span></div>
   <p class="abstract"><b>摘要:</b>提出基于深度学习的基数估计器 QEmbed，面向高效查询处理——学习型基数估计（AI 进入查询优化器）方向的最新工程尝试。 AI4DB 是你技术兴趣的第一优先，学习型基数估计是"AI 进优化器"最成熟的落点，适合跟踪该方向的工程化进展。</p>
+  <p class="action"><b>落地:</b>收藏论文与开源实现，组会做一次 15 分钟分享，评估学习型基数估计接入现有优化器的可行性。</p>
 </div>
 
 <div class="card">
@@ -98,6 +106,7 @@
   <div class="orig">Machine-Checked Dual-Write Recovery from a Commit Log</div>
   <div class="tags">arXiv cs.DB · 论文/分布式/一致性/形式化验证 · 扫摘要 5 分钟 · <span class="score">★4.0</span></div>
   <p class="abstract"><b>摘要:</b>论文用机器检查的形式化证明约束基于提交日志的双写恢复协议，为 DB/缓存、DB/MQ 双写场景提供可验证的一致性恢复方案。 双写一致性（DB/缓存、DB/MQ）是 DBA 日常痛点，正对稳定性工程方向。用机器检查的证明约束恢复协议，是"用数学换睡眠"的思路，可作团队方案评审时的参照。</p>
+  <p class="action"><b>落地:</b>对照团队的 DB/缓存、DB/MQ 双写场景，把论文恢复协议转成一张断电重启后的一致性检查 checklist。</p>
 </div>
 
 <div class="card">
@@ -105,6 +114,7 @@
   <div class="orig">SRE Weekly Issue #534</div>
   <div class="tags">SRE Weekly · 稳定性/周刊速览 · 扫读 10 分钟 · <span class="score">★3.9</span></div>
   <p class="abstract"><b>摘要:</b>本期运维周刊合集：头条讨论 AI 处理事故越多、工程师越容易失去对系统的触感；另介绍 PlanetScale 的 Postgres 水平分片方案 Neki（在线改表、无停机升级、重分片、故障转移）。 稳定性方向的每周固定扫读项——curated 故障复盘与运维文章合集，本期涉及 PlanetScale 的 Postgres 水平分片方案 Neki（在线改表、无停机升级、重分片）等动态。</p>
+  <p class="action"><b>落地:</b>保持每周 20 分钟固定扫读；本期重点看 PlanetScale Neki 的在线改表与无停机重分片设计，评估能否借鉴到分库分表改造。</p>
 </div>
 
 <h2 class="phil" id="phil">🏛 哲学与辩论</h2>
@@ -114,6 +124,7 @@
   <div class="orig">My name is Annabel</div>
   <div class="tags">Psyche · 具体的人/身份与尊严/纪录短片 · 约 15 分钟(视频) · <span class="score">★4.0</span></div>
   <p class="abstract"><b>摘要:</b>Psyche 纪录短片：电影人 Ida Joglar 帮助唐氏综合征表演者 Annabel Hernandez 拍一部她自己想拍的电影——主角自己选定家人、朋友和音乐。 正是你要的"矛盾处境中的具体的人"——一位唐氏综合征表演者，既是"被观看的对象"，又是主动表达自我的创作者。可直接作价值辩素材（尊严、代表性、他者的凝视）。</p>
+  <p class="action"><b>落地:</b>收入价值辩素材库「尊严与代表性」一档，标记可作正方主体性论证的案例。</p>
 </div>
 
 <div class="card">
@@ -121,6 +132,7 @@
   <div class="orig">The bombarding of childhood</div>
   <div class="tags">Aeon · 媒介批判/技术哲学/长文 · 约 15-20 分钟 · <span class="score">★3.9</span></div>
   <p class="abstract"><b>摘要:</b>Aeon 长文（早期儿童教育教授撰文）：问题不只是屏幕时长，当代儿童媒体本身已变得狂躁、吵闹、刺眼，剖析媒介内容如何塑造儿童。 问题不只是屏幕时长——儿童媒体已变得狂躁、吵闹、刺眼。"媒介如何塑造具体的人"是价值辩母题，可与你原典计划里的海德格尔《技术的追问》对读。</p>
+  <p class="action"><b>落地:</b>与海德格尔《技术的追问》排进同一阅读周，提炼「媒介如何塑造具体的人」的辩题框架。</p>
 </div>
 
 <div class="card">
@@ -128,6 +140,7 @@
   <div class="orig">Once upon a screen: explosive paradox</div>
   <div class="tags">Aeon · 记忆/家族/种族/视频散文 · 约 10 分钟(视频) · <span class="score">★3.9</span></div>
   <p class="abstract"><b>摘要:</b>Aeon 短片：一位华裔男孩关于《野战排》的观影记忆，如何在家庭内部搅动代际创伤与种族主义——记忆、身份与观影的悖论。 《野战排》的观影记忆如何在一个家庭里搅动代际创伤与种族主义——"具体的人的两难"典型样本，涉及记忆伦理，可支撑立论。</p>
+  <p class="action"><b>落地:</b>存入「记忆伦理」素材夹，可作家庭叙事与历史创伤议题的立论支撑。</p>
 </div>
 
 <h2 class="sci" id="sci">🔬 科学</h2>
@@ -137,6 +150,7 @@
   <div class="orig">Daily briefing: OpenAI claims a huge maths breakthrough</div>
   <div class="tags">Nature News(搜索兜底,09-10) · 科学新闻/AI×数学/伦理争议 · 约 5 分钟 · <span class="score">★3.4</span></div>
   <p class="abstract"><b>摘要:</b>Nature 每日简报头条：OpenAI 宣称取得重大数学突破，成果荣誉归属引发争议（原始论文链接未能核实，不附）。 是你"看科学资讯 → 回溯原始论文"阅读模式的入口；OpenAI 宣称攻克数学难题后"荣誉该归谁"的争议，正合你偏好的科技伦理事件，可与今日热点层"25 位菲尔兹奖得主警告 AI 侵入数学"对读。</p>
+  <p class="action"><b>落地:</b>顺手检索原始预印本核实双方说法，练一次从科技资讯到一手论文的溯源核查。</p>
 </div>
 
 <div class="note">科学层不足配额说明:本窗口 Quanta 等科学 feed 无更新(多为周末原因);三个无 feed 科学源各搜索 1 次,仅 Nature News 补到本条,返朴、知识分子未见近期达标内容。宁缺毋滥,不凑数。</div>
@@ -147,6 +161,7 @@
   <h3><a href="https://36kr.com/p/3982504266349314?f=rss">9. 8点1氪:25 位菲尔兹奖得主就 AI 侵入数学联合发出警告;月之暗面被造谣已报案;智谱宣布融资 50 亿美元</a></h3>
   <div class="tags">36氪 · 每日导览/AI 行业 · 约 3-5 分钟 · <span class="score">★3.4</span></div>
   <p class="abstract"><b>摘要:</b>今日科技要点：25 位菲尔兹奖得主就 AI 侵入数学联合发出警告；月之暗面就谣言报案；智谱宣布融资 50 亿美元。 一条过完今日要点。"菲尔兹奖得主警告 AI 侵入数学"横跨你的科学与哲学两层——数学真理与人类理解的关系可作哲理辩引子；智谱 50 亿美元融资、OpenAI 年内不 IPO、DeepSeek 灰度测试 AI 语音，是你职业转型关注的行业判断素材。</p>
+  <p class="action"><b>落地:</b>无需深读：菲尔兹奖警告存为辩题引子，智谱 50 亿美元融资记进行业观察笔记。</p>
 </div>
 
 <div class="note">其余快讯(比亚迪固态电池、铠侠拟赴美上市、胖东来四年合同制回应等)打分均低于 3.4,宁缺毋滥,不入选。</div>

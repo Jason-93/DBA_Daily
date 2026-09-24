@@ -42,6 +42,7 @@
   .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
   nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
   nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
   h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
   h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
   h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
@@ -52,6 +53,10 @@
   .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
   .tags { margin:8px 0; font-size:12px; color:var(--dim); }
   .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
   .why { font-size:14px; margin:6px 0 10px; }
   .why b { color:var(--accent); }
   a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
@@ -71,6 +76,7 @@
 </header>
 
 <nav>
+  <a href="./" class="home">← 主页</a>
   <a href="#tech">🛠 技术 6</a>
   <a href="#phil">🏛 哲学与辩论 1</a>
   <a href="#sci">🔬 科学 1</a>
@@ -84,6 +90,7 @@
   <div class="orig">Evaluating LLM models for DBA tasks</div>
   <div class="tags">Percona Blog · AI4DB/LLM 评测/DBA 运维 · 约 15 分钟 · <span class="score">★4.6</span></div>
   <p class="abstract"><b>摘要:</b>作者自造评测 harness，实测大模型完成数据库运维任务的能力边界，并公开方法与结果。 AI4DB 第一优先 + 你反馈最爱的实用性——作者自造评测 harness，实测大模型完成数据库运维任务的能力边界，方法可原样搬回途虎团队做内部评估。</p>
+  <p class="action"><b>落地:</b>把评测 harness 方法搬回团队，选 3 个日常运维任务做内部能力评测。</p>
 </div>
 
 <div class="card">
@@ -91,6 +98,7 @@
   <div class="orig">How Intuit and AWS systematically improved resiliency on ElastiCache using AWS Fault Injection Service</div>
   <div class="tags">AWS Database Blog · 混沌工程/故障演练/缓存韧性 · 约 15-20 分钟 · <span class="score">★4.3</span></div>
   <p class="abstract"><b>摘要:</b>Intuit 与 AWS 用故障注入服务（FIS）系统性提升 ElastiCache 韧性：真实 AZ 故障演练下恢复时间从 50 多分钟压到 2 分钟内、零人工干预。 混沌工程是你稳定性方向的正式命中——真实 AZ 故障演练下恢复时间从 50 多分钟压到 2 分钟内、零人工干预，是"故障演练→恢复指标"闭环的可复刻范本。</p>
+  <p class="action"><b>落地:</b>评估混沌工程（AWS FIS 或等价工具）在团队缓存层的演练可行性，先从小范围非核心集群开始。</p>
 </div>
 
 <div class="card">
@@ -98,6 +106,7 @@
   <div class="orig">Migrating the GitHub Copilot runtime to Rust, using Copilot</div>
   <div class="tags">GitHub Blog · vibe coding/AI 编程/工程实录 · 约 20 分钟 · <span class="score">★4.3</span></div>
   <p class="abstract"><b>摘要:</b>GitHub 用 Copilot 把 Copilot 运行时迁移到 Rust——80 万行生产级移植的真实代价与方法论，「这个规模的重写在没有 agent 之前做不起」。 vibe coding 新方向的重量级工程实录——"这个规模的重写在没有 agent 之前做不起"，80 万行生产级 Rust 移植的真实代价与方法论，是评估 AI 编程能力边界的一手材料。</p>
+  <p class="action"><b>落地:</b>作大规模 agentic 迁移的参照系，重点看它的验证策略与回滚设计。</p>
 </div>
 
 <div class="card">
@@ -105,6 +114,7 @@
   <div class="orig">Self-generated prompt injections in compaction summaries</div>
   <div class="tags">Simon Willison · LLM 实践/模型对齐/安全 · 约 10 分钟 · <span class="score">★4.3</span></div>
   <p class="abstract"><b>摘要:</b>OpenAI 自己抓到模型在训练中往压缩摘要里「留后门」——压缩摘要里的自生提示词注入案例。 OpenAI 自己抓到模型在训练中往压缩摘要里"留后门"——你用 agentic 工作流时最该知道的失控样本，也是理解模型对齐问题的具体案例（vibe coding 与 AI 伦理的交叉点）。</p>
+  <p class="action"><b>落地:</b>把「压缩摘要留后门」案例加进团队 agent 使用安全须知，提醒成员审查长上下文中的异常指令。</p>
 </div>
 
 <div class="card">
@@ -112,6 +122,7 @@
   <div class="orig">DualSQL: Text-to-SQL with Multi-Agent Reinforcement Learning</div>
   <div class="tags">arXiv cs.DB · 论文/AI4DB/Text2SQL/强化学习 · 扫摘要 5 分钟 · <span class="score">★4.2</span></div>
   <p class="abstract"><b>摘要:</b>DualSQL 用多智能体强化学习让 schema linking 与 SQL 生成两个任务协同进化，不再各训一个模型。 正中你的 Text2SQL 关注——不再为 schema linking 和 SQL 生成各训一个模型，而是用多智能体 RL 让两个任务协同进化，是 Text2SQL 工程化的新形态。</p>
+  <p class="action"><b>落地:</b>列入 Text2SQL 技术跟踪清单，与现有方案对比后再决定是否做 PoC。</p>
 </div>
 
 <div class="card">
@@ -119,6 +130,7 @@
   <div class="orig">Too many GCache Page Files in MySQL Data Directory</div>
   <div class="tags">Percona Blog · MySQL/PXC/故障排查 · 约 12 分钟 · <span class="score">★4.1</span></div>
   <p class="abstract"><b>摘要:</b>PXC 集群 gcache.page.* 文件堆积的成因与处置：冻结 purge 导致磁盘膨胀的机理、用 IST 安全恢复 rejoin 的步骤——可进团队 runbook 的排查手册。 又是"充满实用性"的故障排查手册——PXC 集群 gcache.page.* 文件堆积的成因、冻结 purge 导致磁盘膨胀的机理、用 IST 安全恢复 rejoin 的步骤，可直接进团队 runbook。</p>
+  <p class="action"><b>落地:</b>直接进 PXC runbook，并检查现网集群 gcache.page 配置与磁盘水位是否安全。</p>
 </div>
 
 <div class="note">已达配额上限 6 条;同档未入选:Percona 跨集群 DC-DR 容灾(4.0)、分布式数据库分布感知测试(4.0)、AWS 布隆过滤器三层查找架构(3.8),因配额让位。</div>
@@ -130,6 +142,7 @@
   <div class="orig">Who will taste the cherries?</div>
   <div class="tags">Aeon · 技术哲学/计算主义批判/长文 · 约 20 分钟 · <span class="score">★4.4</span></div>
   <p class="abstract"><b>摘要:</b>Aeon 长文：「如果计算机数完了所有花瓣，谁来品尝樱桃？」——对计算主义的正面批判，梦想把主观性从人类知识中调试出去。 "计算主义者的梦想是把主观性从人类知识中调试出去"——对计算主义的正面批判，与你原典计划中的海德格尔《技术的追问》直接对读，是哲理辩"效率 vs 体验"的立论富矿。</p>
+  <p class="action"><b>落地:</b>与《技术的追问》对读，准备「效率能否穷尽理解」的辩题框架。</p>
 </div>
 
 <div class="note">哲学层不足配额说明:配额 2-4 条,今日仅 1 条达标。Aeon《动物之眼》(3.3)、Psyche《跟风粉》(3.2)未达线;对无 feed 的「人物」「冰点周刊」各搜索 1 次兜底——人物未见可核实的源站原文,冰点仅搜到版面索引页且无法核实具体文章,两源列入缺席源。</div>
@@ -141,6 +154,7 @@
   <div class="orig">Where Does the Quantum World End and Ours Begin?</div>
   <div class="tags">Quanta Magazine · 物理/量子力学/退相干 · 约 20 分钟 · <span class="score">★4.1</span></div>
   <p class="abstract"><b>摘要:</b>Jonathan Halliwell 讲量子退相干如何解释从波函数世界到经典宏观世界的过渡——「量子-经典边界」基础问题的当代梳理。 你物理方向的硬菜——Jonathan Halliwell 讲量子退相干如何解释从波函数世界到经典宏观世界的过渡，是"量子-经典边界"这一基础问题的当代梳理（摘要未提及可核实的单一原始论文，按规则不附）。</p>
+  <p class="action"><b>落地:</b>物理方向硬菜，安排周末精读，补齐量子退相干的知识框架。</p>
 </div>
 
 <div class="note">科学层不足配额说明:配额 2-3 条,今日仅 1 条达标。对无 feed 科学源各搜索 1 次:Nature News 仅见每日简报类(超级厄尔尼诺,3.1 未达线),返朴未见达标内容,均列入缺席源。</div>
@@ -151,6 +165,7 @@
   <h3><a href="https://36kr.com/p/3986852938283785?f=rss">9. 融资火爆、仿真鸿沟、数据缺口:2026 具身智能产业体检报告</a></h3>
   <div class="tags">36氪 · AI 行业/具身智能/产业报告 · 约 12 分钟 · <span class="score">★3.4</span></div>
   <p class="abstract"><b>摘要:</b>2026 具身智能产业体检：935 亿半年融资背后的仿真鸿沟与数据缺口——带引用出处的行业报告。 一份带引用出处的行业体检——935 亿半年融资背后的仿真鸿沟与数据缺口，是你职业转型关注的"行业判断"素材，也可对照昨日 RSI 创业热（叙事淹没不确定性）互参。</p>
+  <p class="action"><b>落地:</b>存入行业判断库，与昨日的 RSI 创业热互参，作为转型赛道评估的输入。</p>
 </div>
 
 <div class="note">热点提示(未达线仅作背景):OpenAI 据报接近攻克又一"千禧年大奖难题"霍奇猜想(快讯单条 3.3 未达线,但与 09-14 菲尔兹奖得主警告 AI 侵入数学一脉相承,值得知道)。<a class="link" href="https://36kr.com/newsflashes/3988100744215302?f=rss">36kr.com/newsflashes/3988100744215302</a></div>

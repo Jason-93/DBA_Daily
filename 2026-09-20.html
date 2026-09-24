@@ -42,6 +42,7 @@
   .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
   nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
   nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
   h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
   h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
   h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
@@ -52,6 +53,10 @@
   .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
   .tags { margin:8px 0; font-size:12px; color:var(--dim); }
   .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
   .why { font-size:14px; margin:6px 0 10px; }
   .why b { color:var(--accent); }
   a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
@@ -73,6 +78,7 @@
 </header>
 
 <nav>
+  <a href="./" class="home">← 主页</a>
   <a href="#tech">🛠 技术 4</a>
   <a href="#phil">🏛 哲学与辩论 0</a>
   <a href="#sci">🔬 科学 0</a>
@@ -86,12 +92,14 @@
   <div class="orig">How Claude is uplifting biomolecular modeling</div>
   <div class="tags">Anthropic（搜索兜底）· vibe coding/AI 编程能力边界/性能优化 · 约 10 分钟 · <span class="score">★4.4</span></div>
   <p class="abstract"><b>摘要:</b>Anthropic Science：Claude 用不到 4 周优化 30+ 个开源生物分子模型、平均提速 4 倍——写出 FlashPairformer 内核，约 150 美元算力达到原先 100 倍 GPU 小时的计算量。 Claude 在 4 周内优化 30+ 个生物分子模型、平均提速 4x——写出 FlashPairformer 内核、Big 模式单卡放下 >10,000 token 序列、约 150 美元算力达到原先 100 倍 GPU 的效果，代码开源。这是 vibe coding「充满实用性」方向的硬样本：AI 编程在真实高性能计算场景的能力边界被实质性外推，方法（让模型改内核而非调参数）可直接借鉴。</p>
+  <p class="action"><b>落地:</b>关注其「AI 优化开源模型」的方法论，类比到内部性能优化场景的可行性。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://oceanbase.csdn.net/6aab541e8f401d362660d5d0.html">2. OceanBase PowerContext 1.0.0 正式发布：Agent 的工作上下文基础设施</a></h3>
   <div class="tags">OceanBase 技术博客（搜索兜底）· AI4DB/Agent 上下文工程/开源基建 · 约 8 分钟 · <span class="score">★4.2</span></div>
   <p class="abstract"><b>摘要:</b>OceanBase 开源 PowerContext 1.0.0：Agent 的工作上下文基础设施，集成 12 个框架，LoCoMo 长期记忆 +37.88pt、SWE-bench Pro 从 82.35% 提到 86.73%。 给 Agent 做上下文管理与 Handoff 的开源基础设施——12 个框架集成、LoCoMo 长期记忆 +37.88pt、SWE-bench Pro 从 82.35% 提到 86.73%，Apache 2.0（github.com/oceanbase/powercontext）。国产数据库厂商切入 AI4DB 相邻赛道的实作样本，「充满实用性」命中：多 Agent 协作的上下文工程正是你团队接下来绕不开的工程问题。</p>
+  <p class="action"><b>落地:</b>动手试用 PowerContext，评估能否解决团队 agent 的上下文管理，并复核其 benchmark 数字。</p>
 </div>
 
 <div class="card">
@@ -99,6 +107,7 @@
   <div class="orig">Introducing Claude Fable 5.1 and Claude Mythos 5.1</div>
   <div class="tags">Anthropic（搜索兜底）· vibe coding/AI 工具链/行业判断 · 约 6 分钟 · <span class="score">★4.0</span></div>
   <p class="abstract"><b>摘要:</b>Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1：同一模型、两档安全策略——编程能力刷新标杆，价格便宜 25%（agentic 场景至约 45%）。 编程能力刷新标杆，价格便宜 25%（agentic 场景至约 45%），且首次以「同一模型、两档安全策略」区分面向企业与高风险场景的版本——直接影响你日常 AI 编程工具的成本结构与选型判断，是 vibe coding 方向必看的版本信号。</p>
+  <p class="action"><b>落地:</b>记录两档安全策略的设计思路作模型治理参考；顺手算一笔降价后的接入成本账。</p>
 </div>
 
 <div class="card">
@@ -106,6 +115,7 @@
   <div class="orig">Measurements for understanding the pace of AI development</div>
   <div class="tags">Anthropic（搜索兜底）· 行业判断/AI R&D 自动化/度量框架 · 约 8 分钟 · <span class="score">★3.6</span></div>
   <p class="abstract"><b>摘要:</b>Anthropic 提出 AI 研发自动化程度分级量表 AL0-5：自测 Claude 在内部 AI 研发中「主导」占 26%、「协作及以上」超 90%。 一套 AI 研发自动化程度的分级量表（AL0-5），并给出自测数据：Claude 在 Anthropic 内部 AI 研发中「主导」26%、「协作及以上」超过 90%——既是评估「AI 自我加速」叙事是否属实的标尺，也为你做职业转型判断提供了可复用的行业坐标系。</p>
+  <p class="action"><b>落地:</b>用 AL0-5 自评团队当前的 AI 研发自动化等级，作为转型路线图的坐标。</p>
 </div>
 
 <div class="note">技术层说明:30 小时窗口内 18 个 feed 源仅 Simon Willison 有 3 条更新(发版说明未达线、海狮照片、与 09-19 重复的 Gemini hacked,均排除);Qdrant/Weaviate/Vespa/Timescale/Elastic 五个新增 DB4AI feed 窗口内零更新。本期 4 条全部来自按规则的搜索兜底(Anthropic ×3、OceanBase ×1)。</div>

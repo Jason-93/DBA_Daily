@@ -42,6 +42,7 @@
   .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
   nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
   nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
   h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
   h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
   h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
@@ -52,6 +53,10 @@
   .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
   .tags { margin:8px 0; font-size:12px; color:var(--dim); }
   .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
   .why { font-size:14px; margin:6px 0 10px; }
   .why b { color:var(--accent); }
   a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
@@ -71,6 +76,7 @@
 </header>
 
 <nav>
+  <a href="./" class="home">← 主页</a>
   <a href="#tech">🛠 技术 2</a>
   <a href="#phil">🏛 哲学与辩论 0</a>
   <a href="#sci">🔬 科学 2</a>
@@ -84,12 +90,14 @@
   <div class="orig">Quoting voxium</div>
   <div class="tags">Simon Willison · vibe coding/AI 编程文化/团队落地 · 约 5 分钟 · <span class="score">★4.1</span></div>
   <p class="abstract"><b>摘要:</b>一位工程师自述：入职大厂半个月，规格、代码、测试、PRD 全部由 Claude Code 生成——团队没人喜欢这样，却被迫尽可能多交付。 vibe coding 规模化后的反面叙事——一位工程师自述新团队规格、代码、测试、PRD 全部由 Claude Code 生成，「团队没人喜欢这样，却被迫尽可能多交付」。这是你「AI 工具在团队工作流落地」关注的真实困境样本，也是「效率 vs 人的处境」的现成辩材（可与周六专题的 maxxing 批对读）。</p>
+  <p class="action"><b>落地:</b>作反面案例进团队讨论：明确 agent 产出的人工审查责任边界，避免无人负责的代码进主干。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://36kr.com/newsflashes/3991090829966086?f=rss">2. 华为发布昇腾 960 超节点:4096 卡 + 近封装光学(补录 09-20)</a></h3>
   <div class="tags">36氪 · AI 算力/国产芯片/DB4AI 基础设施 · 约 3 分钟 · <span class="score">★3.7</span></div>
   <p class="abstract"><b>摘要:</b>华为全联接大会发布昇腾 960 超节点：算力卡从 1024 卡升至 4096 卡，首次采用 NPO（近封装光学），匹配十万亿模型训练推理需求。 算力卡规模从 1024 卡升到 4096 卡、首次采用 NPO（近封装光学）匹配十万亿模型训练推理——国产 AI 算力底座的硬件里程碑，DB4AI 方向（AI 数据基础设施）的上游信号，也是你职业转型判断的素材。</p>
+  <p class="action"><b>落地:</b>记入算力观察清单，重点关注 NPO 近封装光学的量产进展。</p>
 </div>
 
 <div class="note">技术层说明：配额 4-6 条,本期仅 2 条。48 小时窗口内 AI4DB/稳定性/DB4AI 各源(含新增的 Qdrant/Weaviate/Vespa/Timescale/Elastic)全部无新条目;DB4AI 五个新源首次参与抓取,接入正常、0 失败,候选将在有更新时自动入选。</div>
@@ -104,12 +112,14 @@
   <h3><a href="https://36kr.com/newsflashes/3991067141520388?f=rss">3. 最复杂、速度最快的分子计算机:100 比特、连续 25 次运算(补录 09-20)</a></h3>
   <div class="tags">36氪(转《自然》) · DNA 计算/低能耗计算/Nature · 约 5 分钟 · <span class="score">★3.6</span></div>
   <p class="abstract"><b>摘要:</b>《自然》报道：爱尔兰梅努斯大学研制出 100 比特 DNA 分子计算机，可连续完成 25 次加法/乘法/除法运算——低能耗计算与长期数据存储的新路径。 DNA 分子计算机完成加法/乘法/除法，为低能耗计算与长期数据存储提供新路径——你的科学阅读模式可直接回溯《自然》原始论文（资讯 → 论文的标准动作）。</p>
+  <p class="action"><b>落地:</b>回溯《自然》原文，作科学层素材入库。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://36kr.com/newsflashes/3991066503019271?f=rss">4. "先导组装":精准缝合长 DNA 片段,一次修复多个突变(补录 09-20)</a></h3>
   <div class="tags">36氪(转《自然》) · 基因编辑/生命科学/Nature · 约 5 分钟 · <span class="score">★3.4</span></div>
   <p class="abstract"><b>摘要:</b>《自然》报道：波士顿儿童医院团队提出「先导组装」基因编辑方法，可精准缝合长 DNA 片段、一轮操作同时修复多个突变，或促成通用基因疗法。 波士顿儿童医院团队的新基因编辑方法，可能促成适用于多数患者的通用基因疗法——生命科学方向的合格候选，同样可回溯《自然》原文。</p>
+  <p class="action"><b>落地:</b>关注通用基因疗法的后续临床进展，素材入库。</p>
 </div>
 
 <h2 class="news" id="news">⚡ 热点保底</h2>
@@ -118,6 +128,7 @@
   <h3><a href="https://36kr.com/newsflashes/3992522145643269?f=rss">5. 中美经贸磋商在纽约举行,就人工智能有关问题举行对话</a></h3>
   <div class="tags">36氪(转新华社) · AI 治理/宏观 · 约 3 分钟 · <span class="score">★3.4</span></div>
   <p class="abstract"><b>摘要:</b>何立峰与贝森特、格里尔在纽约举行中美经贸磋商，围绕落实历次磋商共识、促进双边贸易投资交流，并就人工智能有关问题举行对话。 中美经贸磋商首次单列 AI 议题对话——AI 治理进入两国正式磋商议程，是你职业转型关注的行业级宏观信号。</p>
+  <p class="action"><b>落地:</b>记入行业判断笔记：AI 治理进入两国正式磋商议程，跟踪后续政策走向。</p>
 </div>
 
 <div class="note">热点提示(未达线仅作背景):MLCC("电子工业大米")高容量型号因 AI 需求现货炒至原价 2-10 倍(昨日已提示,今日为 36氪 TOP 新闻,附详细产业链分析)。<a class="link" href="https://36kr.com/p/3992398887926784?f=rss">36kr.com/p/3992398887926784</a></div>

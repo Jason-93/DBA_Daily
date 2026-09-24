@@ -81,35 +81,40 @@
   <h3><a href="https://arxiv.org/abs/2603.03772">1. 走向 AI × DB 工作负载的有效编排</a></h3>
   <div class="orig">Towards Effective Orchestration of AI x DB Workloads</div>
   <div class="tags">arXiv cs.DB · AI4DB/查询优化/系统架构 · 约 18 分钟 · <span class="score">★4.1</span></div>
-  <p class="why"><b>摘要:</b>指出关系算子与 AI 算子分属不同运行时、导致优化器与运行时无法协同的问题,给出统一编排 AI×DB 工作负载的架构方向。正中你 AI4DB 第 1 优先级,是判断"数据库内跑 AI"技术路线的框架性参考。</p>
+  <p class="abstract"><b>摘要:</b>指出关系算子与 AI 算子分属不同运行时、导致优化器与运行时无法协同的问题,给出统一编排 AI×DB 工作负载的架构方向。正中你 AI4DB 第 1 优先级,是判断"数据库内跑 AI"技术路线的框架性参考。</p>
+  <p class="action"><b>落地:</b>收藏为「数据库内跑 AI」技术路线的框架性参考，下次架构评审引用。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://aws.amazon.com/blogs/database/megabytes-in-milliseconds-how-firetv-uses-parallel-queries-and-vertical-partitioning-to-serve-millions-of-customers-in-amazon-dynamodb/">2. FireTV 的 DynamoDB 改造：垂直分区 + 并行查询，写入成本降 97%</a></h3>
   <div class="orig">Megabytes in milliseconds: How FireTV uses parallel queries and vertical partitioning to serve millions of customers in Amazon DynamoDB</div>
   <div class="tags">AWS Database Blog · 云数据库/数据建模/成本优化 · 约 12 分钟 · <span class="score">★3.9</span></div>
-  <p class="why"><b>摘要:</b>FireTV 用垂直分区与哈希前缀排序键重设计"继续观看"数据模型,消除单条目大小限制、写入成本降 97%、读取保持毫秒级。生产级 NoSQL 数据模型改造实录,手段可直接带回团队对照。</p>
+  <p class="abstract"><b>摘要:</b>FireTV 用垂直分区与哈希前缀排序键重设计"继续观看"数据模型,消除单条目大小限制、写入成本降 97%、读取保持毫秒级。生产级 NoSQL 数据模型改造实录,手段可直接带回团队对照。</p>
+  <p class="action"><b>落地:</b>精读数据建模部分，对照团队在用的 NoSQL/宽表设计，评估垂直分区的适用场景。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/">3. Opus 5.5、GPT-6 Sol/Luna 同日登场：前沿模型价格战开打</a></h3>
   <div class="orig">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</div>
   <div class="tags">Simon Willison's Weblog · vibe coding/行业判断/模型选型 · 约 8 分钟 · <span class="score">★3.6</span></div>
-  <p class="why"><b>摘要:</b>Simon 梳理同日发布的 Opus 5.5 与 GPT-6 Sol/Luna——OpenAI 在 Anthropic 发布约一小时后跟进,API 降价 50%,前沿模型进入价格战。为你 vibe coding 工具链的选型与成本判断补上 OpenAI 一侧的拼图。</p>
+  <p class="abstract"><b>摘要:</b>Simon 梳理同日发布的 Opus 5.5 与 GPT-6 Sol/Luna——OpenAI 在 Anthropic 发布约一小时后跟进,API 降价 50%,前沿模型进入价格战。为你 vibe coding 工具链的选型与成本判断补上 OpenAI 一侧的拼图。</p>
+  <p class="action"><b>落地:</b>更新模型成本对比表，重算团队 agent 工作流的月度 API 账单。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/">4. GitHub 如何渲染百万行 PR：Copilot app 的 diff 层重建</a></h3>
   <div class="orig">Rendering huge pull requests in the GitHub Copilot app</div>
   <div class="tags">GitHub Blog · vibe coding/前端性能/开发者工具 · 约 10 分钟 · <span class="score">★3.6</span></div>
-  <p class="why"><b>摘要:</b>GitHub 重建 Copilot app 的 diff 渲染层,支撑百万行 PR 与数百条行内评论同时打开。AI 编程工具处理超大变更的工程实录,是 vibe coding 落地到评审环节的直接参照。</p>
+  <p class="abstract"><b>摘要:</b>GitHub 重建 Copilot app 的 diff 渲染层,支撑百万行 PR 与数百条行内评论同时打开。AI 编程工具处理超大变更的工程实录,是 vibe coding 落地到评审环节的直接参照。</p>
+  <p class="action"><b>落地:</b>作大 diff 场景的技术参照；若团队工具遇到性能瓶颈可借鉴其分层渲染思路。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://arxiv.org/abs/2609.25563">5. AkasicMEM：带治理能力的企业级 Agent 记忆</a></h3>
   <div class="orig">AkasicMEM: Governed Enterprise Memory for Agents</div>
   <div class="tags">arXiv cs.DB · AI4DB/Agent 记忆/企业治理 · 约 16 分钟 · <span class="score">★3.5</span></div>
-  <p class="why"><b>摘要:</b>提出带治理能力的企业级 Agent 记忆框架,把执行经验沉淀为可跨任务、跨 Agent 复用的组织知识。接续本周 PowerContext、图记忆评测、Agent State 那条线,补上"治理"这块拼图。</p>
+  <p class="abstract"><b>摘要:</b>提出带治理能力的企业级 Agent 记忆框架,把执行经验沉淀为可跨任务、跨 Agent 复用的组织知识。接续本周 PowerContext、图记忆评测、Agent State 那条线,补上"治理"这块拼图。</p>
+  <p class="action"><b>落地:</b>与 PowerContext、图记忆评测、Agent State 四篇对照，形成 agent 记忆的选型备忘。</p>
 </div>
 
 <div class="note">技术层说明:配额 4-6 条,本期 5 条(AI4DB/稳定性方向 2 条达标)。未入选:查询上下文生成(与 09-22 上下文层论文主题重叠降分)、Simon llm 0.36(与第 3 条同主题)、GitHub 开发者能效调查(3.0)、Elastic 8.19.22 常规发版(2.8)。</div>
@@ -124,14 +129,16 @@
   <h3><a href="https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/">6. 生物学未必是量子的，但它的数学是"类量子"的</a></h3>
   <div class="orig">Biology Might Not Be Quantum, but Its Math Is Quantumlike</div>
   <div class="tags">Quanta Magazine · 物理/生物/数学/长文 · 约 20 分钟 · <span class="score">★4.0</span></div>
-  <p class="why"><b>摘要:</b>科学家试图联系生物学与量子力学的历史屡战屡败,真正的连接可能藏在数学结构里——Quanta 长文梳理"类量子"数学在生物中的显现。物理×生命科学交叉,可沿文内线索回溯原始论文。</p>
+  <p class="abstract"><b>摘要:</b>科学家试图联系生物学与量子力学的历史屡战屡败,真正的连接可能藏在数学结构里——Quanta 长文梳理"类量子"数学在生物中的显现。物理×生命科学交叉,可沿文内线索回溯原始论文。</p>
+  <p class="action"><b>落地:</b>扫读了解「类量子数学」这一新视角，科学层素材入库。</p>
 </div>
 
 <div class="card">
   <h3><a href="https://www.nature.com/articles/d41586-026-02930-6">7. AI 时代如何保持头脑锋利：批判性思维的科学</a></h3>
   <div class="orig">How to stay smart in the age of AI: the science of critical thinking</div>
   <div class="tags">Nature News（搜索兜底 · 09-23）· 认知科学/AI 影响/特写 · 约 12 分钟 · <span class="score">★3.8</span></div>
-  <p class="why"><b>摘要:</b>Nature 特写:AI 会钝化记忆与推理能力,但认知科学给出了保持头脑锋利的具体方法。你每天高密度使用 AI 工具,这篇是保护自身深度思考能力的对症读物,也可作"AI 依赖 vs 能力保持"的辩题切口。</p>
+  <p class="abstract"><b>摘要:</b>Nature 特写:AI 会钝化记忆与推理能力,但认知科学给出了保持头脑锋利的具体方法。你每天高密度使用 AI 工具,这篇是保护自身深度思考能力的对症读物,也可作"AI 依赖 vs 能力保持"的辩题切口。</p>
+  <p class="action"><b>落地:</b>对照自己的信息摄入习惯做一次自查，把批判性思维训练列入日常。</p>
 </div>
 
 <div class="note">科学层说明:配额 2-3 条,本期 2 条达标。</div>

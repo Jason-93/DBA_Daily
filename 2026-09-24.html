@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-24</title>
+<meta name="description" content="每日晨报 · 2026-09-24：入选 7 条精选——AI×DB 工作负载编排、FireTV DynamoDB 改造、前沿模型价格战、类量子数学等，附相关度评分、摘要与原文链接。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-09-24.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-09-24">
+<meta property="og:description" content="每日晨报 · 2026-09-24：入选 7 条精选，附评分与摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-09-24.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-09-24">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 7 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-09-24",
+  "description": "每日晨报 · 2026-09-24：入选 7 条精选，附评分与摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-09-24.html",
+  "datePublished": "2026-09-24",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .why { font-size:14px; margin:6px 0 4px; }
+  .why b { color:var(--accent); }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; }
+  a.link::before { content:"🔗 "; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .empty b { color:var(--text); }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-24 周四</small></h1>
+  <div class="meta">午间兜底场 12:14（早场抓取超时未完成）· 抓取窗口 30 小时 · 候选 42 条 + 搜索兜底 3 次 · 入选 7 条 · 已对照前七期去重</div>
+</header>
+
+<nav>
+  <a href="#tech">🛠 技术 5</a>
+  <a href="#phil">🏛 哲学与辩论 0</a>
+  <a href="#sci">🔬 科学 2</a>
+  <a href="#news">⚡ 热点 0</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2603.03772">1. 走向 AI × DB 工作负载的有效编排</a></h3>
+  <div class="orig">Towards Effective Orchestration of AI x DB Workloads</div>
+  <div class="tags">arXiv cs.DB · AI4DB/查询优化/系统架构 · 约 18 分钟 · <span class="score">★4.1</span></div>
+  <p class="why"><b>摘要:</b>指出关系算子与 AI 算子分属不同运行时、导致优化器与运行时无法协同的问题,给出统一编排 AI×DB 工作负载的架构方向。正中你 AI4DB 第 1 优先级,是判断"数据库内跑 AI"技术路线的框架性参考。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/megabytes-in-milliseconds-how-firetv-uses-parallel-queries-and-vertical-partitioning-to-serve-millions-of-customers-in-amazon-dynamodb/">2. FireTV 的 DynamoDB 改造：垂直分区 + 并行查询，写入成本降 97%</a></h3>
+  <div class="orig">Megabytes in milliseconds: How FireTV uses parallel queries and vertical partitioning to serve millions of customers in Amazon DynamoDB</div>
+  <div class="tags">AWS Database Blog · 云数据库/数据建模/成本优化 · 约 12 分钟 · <span class="score">★3.9</span></div>
+  <p class="why"><b>摘要:</b>FireTV 用垂直分区与哈希前缀排序键重设计"继续观看"数据模型,消除单条目大小限制、写入成本降 97%、读取保持毫秒级。生产级 NoSQL 数据模型改造实录,手段可直接带回团队对照。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/">3. Opus 5.5、GPT-6 Sol/Luna 同日登场：前沿模型价格战开打</a></h3>
+  <div class="orig">Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war</div>
+  <div class="tags">Simon Willison's Weblog · vibe coding/行业判断/模型选型 · 约 8 分钟 · <span class="score">★3.6</span></div>
+  <p class="why"><b>摘要:</b>Simon 梳理同日发布的 Opus 5.5 与 GPT-6 Sol/Luna——OpenAI 在 Anthropic 发布约一小时后跟进,API 降价 50%,前沿模型进入价格战。为你 vibe coding 工具链的选型与成本判断补上 OpenAI 一侧的拼图。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/">4. GitHub 如何渲染百万行 PR：Copilot app 的 diff 层重建</a></h3>
+  <div class="orig">Rendering huge pull requests in the GitHub Copilot app</div>
+  <div class="tags">GitHub Blog · vibe coding/前端性能/开发者工具 · 约 10 分钟 · <span class="score">★3.6</span></div>
+  <p class="why"><b>摘要:</b>GitHub 重建 Copilot app 的 diff 渲染层,支撑百万行 PR 与数百条行内评论同时打开。AI 编程工具处理超大变更的工程实录,是 vibe coding 落地到评审环节的直接参照。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2609.25563">5. AkasicMEM：带治理能力的企业级 Agent 记忆</a></h3>
+  <div class="orig">AkasicMEM: Governed Enterprise Memory for Agents</div>
+  <div class="tags">arXiv cs.DB · AI4DB/Agent 记忆/企业治理 · 约 16 分钟 · <span class="score">★3.5</span></div>
+  <p class="why"><b>摘要:</b>提出带治理能力的企业级 Agent 记忆框架,把执行经验沉淀为可跨任务、跨 Agent 复用的组织知识。接续本周 PowerContext、图记忆评测、Agent State 那条线,补上"治理"这块拼图。</p>
+</div>
+
+<div class="note">技术层说明:配额 4-6 条,本期 5 条(AI4DB/稳定性方向 2 条达标)。未入选:查询上下文生成(与 09-22 上下文层论文主题重叠降分)、Simon llm 0.36(与第 3 条同主题)、GitHub 开发者能效调查(3.0)、Elastic 8.19.22 常规发版(2.8)。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="empty"><b>本期留空。</b>配额 2-4 条,无达标候选:Aeon 新条目为视频(音频/视频约束排除);Psyche《应对反 LGBTQ+ 偏见压力》评 3.3 未达线;无 feed 的看理想、正面连接各搜索 1 次无果(列入缺席源);哲学园本期未启用搜索。按规则如实留空,不凑数。</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3><a href="https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/">6. 生物学未必是量子的，但它的数学是"类量子"的</a></h3>
+  <div class="orig">Biology Might Not Be Quantum, but Its Math Is Quantumlike</div>
+  <div class="tags">Quanta Magazine · 物理/生物/数学/长文 · 约 20 分钟 · <span class="score">★4.0</span></div>
+  <p class="why"><b>摘要:</b>科学家试图联系生物学与量子力学的历史屡战屡败,真正的连接可能藏在数学结构里——Quanta 长文梳理"类量子"数学在生物中的显现。物理×生命科学交叉,可沿文内线索回溯原始论文。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.nature.com/articles/d41586-026-02930-6">7. AI 时代如何保持头脑锋利：批判性思维的科学</a></h3>
+  <div class="orig">How to stay smart in the age of AI: the science of critical thinking</div>
+  <div class="tags">Nature News（搜索兜底 · 09-23）· 认知科学/AI 影响/特写 · 约 12 分钟 · <span class="score">★3.8</span></div>
+  <p class="why"><b>摘要:</b>Nature 特写:AI 会钝化记忆与推理能力,但认知科学给出了保持头脑锋利的具体方法。你每天高密度使用 AI 工具,这篇是保护自身深度思考能力的对症读物,也可作"AI 依赖 vs 能力保持"的辩题切口。</p>
+</div>
+
+<div class="note">科学层说明:配额 2-3 条,本期 2 条达标。</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="empty"><b>本期留空。</b>36氪 feed 窗口内 20 条快讯全部未达入选线(≥3.4):多为行情、融资、政策通报与大会金句;Anthropic"放缓研发"表态已被昨日 Opus 5.5 与今日第 3 条覆盖。按规则留空,宁缺毋滥。</div>
+
+<div class="note">热点提示(未达线仅作背景):36氪深度《被父母托举的独生子女,开始准备为父母养老》(约 ★3.2)——2 亿独生子女"托举未结束、养老已开始"的双向处境,不错的代际责任辩题素材。<a class="link" href="https://36kr.com/p/3995649500975240?f=rss">36kr.com/p/3995649500975240</a></div>
+
+<footer>
+  <p><b>缺席源:</b>看理想(搜索 1 次仅见播客渠道,音频排除)/ 正面连接(搜索 1 次,Substack 停在 7 月);Nature News 搜索兜底入选 1 条;Percona/CMU/PingCAP/SRE Weekly/Pragmatic Engineer/阮一峰/Qdrant/Weaviate/Vespa/Timescale 窗口内无更新;Elastic 仅常规发版未达线;其余无 feed 源本期未启用搜索(每源限搜 1 次,从严)。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话",例如"2 有用 混沌工程正想推;7 无用 太抽象"</p>
+</footer>
+
+</body>
+</html>

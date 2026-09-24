@@ -75,43 +75,38 @@
 <h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
 
 <div class="card">
-  <h3>1. Anthropic 发布 Claude Opus 5.5：Fable 5.1 级性能，成本再降 40%</h3>
+  <h3><a href="https://www.anthropic.com/claude-opus-5-5">1. Anthropic 发布 Claude Opus 5.5：Fable 5.1 级性能，成本再降 40%</a></h3>
   <div class="orig">Introducing Claude Opus 5.5</div>
   <div class="tags">Anthropic（搜索兜底 · 09-23 当日）· vibe coding/AI 工具链/行业判断 · 约 15 分钟 · <span class="score">★4.4</span></div>
-  <p class="why"><b>为什么适合你:</b>5.5 系列首个模型——多数任务对标 Fable 5.1、成本比 Opus 5 低 40%(输入 $4/输出 $20 每百万 token),实测 68 万行代码迁移一天完成、HAProxy C→Rust 翻译比 Fable 5.1 快 21% 且便宜 51%,FrontierCode 上以约 1/5 成本击败 GPT-6 Astra——直接改变你 vibe coding 工具链的成本结构与选型判断,附 System Card 可深挖对齐评估。</p>
-  <a class="link" href="https://www.anthropic.com/claude-opus-5-5">anthropic.com/claude-opus-5-5</a>
+  <p class="abstract"><b>摘要:</b>Anthropic 发布 Claude 5.5 系列首个模型 Opus 5.5：多数任务对标 Fable 5.1、运行成本比 Opus 5 低 40%（输入 $4/输出 $20 每百万 token），68 万行代码迁移一天完成。</p>
 </div>
 
 <div class="card">
-  <h3>2. Dial：面向企业异构数据库的方言感知 NL2SQL 系统</h3>
+  <h3><a href="https://arxiv.org/abs/2603.07449">2. Dial：面向企业异构数据库的方言感知 NL2SQL 系统</a></h3>
   <div class="orig">Dial: A Knowledge-Grounded Dialect-Specific NL2SQL System</div>
   <div class="tags">arXiv cs.DB · AI4DB/Text2SQL/企业落地 · 约 18 分钟 · <span class="score">★3.7</span></div>
-  <p class="why"><b>为什么适合你:</b>企业普遍部署多种数据库、各方言语法/函数/执行约束不同,现有 NL2SQL 大多忽略方言差异——Dial 用知识接地的方式生成方言正确的 SQL,正中你 AI4DB 第 1 优先级里 Text2SQL 落地最现实的坑(途虎多库并存场景可直接对照)。</p>
-  <a class="link" href="https://arxiv.org/abs/2603.07449">arxiv.org/abs/2603.07449</a>
+  <p class="abstract"><b>摘要:</b>Dial 面向企业异构数据库做方言感知 NL2SQL：用知识接地方式生成方言正确的 SQL，处理各方言语法/函数/执行约束差异。</p>
 </div>
 
 <div class="card">
-  <h3>3. 图索引跨模型迁移：利用残余可达性复用旧索引</h3>
+  <h3><a href="https://arxiv.org/abs/2609.23036">3. 图索引跨模型迁移：利用残余可达性复用旧索引</a></h3>
   <div class="orig">Exploiting Residual Reachability for Cross-Model Migration of Graph-Based Indexes</div>
   <div class="tags">arXiv cs.DB · DB4AI/向量检索/图索引 · 约 18 分钟 · <span class="score">★3.7</span></div>
-  <p class="why"><b>为什么适合你:</b>向量检索(DB4AI 第 2 优先级)里换嵌入模型就要重建 ANN 图索引,这篇研究如何榨取旧索引的"残余可达性"低成本迁移到新模型——向量库选型与升级时非常实际的工程问题,可回溯原文方法。</p>
-  <a class="link" href="https://arxiv.org/abs/2609.23036">arxiv.org/abs/2609.23036</a>
+  <p class="abstract"><b>摘要:</b>论文研究 ANN 图索引的跨模型迁移：换嵌入模型不必全量重建，利用旧索引的「残余可达性」低成本过渡到新模型。</p>
 </div>
 
 <div class="card">
-  <h3>4. Simon Willison 发布 llm-typesafe：给 LLM CLI 接上 Jev"决策模型"</h3>
+  <h3><a href="https://simonwillison.net/2026/Sep/22/llm-typesafe/">4. Simon Willison 发布 llm-typesafe：给 LLM CLI 接上 Jev"决策模型"</a></h3>
   <div class="orig">llm-typesafe 0.1a0</div>
   <div class="tags">Simon Willison's Weblog · vibe coding/AI 工具/LLM 插件 · 约 6 分钟 · <span class="score">★3.6</span></div>
-  <p class="why"><b>为什么适合你:</b>`llm install llm-typesafe` 即可调用 TypeSafe AI 新模型 Jev(System One/决策模型)——vibe coding 工具链里"新模型即插即用"的实操样本,5 分钟可上手验证,符合你"充满实用性"的偏好。</p>
-  <a class="link" href="https://simonwillison.net/2026/Sep/22/llm-typesafe/">simonwillison.net/2026/Sep/22/llm-typesafe</a>
+  <p class="abstract"><b>摘要:</b>Simon 发布 llm-typesafe 插件：llm install 后即可在 LLM CLI 里调用 TypeSafe AI 的新模型 Jev（System One/决策模型）。</p>
 </div>
 
 <div class="card">
-  <h3>5. PingCAP 详解 AI Agent State：无状态是 Agent 的实际成本</h3>
+  <h3><a href="https://www.pingcap.com/blog/ai-agent-state/">5. PingCAP 详解 AI Agent State：无状态是 Agent 的实际成本</a></h3>
   <div class="orig">AI Agent State Explained</div>
   <div class="tags">PingCAP Blog · DB4AI/Agent 状态/基础设施 · 约 10 分钟 · <span class="score">★3.5</span></div>
-  <p class="why"><b>为什么适合你:</b>"调用间遗忘一切的 Agent 无法完成多步任务、无法从崩溃中恢复"——数据库厂商视角讲 Agent 状态管理,接续前两天 PowerContext 与图记忆评测那条线,为你评估 Agent 基础设施补齐概念层拼图。</p>
-  <a class="link" href="https://www.pingcap.com/blog/ai-agent-state/">pingcap.com/blog/ai-agent-state</a>
+  <p class="abstract"><b>摘要:</b>PingCAP 详解 AI Agent State：调用间遗忘一切的 Agent 无法完成多步任务、无法从崩溃中恢复——无状态是 Agent 的实际成本。</p>
 </div>
 
 <div class="note">技术层说明:配额 4-6 条,本期 5 条;AI4DB/稳定性子配额仅 1 条达标(Dial)——窗口内 arXiv 为昨日同批(强条目昨日已选),Percona/CMU/SRE Weekly 等零更新,如实说明不凑数。未入选:AWS Neptune+Linkurious(3.3)、Jev 模型介绍(3.6,与第 4 条同主题取可操作者)、Cloudflare Python Workers(3.1)。</div>
@@ -119,11 +114,10 @@
 <h2 class="phil" id="phil">🏛 哲学与辩论</h2>
 
 <div class="card">
-  <h3>6. 毒蝇伞软糖调查：合法灰色地带里的危险剂量</h3>
+  <h3><a href="https://aeon.co/essays/a-scientists-search-for-answers-about-amanita-muscaria-gummies">6. 毒蝇伞软糖调查：合法灰色地带里的危险剂量</a></h3>
   <div class="orig">Toadstools and toxins</div>
   <div class="tags">Aeon · 科技伦理/监管两难/调查叙事 · 约 14 分钟 · <span class="score">★3.8</span></div>
-  <p class="why"><b>为什么适合你:</b>一位科学家发现毒蝇伞被包进糖果纸售卖,一路追查揭开法律漏洞与危险剂量——第一人称调查叙事,"监管滞后 vs 公众安全"的真实两难,既是科技伦理辩题素材,概念也始终落在具体的调查者身上。</p>
-  <a class="link" href="https://aeon.co/essays/a-scientists-search-for-answers-about-amanita-muscaria-gummies">aeon.co/essays/a-scientists-search-for-answers-about-amanita-muscaria-gummies</a>
+  <p class="abstract"><b>摘要:</b>Aeon 第一人称调查：科学家 Eric Leas 发现毒蝇伞被包进糖果纸售卖，一路追查揭开法律漏洞与危险剂量。</p>
 </div>
 
 <div class="note">哲学层说明:配额 2-4 条,本期仅 1 条达标。Psyche《关系矛盾心理》(3.3)未达线;无 feed 的正面连接搜索 1 次未见窗口内可核实新文章(列入缺席源);看理想/哲学园本期未启用搜索(从严)。</div>
@@ -131,11 +125,10 @@
 <h2 class="sci" id="sci">🔬 科学</h2>
 
 <div class="card">
-  <h3>7. AI 共同科学家正在改变科研方式</h3>
+  <h3><a href="https://www.nature.com/articles/d41586-026-02931-5">7. AI 共同科学家正在改变科研方式</a></h3>
   <div class="orig">AI co-scientists are revolutionizing how research is done</div>
   <div class="tags">Nature News（搜索兜底 · 09-21）· 科学资讯/AI for Science/Nature 特写 · 约 12 分钟 · <span class="score">★3.7</span></div>
-  <p class="why"><b>为什么适合你:</b>AI 系统开始生成假设、设计实验——Nature 新闻特写梳理"AI co-scientist"进展,正接你"看资讯 → 回溯原始论文"的阅读模式,且与你关注的 AI4DB(AI 进入数据与科研工作流)互为印证。</p>
-  <a class="link" href="https://www.nature.com/articles/d41586-026-02931-5">nature.com/articles/d41586-026-02931-5</a>
+  <p class="abstract"><b>摘要:</b>Nature 特写：AI 系统开始生成假设、设计实验，「AI 共同科学家」正在改变科研方式。</p>
 </div>
 
 <div class="note">科学层说明:配额 2-3 条,本期仅 1 条达标。Quanta feed 窗口内零更新;无 feed 的知识分子搜索 1 次仅见 09-10 拉斯克奖旧文(09-16 已选),列入缺席源;返朴本期未启用搜索。</div>

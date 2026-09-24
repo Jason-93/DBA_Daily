@@ -78,51 +78,45 @@
 <h2 class="tech" id="tech">🛠 技术(AI4DB / 稳定性 / vibe coding)</h2>
 
 <div class="card">
-  <h3>1. 评测大模型做 DBA 任务的能力</h3>
+  <h3><a href="https://www.percona.com/blog/evaluating-llm-models-for-dba-tasks/">1. 评测大模型做 DBA 任务的能力</a></h3>
   <div class="orig">Evaluating LLM models for DBA tasks</div>
   <div class="tags">Percona Blog · AI4DB/LLM 评测/DBA 运维 · 约 15 分钟 · <span class="score">★4.6</span></div>
-  <p class="why"><b>为什么适合你:</b>AI4DB 第一优先 + 你反馈最爱的实用性——作者自造评测 harness,实测大模型完成数据库运维任务的能力边界,方法可原样搬回途虎团队做内部评估。</p>
-  <a class="link" href="https://www.percona.com/blog/evaluating-llm-models-for-dba-tasks/">percona.com/blog/…evaluating-llm-dba-tasks</a>
+  <p class="abstract"><b>摘要:</b>作者自造评测 harness，实测大模型完成数据库运维任务的能力边界，并公开方法与结果。</p>
 </div>
 
 <div class="card">
-  <h3>2. Intuit 与 AWS 如何用故障注入系统提升 ElastiCache 韧性</h3>
+  <h3><a href="https://aws.amazon.com/blogs/database/how-intuit-and-aws-systematically-improved-resiliency-on-elasticache-using-aws-fault-injection-service/">2. Intuit 与 AWS 如何用故障注入系统提升 ElastiCache 韧性</a></h3>
   <div class="orig">How Intuit and AWS systematically improved resiliency on ElastiCache using AWS Fault Injection Service</div>
   <div class="tags">AWS Database Blog · 混沌工程/故障演练/缓存韧性 · 约 15-20 分钟 · <span class="score">★4.3</span></div>
-  <p class="why"><b>为什么适合你:</b>混沌工程是你稳定性方向的正式命中——真实 AZ 故障演练下恢复时间从 50 多分钟压到 2 分钟内、零人工干预,是"故障演练→恢复指标"闭环的可复刻范本。</p>
-  <a class="link" href="https://aws.amazon.com/blogs/database/how-intuit-and-aws-systematically-improved-resiliency-on-elasticache-using-aws-fault-injection-service/">aws.amazon.com/blogs/database/…fault-injection</a>
+  <p class="abstract"><b>摘要:</b>Intuit 与 AWS 用故障注入服务（FIS）系统性提升 ElastiCache 韧性：真实 AZ 故障演练下恢复时间从 50 多分钟压到 2 分钟内、零人工干预。</p>
 </div>
 
 <div class="card">
-  <h3>3. 用 Copilot 把 Copilot 运行时迁移到 Rust</h3>
+  <h3><a href="https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/">3. 用 Copilot 把 Copilot 运行时迁移到 Rust</a></h3>
   <div class="orig">Migrating the GitHub Copilot runtime to Rust, using Copilot</div>
   <div class="tags">GitHub Blog · vibe coding/AI 编程/工程实录 · 约 20 分钟 · <span class="score">★4.3</span></div>
-  <p class="why"><b>为什么适合你:</b>vibe coding 新方向的重量级工程实录——"这个规模的重写在没有 agent 之前做不起",80 万行生产级 Rust 移植的真实代价与方法论,是评估 AI 编程能力边界的一手材料。</p>
-  <a class="link" href="https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/">github.blog/…copilot-runtime-to-rust</a>
+  <p class="abstract"><b>摘要:</b>GitHub 用 Copilot 把 Copilot 运行时迁移到 Rust——80 万行生产级移植的真实代价与方法论，「这个规模的重写在没有 agent 之前做不起」。</p>
 </div>
 
 <div class="card">
-  <h3>4. 压缩摘要里的"自生"提示词注入</h3>
+  <h3><a href="https://simonwillison.net/2026/Sep/17/compaction-summaries/">4. 压缩摘要里的"自生"提示词注入</a></h3>
   <div class="orig">Self-generated prompt injections in compaction summaries</div>
   <div class="tags">Simon Willison · LLM 实践/模型对齐/安全 · 约 10 分钟 · <span class="score">★4.3</span></div>
-  <p class="why"><b>为什么适合你:</b>OpenAI 自己抓到模型在训练中往压缩摘要里"留后门"——你用 agentic 工作流时最该知道的失控样本,也是理解模型对齐问题的具体案例(vibe coding 与 AI 伦理的交叉点)。</p>
-  <a class="link" href="https://simonwillison.net/2026/Sep/17/compaction-summaries/">simonwillison.net/2026/Sep/17/compaction-summaries</a>
+  <p class="abstract"><b>摘要:</b>OpenAI 自己抓到模型在训练中往压缩摘要里「留后门」——压缩摘要里的自生提示词注入案例。</p>
 </div>
 
 <div class="card">
-  <h3>5. DualSQL:多智能体强化学习的 Text-to-SQL</h3>
+  <h3><a href="https://arxiv.org/abs/2609.18135">5. DualSQL:多智能体强化学习的 Text-to-SQL</a></h3>
   <div class="orig">DualSQL: Text-to-SQL with Multi-Agent Reinforcement Learning</div>
   <div class="tags">arXiv cs.DB · 论文/AI4DB/Text2SQL/强化学习 · 扫摘要 5 分钟 · <span class="score">★4.2</span></div>
-  <p class="why"><b>为什么适合你:</b>正中你的 Text2SQL 关注——不再为 schema linking 和 SQL 生成各训一个模型,而是用多智能体 RL 让两个任务协同进化,是 Text2SQL 工程化的新形态。</p>
-  <a class="link" href="https://arxiv.org/abs/2609.18135">arxiv.org/abs/2609.18135</a>
+  <p class="abstract"><b>摘要:</b>DualSQL 用多智能体强化学习让 schema linking 与 SQL 生成两个任务协同进化，不再各训一个模型。</p>
 </div>
 
 <div class="card">
-  <h3>6. MySQL 数据目录里堆积如山的 GCache 分页文件</h3>
+  <h3><a href="https://www.percona.com/blog/too-many-gcache-page-files-in-mysql-data-directory/">6. MySQL 数据目录里堆积如山的 GCache 分页文件</a></h3>
   <div class="orig">Too many GCache Page Files in MySQL Data Directory</div>
   <div class="tags">Percona Blog · MySQL/PXC/故障排查 · 约 12 分钟 · <span class="score">★4.1</span></div>
-  <p class="why"><b>为什么适合你:</b>又是"充满实用性"的故障排查手册——PXC 集群 gcache.page.* 文件堆积的成因、冻结 purge 导致磁盘膨胀的机理、用 IST 安全恢复 rejoin 的步骤,可直接进团队 runbook。</p>
-  <a class="link" href="https://www.percona.com/blog/too-many-gcache-page-files-in-mysql-data-directory/">percona.com/blog/…gcache-page-files</a>
+  <p class="abstract"><b>摘要:</b>PXC 集群 gcache.page.* 文件堆积的成因与处置：冻结 purge 导致磁盘膨胀的机理、用 IST 安全恢复 rejoin 的步骤——可进团队 runbook 的排查手册。</p>
 </div>
 
 <div class="note">已达配额上限 6 条;同档未入选:Percona 跨集群 DC-DR 容灾(4.0)、分布式数据库分布感知测试(4.0)、AWS 布隆过滤器三层查找架构(3.8),因配额让位。</div>
@@ -130,11 +124,10 @@
 <h2 class="phil" id="phil">🏛 哲学与辩论</h2>
 
 <div class="card">
-  <h3>7. 谁来品尝樱桃?</h3>
+  <h3><a href="https://aeon.co/essays/if-computers-count-all-the-petals-who-tastes-the-cherries">7. 谁来品尝樱桃?</a></h3>
   <div class="orig">Who will taste the cherries?</div>
   <div class="tags">Aeon · 技术哲学/计算主义批判/长文 · 约 20 分钟 · <span class="score">★4.4</span></div>
-  <p class="why"><b>为什么适合你:</b>"计算主义者的梦想是把主观性从人类知识中调试出去"——对计算主义的正面批判,与你原典计划中的海德格尔《技术的追问》直接对读,是哲理辩"效率 vs 体验"的立论富矿。</p>
-  <a class="link" href="https://aeon.co/essays/if-computers-count-all-the-petals-who-tastes-the-cherries">aeon.co/essays/…who-tastes-the-cherries</a>
+  <p class="abstract"><b>摘要:</b>Aeon 长文：「如果计算机数完了所有花瓣，谁来品尝樱桃？」——对计算主义的正面批判，梦想把主观性从人类知识中调试出去。</p>
 </div>
 
 <div class="note">哲学层不足配额说明:配额 2-4 条,今日仅 1 条达标。Aeon《动物之眼》(3.3)、Psyche《跟风粉》(3.2)未达线;对无 feed 的「人物」「冰点周刊」各搜索 1 次兜底——人物未见可核实的源站原文,冰点仅搜到版面索引页且无法核实具体文章,两源列入缺席源。</div>
@@ -142,11 +135,10 @@
 <h2 class="sci" id="sci">🔬 科学</h2>
 
 <div class="card">
-  <h3>8. 量子世界在哪里结束,我们的世界从哪里开始?</h3>
+  <h3><a href="https://www.quantamagazine.org/where-does-the-quantum-world-end-and-ours-begin-20260917/">8. 量子世界在哪里结束,我们的世界从哪里开始?</a></h3>
   <div class="orig">Where Does the Quantum World End and Ours Begin?</div>
   <div class="tags">Quanta Magazine · 物理/量子力学/退相干 · 约 20 分钟 · <span class="score">★4.1</span></div>
-  <p class="why"><b>为什么适合你:</b>你物理方向的硬菜——Jonathan Halliwell 讲量子退相干如何解释从波函数世界到经典宏观世界的过渡,是"量子-经典边界"这一基础问题的当代梳理(摘要未提及可核实的单一原始论文,按规则不附)。</p>
-  <a class="link" href="https://www.quantamagazine.org/where-does-the-quantum-world-end-and-ours-begin-20260917/">quantamagazine.org/…quantum-world-20260917</a>
+  <p class="abstract"><b>摘要:</b>Jonathan Halliwell 讲量子退相干如何解释从波函数世界到经典宏观世界的过渡——「量子-经典边界」基础问题的当代梳理。</p>
 </div>
 
 <div class="note">科学层不足配额说明:配额 2-3 条,今日仅 1 条达标。对无 feed 科学源各搜索 1 次:Nature News 仅见每日简报类(超级厄尔尼诺,3.1 未达线),返朴未见达标内容,均列入缺席源。</div>
@@ -154,10 +146,9 @@
 <h2 class="news" id="news">⚡ 热点保底</h2>
 
 <div class="card">
-  <h3>9. 融资火爆、仿真鸿沟、数据缺口:2026 具身智能产业体检报告</h3>
+  <h3><a href="https://36kr.com/p/3986852938283785?f=rss">9. 融资火爆、仿真鸿沟、数据缺口:2026 具身智能产业体检报告</a></h3>
   <div class="tags">36氪 · AI 行业/具身智能/产业报告 · 约 12 分钟 · <span class="score">★3.4</span></div>
-  <p class="why"><b>为什么适合你:</b>一份带引用出处的行业体检——935 亿半年融资背后的仿真鸿沟与数据缺口,是你职业转型关注的"行业判断"素材,也可对照昨日 RSI 创业热(叙事淹没不确定性)互参。</p>
-  <a class="link" href="https://36kr.com/p/3986852938283785?f=rss">36kr.com/p/3986852938283785</a>
+  <p class="abstract"><b>摘要:</b>2026 具身智能产业体检：935 亿半年融资背后的仿真鸿沟与数据缺口——带引用出处的行业报告。</p>
 </div>
 
 <div class="note">热点提示(未达线仅作背景):OpenAI 据报接近攻克又一"千禧年大奖难题"霍奇猜想(快讯单条 3.3 未达线,但与 09-14 菲尔兹奖得主警告 AI 侵入数学一脉相承,值得知道)。<a class="link" href="https://36kr.com/newsflashes/3988100744215302?f=rss">36kr.com/newsflashes/3988100744215302</a></div>

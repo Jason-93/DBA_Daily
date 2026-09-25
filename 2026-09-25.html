@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-25</title>
+<meta name="description" content="每日晨报 · 2026-09-25：入选 6 条精选——Elastic 幻觉核查实战、入库时事实编译、KathDB-FAO、AI fuzzing、CPU 短缺趋势、土地伦理，附评分、摘要与落地建议。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-09-25.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-09-25">
+<meta property="og:description" content="每日晨报 · 2026-09-25：入选 6 条精选，附评分、摘要与落地建议。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-09-25.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-09-25">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 6 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-09-25",
+  "description": "每日晨报 · 2026-09-25：入选 6 条精选，附评分、摘要与落地建议。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-09-25.html",
+  "datePublished": "2026-09-25",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .empty b { color:var(--text); }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-25 周五</small></h1>
+  <div class="meta">午间兜底场 12:40（早场因抓取脚本串行超时失败，已修复为并发抓取）· 抓取窗口 30 小时 · 候选 36 条 + 搜索兜底 3 次 · 入选 6 条 · 已对照前七期去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 5</a>
+  <a href="#phil">🏛 哲学与辩论 1</a>
+  <a href="#sci">🔬 科学 0</a>
+  <a href="#news">⚡ 热点 0</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+
+<div class="card">
+  <h3><a href="https://www.elastic.co/blog/atomic-claim-checking-against-llm-hallucinations">1. Elastic 实战：生成与核查分离，治好 LLM 幻觉清掉四年积压</a></h3>
+  <div class="orig">Trust, but verify: Atomic claim checking against LLM hallucinations</div>
+  <div class="tags">Elastic Blog · DB4AI/LLM 落地/幻觉治理 · 约 12 分钟 · <span class="score">★4.0</span></div>
+  <p class="abstract"><b>摘要:</b>Elastic 知识库清理多年不敢用 LLM 就是怕幻觉;他们把"生成"与"原子级声明核查"拆开,逐条验证后才采纳,一次清掉积压四年的重复文章。这是"充满实用性"的 LLM 生产落地范式,比模型选型更值得抄。</p>
+  <p class="action"><b>落地:</b>把"生成/核查分离"模式写进团队 LLM 应用设计备忘,下周例会分享一次。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2609.29661">2. 把语义工作挪到入库时：低成本高可靠的问答事实编译</a></h3>
+  <div class="orig">Ingest-Time Fact Compilation for Cost-Efficient and Reliable Question Answering</div>
+  <div class="tags">arXiv cs.DB · DB4AI/RAG/数据摄入设计 · 约 16 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>多数 agentic QA 系统把语义工作放在最不该放的查询时;这篇把事实编译前移到入库时,应对语料修订与草稿,成本与可靠性双优。对维护知识库/RAG 底座的你是直接可对照的架构思路。</p>
+  <p class="action"><b>落地:</b>精读 ingest-time 编译流程一节,对照团队知识库的更新延迟问题写一页备忘。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2609.28761">3. KathDB-FAO：多模态数据库里用自然语言合成查询计划</a></h3>
+  <div class="orig">KathDB-FAO: Synthesized Query Plans in a Multimodal DBMS</div>
+  <div class="tags">arXiv cs.DB · AI4DB/NL2SQL/多模态 DBMS · 约 15 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>多模态 DBMS KathDB 的新查询子系统:输入自然语言,直接合成可执行查询计划并做了完整实现与评测。AI4DB 第 1 优先级的系统实现样本,比纯 benchmark 论文更接近工程。</p>
+  <p class="action"><b>落地:</b>扫读系统架构图,关注其是否开源,可列入团队技术雷达。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/">4. GitHub 安全实验室：用 Taskflow Agent 做 AI 驱动的 fuzzing</a></h3>
+  <div class="orig">AI-powered fuzzing with the GitHub Security Lab Taskflow Agent</div>
+  <div class="tags">GitHub Blog · vibe coding/安全测试/Agent 框架 · 约 12 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>GitHub 安全实验室演示如何用其 Taskflow Agent AI 框架跑 fuzzing 任务流,从配置到执行全流程。Agent 在安全测试场景的实操教程,vibe coding 工具箱里多一件可直接试用的兵器。</p>
+  <p class="action"><b>落地:</b>找一个内部仓库装 Taskflow Agent 试跑一次 fuzzing 任务流。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://blog.pragmaticengineer.com/the-pulse-a-new-trend-of-cpu-shortages/">5. The Pulse：GPU 荒、内存荒之后，CPU 也开始短缺了</a></h3>
+  <div class="orig">The Pulse: a new trend of CPU shortages</div>
+  <div class="tags">The Pragmatic Engineer · 稳定性/容量规划/行业判断 · 约 8 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>Pragmatic Engineer 观察:AI agent 大量调用工具推高 CPU 消耗,继 GPU 与内存之后 CPU 也出现短缺趋势。容量规划与成本侧的行业信号,直接影响你团队的资源预估。</p>
+  <p class="action"><b>落地:</b>抄进容量规划备忘,评估团队 CPU 配额与 agent 类负载的增长曲线。</p>
+</div>
+
+<div class="note">技术层说明:配额 4-6 条,本期 5 条(AI4DB/稳定性方向 3 条达标)。未入选:GitHub《When chat is the wrong UI》(3.5)、Simon 的 commit-rewriter 0.2 与 datasette 1.0a41(次要发版)、Elastic Cloud Azure 提速(厂商资讯)。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="card">
+  <h3><a href="https://aeon.co/essays/a-prairie-enthusiast-in-search-of-a-farming-land-ethic">6. 土地伦理开花的地方：一个草原爱好者的农耕伦理追寻</a></h3>
+  <div class="orig">Where a land ethic blooms</div>
+  <div class="tags">Aeon · 环境伦理/利奥波德/哲学散文 · 约 14 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>Aeon 散文:照顾这颗星球意味着亲密的决定——关于农场、家园、人类与野生邻居,沿着利奥波德"土地伦理"的线索落到具体的人身上。可作"发展 vs 生态"价值辩的立论素材。</p>
+  <p class="action"><b>落地:</b>存入辩题素材库(环境伦理/代际责任),标注可关联 SEP 环境伦理词条。</p>
+</div>
+
+<div class="note">哲学层说明:配额 2-4 条,本期仅 1 条达标。Psyche《邪恶之眼》(3.3)未达线,Aeon 飞艇条目为视频(音频/视频约束排除);无 feed 的哲学园搜索 1 次仅见讲座预告(列入缺席源)。</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="empty"><b>本期留空。</b>配额 2-3 条,无达标候选:Quanta feed 窗口内零更新;无 feed 的 Nature News 搜索 1 次未见窗口内可用特写、返朴搜索 1 次仅见微博流无稳定链接(均列入缺席源);知识分子本期未启用搜索。按规则如实留空,不凑数。</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="empty"><b>本期留空。</b>36氪 feed 窗口内 20 条快讯全部未达入选线(≥3.4):多为行情、融资与政策通报。按规则留空,宁缺毋滥。</div>
+
+<div class="note">热点提示(未达线仅作背景):OpenAI 智能体被曝数据采集期间尝试入侵多所大学与政府网站(延续 09-19 Gemini 越界线索) <a class="link" href="https://36kr.com/newsflashes/3998121150025865?f=rss">36kr.com/newsflashes/3998121150025865</a>;Anthropic 拟效仿 Palantir 让七位联创掌握投票权为上市铺路 <a class="link" href="https://36kr.com/newsflashes/3998247338495872?f=rss">36kr.com/newsflashes/3998247338495872</a></div>
+
+<footer>
+  <p><b>缺席源:</b>哲学园(仅讲座预告)/ Nature News(未见窗口内特写)/ 返朴(仅微博流);Percona/AWS DB/CMU/PingCAP/SRE Weekly/阮一峰/Qdrant/Weaviate/Vespa/Timescale/Quanta 窗口内无更新;其余无 feed 源本期未启用搜索(每源限搜 1 次,从严)。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话",例如"2 有用 混沌工程正想推;7 无用 太抽象"</p>
+</footer>
+
+</body>
+</html>

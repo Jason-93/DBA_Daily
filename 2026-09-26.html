@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-26</title>
+<meta name="description" content="每日晨报 · 2026-09-26：入选 8 条精选——Timescale 大表容量、PG CDC 入湖、TPU megakernel、哈贝马斯、全息引力、Claude 九圈振幅等，附评分、摘要与落地建议。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-09-26.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-09-26">
+<meta property="og:description" content="每日晨报 · 2026-09-26：入选 8 条精选，附评分、摘要与落地建议。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-09-26.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-09-26">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 8 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-09-26",
+  "description": "每日晨报 · 2026-09-26：入选 8 条精选，附评分、摘要与落地建议。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-09-26.html",
+  "datePublished": "2026-09-26",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .empty b { color:var(--text); }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-26 周六</small></h1>
+  <div class="meta">手动重跑 16:30（两场定时任务未产出）· 抓取窗口 30 小时 · 候选 29 条 + 搜索兜底 4 次 · 入选 8 条 · 已对照前七期去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 4</a>
+  <a href="#phil">🏛 哲学与辩论 2</a>
+  <a href="#sci">🔬 科学 2</a>
+  <a href="#news">⚡ 热点 0</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+
+<div class="card">
+  <h3><a href="https://www.tigerdata.com/blog/sizing-your-iiot-table-before-you-deploy">1. Timescale 实战：部署 IIoT 大表前，先算清每行真实成本</a></h3>
+  <div class="orig">Sizing Your IIoT Table Before You Deploy</div>
+  <div class="tags">Timescale Blog · DB4AI/时序数据库/容量规划 · 约 10 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>一条 20 字节的传感器读数落到磁盘实际要 95.6 字节——先测每行字节、再按 6310 亿行推演总量、最后压测写入上限,都在 schema 评审前做完。容量规划方法论可直接照抄到团队任何大表评审。</p>
+  <p class="action"><b>落地:</b>把"测行字节 → 推演总量 → 压测 ingest 上限"三步抄进团队大表 schema 评审 checklist。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/how-to-stream-postgresql-changes-to-amazon-s3-with-aws-fargate/">2. 用 AWS Fargate 搭全托管 CDC 管道：PostgreSQL 变更近实时入 S3</a></h3>
+  <div class="orig">How to stream PostgreSQL changes to Amazon S3 with AWS Fargate</div>
+  <div class="tags">AWS Database Blog · 云数据库/CDC/数据管道 · 约 14 分钟 · <span class="score">★3.8</span></div>
+  <p class="abstract"><b>摘要:</b>AWS 官方教程:用 Fargate 构建全托管、事件驱动的 CDC 管道,把 RDS/Aurora PostgreSQL 的行级变更近实时流入 S3。PG 逻辑复制入湖的生产级参考架构,组件全托管、运维负担小。</p>
+  <p class="action"><b>落地:</b>收藏架构图,团队下次有"PG → 数据湖"需求时按此搭一个 PoC 验证延迟与成本。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.qbitai.com/2026/09/497425.html">3. vLLM 原班人马给 TPU 写 megakernel：跑 Kimi K3 比 GB200 快 57%，代码开源</a></h3>
+  <div class="tags">量子位（搜索兜底 · 09-26 当日）· AI infra/推理性能/行业判断 · 约 8 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>Inferact(vLLM 创始团队)为谷歌 TPU v7 写 megakernel 推理内核,配合 DeepSeek 的 DSpark 框架,16 卡对 16 卡跑 Kimi K3 达 709 token/s、比 GB200 快 57%,代码已开源。推理栈"芯片×内核"组合正在重构成本曲线。</p>
+  <p class="action"><b>落地:</b>记入你的 AI infra 雷达备忘——推理成本与芯片选型是职业转型方向的关键变量。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.qbitai.com/2026/09/497075.html">4. Kimi 浏览器扩展升级：网页操作可录成 Skill 复用</a></h3>
+  <div class="tags">量子位（搜索兜底）· vibe coding/AI 工具/Agent 效率 · 约 6 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>Kimi WebBridge 改头换面为 Kimi 浏览器扩展——新增浏览器侧边栏入口,且网页上做过的事能录成 Skill 下次一键复用。你日常就在用 Kimi,这是提升个人工作流复用率的小而实更新。</p>
+  <p class="action"><b>落地:</b>升级扩展,挑一个高频网页操作流程录成 Skill 试跑一次。</p>
+</div>
+
+<div class="note">技术层说明:配额 4-6 条,本期 4 条;AI4DB/稳定性子配额未满足(窗口内 arXiv cs.DB 零更新、Percona/CMU 等零更新),如实说明不凑数。未入选:GitHub 迁移 CSS-in-JS(3.2)、Simon 转 Gruber 评 Meta Muse(3.35)。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="card">
+  <h3><a href="https://aeon.co/essays/habermass-theory-of-truth-meant-he-changed-his-mind">5. 一起说理：哈贝马斯一生都在践行"改变心意"</a></h3>
+  <div class="orig">Reasoning together</div>
+  <div class="tags">Aeon · 哈贝马斯/协商民主/哲学散文 · 约 14 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>Aeon 写哈贝马斯:协商民主的伟大捍卫者自己也从不害怕改变主意——他的真理理论要求的就是可被说服。既接你德国古典到近当代的哲学底子,更是辩论的元理论:说理何以可能、为何值得。</p>
+  <p class="action"><b>落地:</b>存入辩题素材库(说理/共识/改变心意),标注可关联 SEP 哈贝马斯词条。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://psyche.co/ideas/the-way-we-talk-to-bots-matters-even-if-they-arent-conscious">6. 即使机器人没有意识，我们跟它们说话的方式依然重要</a></h3>
+  <div class="orig">The way we talk to bots matters even if they aren't conscious</div>
+  <div class="tags">Psyche · 科技伦理/人机交互/具体的人 · 约 10 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>Psyche:如果日常越来越多的交流是对机器的粗暴对话,这种习惯会反过来改变我们自己——无关机器是否有意识,关乎人变成什么样。"对 AI 是否需要礼貌"是现成的价值辩切口,落点仍在具体的人。</p>
+  <p class="action"><b>落地:</b>存入辩题素材库(科技伦理),可立"对 AI 粗鲁会不会让人变得更糟"辩题。</p>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3><a href="https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/">7. 引力似乎是全息的：这对现实意味着什么？</a></h3>
+  <div class="orig">Gravity Seems Holographic. What Does That Mean for Reality?</div>
+  <div class="tags">Quanta Magazine · 物理/全息原理/长文 · 约 20 分钟 · <span class="score">★4.0</span></div>
+  <p class="abstract"><b>摘要:</b>Quanta 长文:现代理论物理最大的突破是发现引力可以把空间维度"压缩"——全息原理,但物理学家还没完全搞懂它的含义。正接你"看资讯 → 回溯原始论文"的阅读模式,可沿 AdS/CFT 线索回读原始文献。</p>
+  <p class="action"><b>落地:</b>周末深读,沿文内 AdS/CFT 线索标记 1-2 篇原始综述回读。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.anthropic.com/research/yes-claude-can-do-nine-loops">8. 是的，Claude 算出了九圈：物理学家亲述"被机器抢先"的滋味</a></h3>
+  <div class="orig">Yes, Claude can do Nine Loops</div>
+  <div class="tags">Anthropic（搜索兜底 · 09-26）· AI for Science/理论物理/一手研究 · 约 15 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>Claude 算出平面 N=4 超杨-米尔斯九圈 MHV 六粒子振幅,SLAC/斯坦福教授 Lance Dixon 验证并附言"被机器抢先是什么感觉"。AI 进入前沿理论计算的标志性案例,接续 09-23 AI co-scientist 那条线。</p>
+  <p class="action"><b>落地:</b>精读 Dixon 附言部分,作为"AI 改变科研工作流"案例存档,可回溯振幅计算原始文献。</p>
+</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="empty"><b>本期留空。</b>36氪 feed 窗口内 20 条快讯全部未达入选线(≥3.4):多为签约、行情与政企动态。按规则留空,宁缺毋滥。</div>
+
+<div class="note">热点提示(未达线仅作背景):Anthropic 据悉洽谈 1GW 数据中心容量交易(接续 09-25 CPU 短缺线索) <a class="link" href="https://36kr.com/newsflashes/3999708319895426?f=rss">36kr.com/newsflashes/3999708319895426</a>;美实验室称多智能体协作中演化出人类看不懂的"方言" <a class="link" href="https://36kr.com/newsflashes/3999814609473416?f=rss">36kr.com/newsflashes/3999814609473416</a></div>
+
+<footer>
+  <p><b>缺席源:</b>OceanBase(搜索 1 次,博客停在 7 月)/ OpenAI News(搜索 1 次,仅活动页与旧 notes);Anthropic Engineering 与量子位搜索兜底共入选 3 条;Percona/CMU/arXiv/PingCAP/SRE Weekly/Pragmatic Engineer/阮一峰/Qdrant/Weaviate/Vespa/Elastic 窗口内无(达标)更新;其余无 feed 源本期未启用搜索(每源限搜 1 次,从严)。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话",例如"2 有用 混沌工程正想推;7 无用 太抽象"</p>
+</footer>
+
+</body>
+</html>

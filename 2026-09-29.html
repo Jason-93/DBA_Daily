@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-09-29</title>
+<meta name="description" content="每日晨报 · 2026-09-29：入选 9 条精选——MySQL 升级回退排查、pt-osc×Galera 避坑、Qdrant 免重建换模型、Sonnet 5.5、情感转向与 55 年数学猜想，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-09-29.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-09-29">
+<meta property="og:description" content="每日晨报 · 2026-09-29：入选 9 条精选，附评分与摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-09-29.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-09-29">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 9 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-09-29",
+  "description": "每日晨报 · 2026-09-29：入选 9 条精选，附评分与摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-09-29.html",
+  "datePublished": "2026-09-29",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-09-29 周二</small></h1>
+  <div class="meta">午间兜底场 12:11 · 抓取窗口 30 小时 · 候选 37 条（19 源成功 / 0 失败）· 入选 9 条 · 已对照前七期去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 6</a>
+  <a href="#phil">🏛 哲学与辩论 2</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 0</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/resolving-query-plan-regressions-after-a-mysql-engine-upgrade/">1. MySQL 引擎升级后查询计划回退？AWS 给出系统排查法</a></h3>
+  <div class="orig">Resolving query plan regressions after a MySQL engine upgrade</div>
+  <div class="tags">AWS Database Blog · 稳定性 / MySQL / 升级排查 · 约 15 分钟 · <span class="score">★4.5</span></div>
+  <p class="abstract"><b>摘要:</b>Aurora/RDS MySQL 大小版本升级后，优化器成本模型与默认策略变化导致部分查询回退，文章给出把每条回退溯源到具体版本变更的诊断工作流。升级回退是 DBA 最高频的稳定性痛点，这篇是可直接落地的排查手册。</p>
+  <p class="action"><b>落地:</b>精读诊断流程，把"回退→定位版本变更→修复"步骤抄进团队升级 runbook。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.percona.com/blog/when-pt-online-schema-change-where-meets-galera-understanding-chunk-auto-resize-and-flow-control/">2. pt-online-schema-change 遇上 Galera：chunk 自动缩放与流控的暗坑</a></h3>
+  <div class="orig">When pt-online-schema-change "where" Meets Galera: Understanding Chunk Auto-Resize and Flow Control</div>
+  <div class="tags">Percona Blog · 稳定性 / MySQL / 在线改表 · 约 14 分钟 · <span class="score">★4.3</span></div>
+  <p class="abstract"><b>摘要:</b>pt-osc 的分块复制算法本应按负载动态适配，但在 Galera 集群里与流控交互会产生意外行为，文章拆解 chunk 自动缩放与 flow control 的碰撞机制。生产环境大表在线改表的必备避坑指南。</p>
+  <p class="action"><b>落地:</b>有 Galera/PXC 集群就精读并抄进 runbook；纯主从环境扫读机制原理即可。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.tigerdata.com/blog/41-experiments-6-days-what-human-was-for">3. 6 天 41 个实验：人类在 AI 实验里到底负责什么</a></h3>
+  <div class="orig">41 Experiments in 6 Days: What the Human Was Actually For</div>
+  <div class="tags">Timescale Blog · vibe coding / Agent 记忆 / 评测 · 约 12 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>6 天跑 41 个实验把 LoCoMo 记忆基准 F1 从 0.392 提到 0.666——Claude 写代码，人类负责抓住"会说谎的指标"。既是 agentic 研发效率的实测样本，也是 Agent 记忆评测的一手经验，点中 DB4AI 与 vibe coding 双兴趣。</p>
+  <p class="action"><b>落地:</b>精读"指标说谎"部分，把评测校验清单思路带回团队任何 AI 实验流程。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://qdrant.tech/blog/constella-research-preview/">4. Qdrant Constella 预览：换查询模型不用重建 Embedding</a></h3>
+  <div class="orig">Constella Preview: Swap Query Models Without Re-Embedding</div>
+  <div class="tags">Qdrant Blog · DB4AI / 向量检索 / 成本优化 · 约 10 分钟 · <span class="score">★4.0</span></div>
+  <p class="abstract"><b>摘要:</b>查询流量越大 embedding 算力账单越贵，小模型本可降本但换模型就要全库重建；Constella 模型族让你直接换查询模型而不动已建索引。向量库查询侧降本与端侧部署的新选项，正中 DB4AI。</p>
+  <p class="action"><b>落地:</b>记入团队向量库降本备选清单，有查询侧成本压力时试 research preview。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.percona.com/blog/pgq-and-pgque-workflow-engines-you-might-need-in-postgresql/">5. PgQ 与 PgQue：你可能需要的 PostgreSQL 工作流引擎</a></h3>
+  <div class="orig">PgQ and PgQue: Workflow Engines you might need in PostgreSQL</div>
+  <div class="tags">Percona Blog · PostgreSQL / 队列 / 运维 · 约 12 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>高频更新表（日百万级）导致 autovacuum 反复空转、表膨胀、性能与并发变差——PgQ/PgQue 这类 PG 内工作流引擎正是为此设计。"库内队列"场景的原理解析，顺带把膨胀治理的因果链讲透了。</p>
+  <p class="action"><b>落地:</b>精读膨胀成因部分；团队若用 PG 做队列表，评估 PgQ/PgQue 替代方案。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/">6. Claude Sonnet 5.5 发布：更快 30%、便宜 30%，同价全面超 Sonnet 5</a></h3>
+  <div class="orig">Claude Sonnet 5.5</div>
+  <div class="tags">Simon Willison · vibe coding / 模型动态 / 成本 · 约 6 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>Anthropic 发布 Sonnet 5.5，官方称多数任务快 30%+、成本省 30%，价格与 Sonnet 5 持平但基准全面领先。延续本周"推理成本战"主线，直接影响团队 AI 工具的模型选型与账单。</p>
+  <p class="action"><b>落地:</b>扫读即可；团队有用 Claude 系模型的话，下周评估切到 5.5。</p>
+</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="card">
+  <h3><a href="https://aeon.co/videos/beyond-the-mind-body-divide-on-the-affective-turn-in-the-humanities">7. 情感转向：人文学科如何越过"身心二分"</a></h3>
+  <div class="orig">Affect theory</div>
+  <div class="tags">Aeon · 哲学 / 情感理论 / 短片 · 约 10 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>上世纪 90 年代中期，思想家们反抗"人由语言建构"的叙事，转向感受与身体——人文学科的"情感转向"一瞥。接你德古到存在主义的哲学底子，补一块当代理论版图。</p>
+  <p class="action"><b>落地:</b>扫看短片，感兴趣再沿 affect theory 词条扩展，不进精读队列。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://aeon.co/essays/when-a-man-becomes-a-father-and-a-poetic-revolution-follows">8. 父职是诗意的：当男人成为父亲，一场诗学革命随之而来</a></h3>
+  <div class="orig">Paternity is poetical</div>
+  <div class="tags">Aeon · 随笔 / 具体的人 / 创造力 · 约 12 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>父职与创造力互斥的说法是错的——诗歌与神经科学都在证明相反方向。"具体的人"视角看身份转变，可作价值辩里"责任与自我实现是否冲突"的生活化素材。</p>
+  <p class="action"><b>落地:</b>扫读，观点有触动就存素材库，优先级低。</p>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3><a href="https://www.quantamagazine.org/mathematicians-harness-randomness-to-crack-a-55-year-old-conjecture-20260928/">9. 数学家驯服随机性，攻破 55 年猜想</a></h3>
+  <div class="orig">Mathematicians Harness Randomness To Crack a 55-Year-Old Conjecture</div>
+  <div class="tags">Quanta · 数学 / 随机性 / 长文 · 约 18 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>一个可能由杂耍启发的数学猜想搁置数十年后，被一群年轻数学家用随机性方法最终解决。纯数学长文，"老问题被新工具攻陷"的叙事与你关注的 AI 攻难题形成有趣互文。</p>
+  <p class="action"><b>落地:</b>周末深读，作为通识放松读即可。</p>
+</div>
+
+<div class="note">科学层说明：配额 2-3 条，窗口内 Quanta 仅此 1 条新内容、其余科学源无更新，本期 1 条，不凑数。</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="empty"><b>本期留空。</b>36氪 窗口内 20 条均为融资、行情与会议报道，未达入选线（≥3.4）。背景提示：「8点1氪」汇总含比尔盖茨警告"AI 或足以造成 10 亿人死亡"、罗永浩回应偷税举报等——扫读即可。</div>
+
+<footer>
+  <p><b>缺席源:</b>无——19 个 feed 源全部成功。无 feed 源（Anthropic/OpenAI News/Cursor/量子位/OceanBase/晚点/南周/人物/返朴/Nature News 等 18 个）本期未启用搜索：feed 候选已充足且各层达标。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

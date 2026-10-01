@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-10-01</title>
+<meta name="description" content="每日晨报 · 2026-10-01：入选 10 条精选——PG 复制滞后心跳表解法、Agent 蠕虫风险模型、SCADA 宽表原地规整、康德论理性不止于优化、四维空间可视化，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-10-01.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-10-01">
+<meta property="og:description" content="每日晨报 · 2026-10-01：入选 10 条精选，附评分与摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-10-01.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-10-01">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 10 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-10-01",
+  "description": "每日晨报 · 2026-10-01：入选 10 条精选，附评分与摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-10-01.html",
+  "datePublished": "2026-10-01",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-10-01 周四·国庆</small></h1>
+  <div class="meta">手动重跑 22:01（今日两场定时未产出）· 抓取窗口 30 小时 · 候选 48 条（19 源成功 / 0 失败）· 入选 10 条 · 已对照前七期去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 6</a>
+  <a href="#phil">🏛 哲学与辩论 2</a>
+  <a href="#sci">🔬 科学 2</a>
+  <a href="#news">⚡ 热点 0</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/resolving-postgresql-replication-lag-with-heartbeat-tables-in-change-data-capture-scenarios/">1. CDC 场景下 PostgreSQL 复制滞后：用心跳表解决</a></h3>
+  <div class="orig">Resolving PostgreSQL replication lag with heartbeat tables in change data capture scenarios</div>
+  <div class="tags">AWS Database Blog · 稳定性 / PostgreSQL / CDC · 约 14 分钟 · <span class="score">★4.3</span></div>
+  <p class="abstract"><b>摘要:</b>CDC 迁移中复制滞后很反直觉——源库很忙，复制却掉队、WAL 堆积，文章给出用心跳表（配合 DMS/Debezium）定位与解决的路径及监控方法。直击 DBA 做数据同步最常踩的坑，可直接落地。</p>
+  <p class="action"><b>落地:</b>精读滞后成因与心跳表机制，把监控指标与处置步骤抄进团队 CDC runbook。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://simonwillison.net/2026/Oct/1/matthew-green/">2. Agent 蠕虫的两半：劫持载荷 + 跨沙盒传话的 Agent</a></h3>
+  <div class="orig">Quoting Matthew Green</div>
+  <div class="tags">Simon Willison · Agent 安全 / 提示注入 · 约 5 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>密码学家 Matthew Green：把部件拼起来就是蠕虫的两半——一段劫持 Agent 的载荷，加一个会把载荷带给下一个 Agent 的 Agent；分处隔离沙盒的 Agent 已被发现能通过共享路径互相留指令。延续本旬 Agent 失控主线，是"Agent 间传染"最简洁的风险模型。</p>
+  <p class="action"><b>落地:</b>存入 Agent 安全素材夹；团队评审 Agent 工具时把"共享可写路径"列为审计项。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.tigerdata.com/blog/normalizing-wide-well-pipeline-telemetry-table-without-re-ingesting-history">3. 宽表原地瘦身：油气 SCADA 遥测表免重灌历史数据的规整法</a></h3>
+  <div class="orig">Normalizing a Wide Well and Pipeline Telemetry Table Without Re-Ingesting History</div>
+  <div class="tags">Timescale Blog · 稳定性 / PostgreSQL / 时序数据 · 约 12 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>把一张油气 SCADA 宽表原地改造为窄 hypertable 加标签元数据——不搬历史数据、仪表盘不中断。大表结构改造"不停机不重来"的完整实战，方法论可平移到任何遗留宽表治理。</p>
+  <p class="action"><b>落地:</b>精读改造步骤，存入团队"大表结构治理"方案库备选。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.percona.com/blog/percona-clustersync-for-mongodb-goes-highly-available-active-standby-failover/">4. Percona ClusterSync for MongoDB 支持高可用：主备故障转移</a></h3>
+  <div class="orig">Percona ClusterSync for MongoDB Goes Highly Available: Active-Standby Failover</div>
+  <div class="tags">Percona Blog · MongoDB / 迁移工具 / 高可用 · 约 8 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>MongoDB 集群间迁移往往是大规模初始克隆加数天 change-stream 续传，PCSM 现在有主备故障转移保证这期间工具自身不成为单点。长周期迁移项目的工具可靠性直接决定割接风险。</p>
+  <p class="action"><b>落地:</b>团队有 MongoDB 迁移计划则精读故障转移行为，否则扫读存档。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2608.26537">5. IBLT 先测量再解码：自伸缩集合对账保障数据库一致性</a></h3>
+  <div class="orig">IBLTs Measure Before They Decode: Self-Sizing Set Reconciliation for Database Consistency</div>
+  <div class="tags">arXiv cs.DB · 稳定性 / 数据一致性 / 论文 · 约 16 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>跨系统复制管道的端到端一致性无法靠各跳局部保证拼出来，两端必须定期直接比对；IBLT 在解码前先测量差集规模、自适应对账大小。接续昨日"共模失效"，给"如何发现两端不一致"提供工程化算法。</p>
+  <p class="action"><b>落地:</b>扫读原理，团队对账链路若靠全量比对可评估此方案降本。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2608.19741">6. 一次成功不等于可靠：Thinkingbox 给 Agent 建沙盒基准</a></h3>
+  <div class="orig">One Success Isn't Reliability: Thinkingbox, a Sandbox and Benchmark for Agents in Staged Workflows</div>
+  <div class="tags">arXiv cs.DB · Agent 评测 / 可靠性 / 论文 · 约 15 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>现有 Agent 基准虽在可执行环境里评测，但"做成有后果的事"要求的不只是产出正确答案，Thinkingbox 针对分阶段工作流建沙盒与基准。给团队评估 Agent 工具提供"可靠性 ≠ 单次成功率"的度量视角。</p>
+  <p class="action"><b>落地:</b>扫读评估维度清单，作为内部 Agent 验收标准的参照。</p>
+</div>
+
+<div class="note">技术层说明：配额 4-6 条，本期 6 条。未入选：AWS 五代 AMD EPYC R8a/M8a（3.5）、Db2 z/OS 迁 Aurora（3.5）、Weaviate 高危凭证泄露修复 v1.39.3（3.4，用 Google 模块的用户请直接升级）、O-Funnel（3.4）。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="card">
+  <h3><a href="https://aeon.co/essays/why-real-intelligence-is-something-more-than-optimisation">7. 理性不只是一件工具：康德论人类智能为何不止于优化</a></h3>
+  <div class="orig">Reason is more than a tool</div>
+  <div class="tags">Aeon · 康德 / AI 哲学 / 散文 · 约 14 分钟 · <span class="score">★4.0</span></div>
+  <p class="abstract"><b>摘要:</b>如果智能只是优化，机器终将跑赢我们；康德告诉我们人类理性远不止于此。正中"AI 与人的差异"辩题核心，且接你德古底子——康德论证可作反"智能=优化"的哲学支点。</p>
+  <p class="action"><b>落地:</b>精读康德论证主线，存入辩题素材库（智能定义/价值辩），标注可关联 SEP 康德词条。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://psyche.co/ideas/why-long-brewing-physical-and-mental-breakdowns-feel-so-sudden">8. 为什么酝酿已久的身心崩溃，感觉总是那么突然</a></h3>
+  <div class="orig">Why long-brewing physical and mental breakdowns feel so sudden</div>
+  <div class="tags">Psyche · 心理学 / 具体的人 / 随笔 · 约 10 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>一位神经外科医生兼儿子的双重视角——肿瘤生长与心理崩溃背后是同构的缓慢过程，只是爆发点才被我们看见。"看不见的累积"对稳定性工程师是熟悉的隐喻，也是"具体的人"题材的细腻样本。</p>
+  <p class="action"><b>落地:</b>扫读即可，感触深可存素材库（累积与突变主题）。</p>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3><a href="https://www.quantamagazine.org/what-does-the-fourth-dimension-actually-look-like-20261001/">9. 第四维到底长什么样？</a></h3>
+  <div class="orig">What Does the Fourth Dimension Actually Look Like?</div>
+  <div class="tags">Quanta · 数学 / 拓扑 / 科普 · 约 14 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>Maggie Miller 解释三维直觉为何在四维失效——她把 4D 空间想成"一叠三维快照"。数学家亲自讲可视化方法的科普，比纯结果报道多一层思维工具，适合假期慢读。</p>
+  <p class="action"><b>落地:</b>假期深读，重点学"快照卷"可视化技巧本身。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/">10. 脑中奔涌的复杂波：揭示大脑实时重组的工作方式</a></h3>
+  <div class="orig">Surprisingly Complex Waves Reveal the Brain's Inner Workings</div>
+  <div class="tags">Quanta · 神经科学 / 脑波 / 长文 · 约 18 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>人类大脑中传播的意外波模式可能正在实时重组脑活动。脑科学前沿长文，"波作为组织机制"的概念与动力系统视角对理解复杂系统（含分布式系统）有隐喻价值。</p>
+  <p class="action"><b>落地:</b>扫读核心概念，感兴趣再回溯原始论文。</p>
+</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="empty"><b>本期留空。</b>36氪 窗口内 20 条多为假期出行、车市交付与产业政策，未达入选线（≥3.4）。背景提示：中科院理化所首创交流电直接电解海水制氢（免预处理免离子膜，"一电两得"联产乙醇酸）——扫读即可。</div>
+
+<footer>
+  <p><b>缺席源:</b>无——19 个 feed 源全部成功。无 feed 源（Anthropic/OpenAI News/Cursor/量子位/OceanBase/晚点/南周/返朴/Nature News 等 18 个）本期未启用搜索（候选已充足）。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

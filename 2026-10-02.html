@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-10-02</title>
+<meta name="description" content="每日晨报 · 2026-10-02：入选 9 条精选——DHH 手写代码已死之争、AI 时代三项技能、DynamoDB 过滤导出、Aurora DSQL 外键、丰年虾改写湍流规则，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-10-02.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-10-02">
+<meta property="og:description" content="每日晨报 · 2026-10-02：入选 9 条精选，附评分与摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-10-02.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-10-02">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 9 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-10-02",
+  "description": "每日晨报 · 2026-10-02：入选 9 条精选，附评分与摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-10-02.html",
+  "datePublished": "2026-10-02",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-10-02 周五·国庆假期</small></h1>
+  <div class="meta">补跑于 10-03 13:40（10-02 定时未产出）· 抓取窗口 54 小时 · 候选 38 条（17 源成功 / 2 失败）· 入选 9 条 · 已对照前七期去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 6</a>
+  <a href="#phil">🏛 哲学与辩论 2</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 0</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+
+<div class="card">
+  <h3><a href="https://blog.pragmaticengineer.com/the-pulse-ror-creator-sparks-new-death-of-coding-by-hand-debate/">1. DHH 在 Rails World 宣战"手写代码已死"，这次拦得住吗</a></h3>
+  <div class="orig">The Pulse: RoR creator sparks new "death of coding by hand" debate</div>
+  <div class="tags">The Pragmatic Engineer · vibe coding / 职业转型 / 行业辩论 · 约 8 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>DHH 在 Rails World 主题演讲宣称至少在 37signals，专业工作手写代码的时代结束了，引发新一轮"手写代码之死"辩论。这不是标题党而是框架创造者的公开押注，是职业判断绕不开的立场样本。</p>
+  <p class="action"><b>落地:</b>精读 DHH 论点与反方要点，写一页备忘：哪些论断适用于你们团队的代码生产。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/">2. AI 正在改写开发者职业阶梯：三项该强化的技能</a></h3>
+  <div class="orig">AI is changing developer work. Here are three skills to strengthen</div>
+  <div class="tags">GitHub Blog · 职业转型 / AI 工具链 / 技能 · 约 8 分钟 · <span class="score">★3.8</span></div>
+  <p class="abstract"><b>摘要:</b>指挥 AI agent、批判性审查其输出、把技术判断保持在 workflow 中心——AI 时代开发者该强化的三项技能。与 Nature"AI 放大专家而非专业"（09-30 期）互为表里，是职业转型叙事的产业侧版本。</p>
+  <p class="action"><b>落地:</b>对照三项技能自评一次，把"审查输出"列进团队 AI 编码规范草案。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.pingcap.com/blog/ai-hardware-data-architecture-at-scale/">3. 数据库即产品：当记忆设备规模化，什么会先崩</a></h3>
+  <div class="orig">The Database Is the Product: What Breaks When Memory Devices Scale</div>
+  <div class="tags">PingCAP Blog · AI4DB / 数据架构 / 行业判断 · 约 12 分钟 · <span class="score">★3.8</span></div>
+  <p class="abstract"><b>摘要:</b>AI 随身记录设备这类"记忆硬件"规模化后，背后数据架构会先在哪断裂——数据库本身就是产品。把 DB 从后台基建拉到产品前台的视角，正是 AI4DB 职业方向的行业叙事。</p>
+  <p class="action"><b>落地:</b>扫读并存入职业观察备忘，关注"记忆设备→数据架构"的需求传导链。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/introducing-filtered-export-from-amazon-dynamodb-to-amazon-s3/">4. DynamoDB 过滤导出到 S3：只导你要的，不耗表容量</a></h3>
+  <div class="orig">Introducing filtered export from Amazon DynamoDB to Amazon S3</div>
+  <div class="tags">AWS Database Blog · 云数据库 / DynamoDB / 数据导出 · 约 9 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>DynamoDB 新功能支持按 item 与属性过滤导出到 S3、不消耗表容量，示例含单租户数据恢复与选择性共享租户历史。多租户 SaaS 数据导出与合规场景的实用新武器。</p>
+  <p class="action"><b>落地:</b>团队用 DynamoDB 则精读租户恢复示例抄进 runbook，否则扫读存档。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/working-with-foreign-key-constraints-in-aurora-dsql/">5. 在 Aurora DSQL 里用外键约束：即时与延迟执行的取舍</a></h3>
+  <div class="orig">Working with foreign key constraints in Aurora DSQL</div>
+  <div class="tags">AWS Database Blog · 分布式数据库 / Aurora DSQL · 约 10 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>Aurora DSQL 支持外键强制引用完整性，文章覆盖定义方式、即时 vs 延迟执行、存量表加约束及与乐观并发的配合。分布式 SQL 里约束语义是选型硬指标，这篇是 DSQL 能力边界的一手说明。</p>
+  <p class="action"><b>落地:</b>精读即时/延迟取舍段，记入团队分布式数据库选型对比表。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/babelfish-for-aurora-postgresql-performance-tuning/">6. Babelfish for Aurora PostgreSQL 性能调优</a></h3>
+  <div class="orig">Babelfish for Aurora PostgreSQL performance tuning</div>
+  <div class="tags">AWS Database Blog · 数据库迁移 / 性能调优 · 约 12 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>从监控、查询优化、参数调优到日常维护的 Babelfish 全链路调优指南。SQL Server 迁 PostgreSQL 路线上的团队可直接照做，其他人可借鉴其调优方法论结构。</p>
+  <p class="action"><b>落地:</b>有 Babelfish 在用就精读抄进 runbook，否则扫读框架即可。</p>
+</div>
+
+<div class="note">技术层说明：配额 4-6 条，本期 6 条。未入选：Elastic TEI 报告（3.2，营销属性）、Elastic BYOK（3.4）、GitHub Universe 演讲预告（3.2）、Weaviate 安全修复（10-01 期已提醒）。</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+
+<div class="card">
+  <h3><a href="https://aeon.co/essays/early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew">7. 活在一触即发之中：暴力如何塑造心灵</a></h3>
+  <div class="orig">Life on a hair trigger</div>
+  <div class="tags">Aeon · 暴力与心灵 / 具体的人 / 散文 · 约 13 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>暴力世界靠枪支、贫困维持，也靠它塑造出的心灵自我延续——但心灵可以重新学习。早期创伤与环境的因果链，是"系统与个人谁负责"类辩题的实证弹药。</p>
+  <p class="action"><b>落地:</b>存入辩题素材库（环境决定论 vs 能动性），标注神经可塑性案例位置。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://psyche.co/videos/what-happens-when-a-sudanese-refugee-lets-strangers-ask-him-anything">8. 尽管问我：当苏丹难民让陌生人提问</a></h3>
+  <div class="orig">Ask me anything</div>
+  <div class="tags">Psyche · 难民 / 公共对话 / 短片 · 约 12 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>荷兰通过史上最严庇护政策之际，苏丹难民 Abdulaal Hussein 创造空间让路人向他提任何问题。以具体的人对冲抽象政策叙事，是移民/公共对话辩题的情感锚点。</p>
+  <p class="action"><b>落地:</b>扫看短片，案例存入素材库（公共对话/移民议题）。</p>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+
+<div class="card">
+  <h3><a href="https://www.quantamagazine.org/sea-monkeys-show-scientists-how-to-rewrite-a-rule-of-turbulence-20261002/">9. 丰年虾教科学家改写湍流规则</a></h3>
+  <div class="orig">Sea Monkeys Show Scientists How To Rewrite a Rule of Turbulence</div>
+  <div class="tags">Quanta · 流体力学 / 湍流 / 科普 · 约 14 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>科学家原以为湍流中能量只朝一个方向流动，直到细看丰年虾才发现一个简单因子就能逆转流向。百年湍流直觉被小生物撬动，是基础科学"例外驱动修正"的漂亮样本。</p>
+  <p class="action"><b>落地:</b>假期慢读即可，感兴趣可回溯原始论文。</p>
+</div>
+
+<div class="note">科学层说明：配额 2-3 条，窗口内 Quanta 仅 1 条新内容（四维空间 10-01 期已选），本期 1 条，不凑数。</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+
+<div class="empty"><b>本期留空。</b>36氪 窗口内条目多为假期消费与产业动态，未达入选线（≥3.4），按规则留空，宁缺毋滥。</div>
+
+<footer>
+  <p><b>缺席源:</b>Percona Blog、Simon Willison's Weblog（均抓取超时，重试 1 次仍失败）。无 feed 源本期未启用搜索（候选已充足）。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

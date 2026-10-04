@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周日专题 · 2026-W40</title>
+<meta name="description" content="周日专题 2026-W40：本周 AI4DB/稳定性雷达、辩题素材包（阿根廷投资换国籍：国籍可以明码标价吗）、论文精读推荐与反馈回顾。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/weekly/2026-W40.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="周日专题 · 2026-W40">
+<meta property="og:description" content="周日专题 2026-W40：本周 AI4DB/稳定性雷达、辩题素材包、论文精读推荐与反馈回顾。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/weekly/2026-W40.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="周日专题 · 2026-W40">
+<meta name="twitter:description" content="周日专题 2026-W40：本周 AI4DB/稳定性雷达、辩题素材包、论文精读推荐与反馈回顾。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "周日专题 · 2026-W40",
+  "description": "周日专题 2026-W40：本周 AI4DB/稳定性雷达、辩题素材包、论文精读推荐与反馈回顾。",
+  "url": "https://jason-93.github.io/DBA_Daily/weekly/2026-W40.html",
+  "inLanguage": "zh-CN",
+  "author": {
+    "@type": "Organization",
+    "name": "DBA Daily"
+  },
+  "datePublished": "2026-10-04"
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --radar:#4cc38a; --debate:#c792ea; --paper:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.radar { border-color:var(--radar); } h2.debate { border-color:var(--debate); }
+  h2.paper { border-color:var(--paper); }
+  h3 { font-size:15.5px; margin:18px 4px 8px; }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; font-size:14px; }
+  .card p { margin:6px 0; }
+  .judge { color:var(--radar); font-size:13.5px; }
+  .judge::before { content:"趋势判断："; font-weight:600; }
+  ul, ol { margin:6px 0 6px 22px; font-size:14px; }
+  li { margin:4px 0; }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; display:block; margin:3px 0; }
+  a.link::before { content:"🔗 "; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px; border-top:1px solid #262c38; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>周日专题 <small>2026-W40（09-28 ~ 10-04）</small></h1>
+  <div class="meta">生成于 10-04 08:20 · 素材：本周七期晨报（09-27 ~ 10-03）+ 200h 候选 89 条（19 源成功 / 0 失败）</div>
+</header>
+
+<nav>
+  <a href="../" class="home">← 主页</a>
+  <a href="#radar">📡 雷达 5</a>
+  <a href="#debate">⚖️ 辩题素材包</a>
+  <a href="#paper">📄 论文精读</a>
+  <a href="#feedback">💬 反馈回顾</a>
+</nav>
+
+<h2 class="radar" id="radar">一、本周 AI4DB / 稳定性雷达</h2>
+
+<div class="card">
+  <p><b>1. Agent 检索底座：向量库厂商集体把叙事从"存向量"转向"Agent 的检索质量"。</b></p>
+  <p>一周之内多方同向：PingCAP《向量检索与全文检索详解：AI Agent 为什么两个都要》（09-30 晨报）、Vespa《为什么检索质量正成为 AI Agent 架构的决定性挑战》（本周候选）、TigerData《Agent 记忆是搜索问题，不是存储问题》（10-01 晨报）、Qdrant Constella 预览"换查询模型不用重建 Embedding"（09-29 晨报）、arXiv 出现"声明式召回"的过滤式向量搜索 VADER（09-30 晨报）。</p>
+  <p class="judge">混合检索（向量 + 全文）正成为 Agent 场景的默认答案，"召回质量可声明、可度量"开始取代"ANN 参数人肉调优"成为产品分水岭——选择性、相关性、过滤谓词正是 DBA 的老词汇，我们的检索调优经验在这里直接复用。</p>
+</div>
+
+<div class="card">
+  <p><b>2. 变更与升级风险的工程化：厂商把"升级后遗症"写成标准 runbook。</b></p>
+  <p>AWS《MySQL 引擎升级后查询计划回退的系统排查法》（09-29 晨报）、Percona《pt-online-schema-change 遇上 Galera：chunk 自动缩放与流控的暗坑》（09-29 晨报）、AWS《CDC 场景用心跳表解决 PostgreSQL 复制滞后》（10-01 晨报）、Percona ClusterSync for MongoDB 补上主备高可用（10-01 晨报）、Aurora DSQL 外键约束即时与延迟执行的取舍（10-02 晨报）。</p>
+  <p class="judge">变更管理正在从个人经验沉淀为厂商工程清单，排查路径产品化的速度没有放缓；一线 DBA 的差异化价值进一步向"跨系统归因"和"变更前的风险预判"集中——runbook 抄得快不如抄得准。</p>
+</div>
+
+<div class="card">
+  <p><b>3. "手写代码已死"之争进入第二轮，官方开始重写职业叙事。</b></p>
+  <p>DHH 在 Rails World 重燃"手写代码之死"论战（10-02 晨报）、GitHub 官方博客《AI 正在改写开发者职业阶梯：三项该强化的技能》（10-02 晨报）、Anthropic 投 1 亿美元办 Claude Frontier Academy 训练 1 万名"前沿部署工程师"（10-03 晨报）。</p>
+  <p class="judge">争论焦点已从"AI 能不能写代码"移向"人的价值往哪挪"——评审、验证、架构判断成了官方叙事里的新技能栈；但"谁为 AI 写的代码兜底"这个责任问题，厂商们默契地都没回答。</p>
+</div>
+
+<div class="card">
+  <p><b>4. Agent 失控成本：默认硬限额正在变成基础设施的新默认。</b></p>
+  <p>Simon Willison 呼吁"几乎所有按量付费服务都需要默认硬预算上限"——超过限额直接断供报错，而不是半夜发警告邮件；他指出 AWS 已于 9 月 16 日上线消费限额、Google Cloud 7 月推出 Spend Caps（本周候选）。同一周：Matthew Green 拆解"Agent 蠕虫的两半"（10-01 晨报）、Weaviate 发布高危凭证泄露修复（本周候选）、OpenAI 安全系统团队负责人 David Robinson 离职（10-03 热点）。</p>
+  <p class="judge">Agent 时代的"稳定性"定义在扩展——不只防宕机，还要防账单与权限越界；硬限额从 nice-to-have 变成默认假设，明年大概率成为平台工程的标配检查项。</p>
+</div>
+
+<div class="card">
+  <p><b>5. 内存设备规模化开始反向定义数据库产品形态。</b></p>
+  <p>PingCAP《数据库即产品：当内存设备规模化，什么会先崩》（10-02 晨报）讨论大内存/新型内存设备对数据架构的冲击；AWS 与 AMD 把第 5 代 EPYC 处理器带入 Aurora 与 RDS（本周候选）。</p>
+  <p class="judge">硬件层的内存/存储分层正在变成数据库架构的上游变量，"内存墙"在选型评估里的权重上升——容量规划模型需要把内存设备的性价比曲线单列跟踪。</p>
+</div>
+
+<h2 class="debate" id="debate">二、辩题素材包：国籍可以明码标价吗？——阿根廷"投资换国籍"</h2>
+
+<div class="card">
+  <p><b>案例（已核实）</b></p>
+  <p>2026 年 10 月 2 日，阿根廷经济部长卡普托与内阁首席部长圣蒂利在巴黎"阿根廷周"活动上共同宣布"投资换国籍"计划，定于今年第四季度启动：申请人向阿根廷直接投资至少 35 万美元（不可退还），或购买 80 万美元公共债券，即可申请入籍；主申请人的配偶及子女可随同申请，一个四口之家总计投资 50 万美元便可全家入籍。阿经济部称这是"开放和国际融合"的举措；路透社解读，米莱政府意在为经济输血——阿明年面临近 250 亿美元外债偿还压力，若申请人数达标，该项目可望带来多达 25 亿美元。批评者担忧其滋生腐败、带来安全风险并涉嫌违宪——今年 6 月，阿根廷联邦法院已裁定米莱政府将入籍审批权从联邦法官移交行政机关的紧急法令部分内容违宪。</p>
+  <a class="link" href="https://www.news.cn/world/20261003/61ba89e82c834dd58b16d2d2fc6593ff/c.html">news.cn（新华社，10-03）</a>
+  <a class="link" href="https://36kr.com/newsflashes/4009745778512003?f=rss">36kr.com（36氪快讯，本周候选）</a>
+  <a class="link" href="https://www.guancha.cn/internation/2026_06_28_821832.shtml">guancha.cn（观察者网，6 月：违宪担忧）</a>
+  <a class="link" href="https://www.sohu.com/a/1049558540_120394108">sohu.com（7 月：联邦法院裁定相关法令部分违宪）</a>
+  <p><b>同一个星期的另一面</b>：Psyche 本周纪录短片《尽管问我》里，苏丹难民 Abdulaal Hussein 在荷兰（2024 年拍摄，当时荷兰正收紧庇护政策）巡回举办"随便问我"见面会，回答本地人关于流亡与身份的一切问题——一边是可以花 35 万美元直接购买的国籍，一边是一个逃亡者连"被当作自己人提问"都要靠一次次见面会去争取。这正处本期辩题矛盾的中心。</p>
+  <a class="link" href="https://psyche.co/videos/what-happens-when-a-sudanese-refugee-lets-strangers-ask-him-anything">psyche.co（《尽管问我》纪录短片）</a>
+</div>
+
+<div class="card">
+  <p><b>正方立论框架（国籍可以出售）</b></p>
+  <ol>
+    <li><b>自愿交易，无人被迫</b>：国家让渡接纳权、个人让渡财富，双方自愿各取所需；禁止它反而限制了人对居住地与身份的选择自由——花钱买身份与花钱买教育、医疗一样，是财富对人生选项的正常兑换。</li>
+    <li><b>三害相权取其轻的现实主义</b>：阿根廷的替代方案是违约、印钞（通胀全民摊付）或继续紧缩；卖国籍筹到 25 亿美元偿债资金，投资者得身份、本国民众免于通胀掠夺，接近帕累托改进。道德洁癖的代价由最穷的国民承担。</li>
+    <li><b>市场本就存在，堵不如疏</b>：加勒比五国、马耳他、美国 EB-5 与"金卡"、欧洲各国黄金签证——国籍与居留权市场是全球现实。公开定价 + 严格尽调，好于把交易逼入灰色地带；G20 国家入场反而可能抬升行业审查标准。</li>
+  </ol>
+</div>
+
+<div class="card">
+  <p><b>反方立论框架（国籍不可出售）</b></p>
+  <ol>
+    <li><b>有些东西入市即变质</b>：公民身份是平等成员资格与归属关系，不是资产。标价出售改变了它的含义——国家从政治共同体退化为销售商，公民从"我们中的一员"变成"客户"；正如卖官鬻爵摧毁公职的含义，无关交易是否"自愿"。</li>
+    <li><b>根基性权利不该由市场分配</b>：国籍是"拥有权利的权利"——其他一切权利的载体。把它交给市场，意味着最需要它的人（无国籍者、难民）永远出不起价：同一个星期，富人 35 万美元买身份，苏丹难民在荷兰靠巡回见面争取被平等看待，这就是市场分配权利的实质图景。</li>
+    <li><b>程序越权与平等腐蚀</b>：行政权绕过国会出售国籍，已被本国法院裁定相关法令部分违宪；且它制造出"买来的公民"与"出生的公民"两个阶层——尽调再严，也只是把富人犯罪的风险重新定价，而非消除。</li>
+  </ol>
+</div>
+
+<div class="card">
+  <p><b>关联哲学文本</b></p>
+  <ul>
+    <li><b>阿伦特《极权主义的起源》"拥有权利的权利"</b>（你在读《艾希曼在耶路撒冷》，此概念出自《起源》的帝国主义/无国籍章节，可回溯源头）：反方第 2 条的理论基石——丧失国籍意味着丧失"以行动与意见被人类共同体接纳"的位置本身；市场逻辑恰恰从这一层开始排除。</li>
+    <li><b>伯林《自由论》</b>：正方第 1 条是消极自由的直接运用（选择的自由应最大化）；反方可用伯林自己的价值多元论回击——自由与平等是可能冲突且不可通约的价值，"出售国籍"是用自由之名做平等之交易，不存在两全解，只有带损失的排序。</li>
+    <li><b>当代补充：桑德尔《金钱不能买什么》</b>（非书单内，但论证最对口）：市场的腐蚀性效应——某些善一旦被买卖，其规范就被改写。</li>
+    <li><b>SEP 词条方向</b>：Citizenship（公民身份）；Immigration（移民伦理，特别是准入权的正当性讨论）；Hannah Arendt（含 statelessness 与 right to have rights）；Isaiah Berlin（价值多元主义）；Global Justice（全球正义中的边界与成员资格问题）。</li>
+  </ul>
+</div>
+
+<h2 class="paper" id="paper">三、论文精读推荐</h2>
+
+<div class="card">
+  <p><b>VADER：声明式召回的近似过滤式向量搜索（arXiv 2609.38053）</b></p>
+  <a class="link" href="https://arxiv.org/abs/2609.38053">arxiv.org/abs/2609.38053</a> · v1 提交于 2026-09-29，v2 于 09-30（09-30 晨报技术层）
+  <p><b>导读：</b>过滤式向量搜索（FVS）是"结构化过滤 + 向量召回"混合负载的核心操作，其执行难度由谓词的选择性（selectivity）与相关性（correlation）共同决定——同一查询向量，换个过滤条件难度天差地别，导致用户不得不为不同负载人肉调参。VADER 提出<b>声明式召回</b>：用户只声明目标召回率，系统用"过滤感知的召回预测器"（对选择性与相关性泛化，无需显式调参）动态推断当前进度，一旦预测召回达标即提前终止搜索。论文称这是首个免除 FVS 超参调优的方案，相比最优基线提速最高 53%、结果质量提升 28%。对 DBA 而言，这个思路的眼熟之处在于：它把"要多少召回"变成了像 RTO/RPO 一样的声明式目标，把调参黑盒变成了可承诺的服务等级——与本周雷达第 1 条（混合检索成为 Agent 默认底座）正好处在同一战线。</p>
+  <p><b>怎么读：</b>先读引言中对"选择性 × 相关性如何改变搜索难度"的刻画（这是全文问题意识的根，15 分钟），再读召回预测器与提前终止两节（20 分钟）。建议与本周晨报的 TigerData《Agent 记忆是搜索问题》对读：一个讲系统怎么实现，一个讲业务为什么需要。可落地动作：把"声明式召回目标"写进团队向量检索的需求清单，评估 pgvector/ES 现有方案能否承诺召回率 SLA。</p>
+</div>
+
+<h2 id="feedback">四、反馈回顾</h2>
+
+<div class="note">feedback.md 自 09-16 以来仍无新反馈，本期不调整权重，RUBRIC.md「权重变更日志」无追加。提醒：回复"晨报反馈：条目序号 + 有用/无用 + 一句话"，或直接编辑 feedback.md。本周七期晨报共约 40 条入选条目，哪怕只标记"哪几条真读了"也是有效信号——09-16 的反馈（"充满实用性"）至今仍是落地建议字段的主要依据。</div>
+
+<footer>DBA Daily · 周日专题由 Kimi Work 生成</footer>
+
+</body>
+</html>

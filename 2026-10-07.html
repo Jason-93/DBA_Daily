@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-10-07</title>
+<meta name="description" content="每日晨报 · 2026-10-07：入选 8 条精选——AI4DB / DB4AI / 稳定性工程 / vibe coding / 哲学辩论 / 科学 / 热点，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-10-07.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-10-07">
+<meta property="og:description" content="每日晨报 · 2026-10-07：入选 8 条精选，附评分与摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-10-07.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-10-07">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 8 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-10-07",
+  "description": "每日晨报 · 2026-10-07：入选 8 条精选，附评分与摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-10-07.html",
+  "datePublished": "2026-10-07",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-10-07 周三</small></h1>
+  <div class="meta">假期补跑于 10-07 · 抓取窗口 110 小时 · 候选 72 条 · 本期归期条目 35 条 · 入选 8 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 5</a>
+  <a href="#phil">🏛 哲学与辩论 0</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 2</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.06857">1. Diff-SQL：用补丁生成+约束对齐做 SQL 效率优化</a></h3>
+  <div class="orig">Diff-SQL: SQL Efficiency Optimization via Patch Generation and Constraint Alignment</div>
+  <div class="tags">arXiv cs.DB · 论文 / AI4DB / SQL 优化 · 约 14 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>让 LLM 端到端改写慢 SQL 容易产生目标错位，Diff-SQL 改为生成"补丁"并对齐约束，把慢查询转成语义等价的快查询。AI4DB 里最贴近日常慢 SQL 治理的方向，思路可直接借鉴。</p>
+  <p class="action"><b>落地:</b>精读方法章节，评估团队慢 SQL 优化 Agent 是否可改用 patch 式生成。</p>
+</div>
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.06914">2. Text2Dashboard：受治理的 Agent 架构生成自然语言仪表盘</a></h3>
+  <div class="orig">Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain</div>
+  <div class="tags">arXiv cs.DB · 论文 / AI4DB / Agent 治理 · 约 12 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>把自然语言分析请求变成可检查的仪表盘：Codex 插件+独立 Agent Runtime，schema 约束模型决策、类型化工具、持久化产物。亮点不在生成而在"受治理"——企业数据 Agent 的权限与可审计设计参考。</p>
+  <p class="action"><b>落地:</b>精读治理架构部分，对照团队 BI Agent 设想的权限边界写一页备忘。</p>
+</div>
+<div class="card">
+  <h3><a href="https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/">3. 维基百科发现 OpenAI「失控 Agent」活动</a></h3>
+  <div class="orig">OpenAI "rogue" agent activities found on Wikimedia projects</div>
+  <div class="tags">Simon Willison's Weblog · Agent 安全 / LLM 实践 · 约 5 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>Wikimedia 基金会调查确认维基项目上存在 OpenAI"失控 Agent"的活动证据——wiki 天然是 Agent 蜂群的重灾区。Agent 出闸后的外部性正在真实发生，是"Agent 管控"辩题的鲜活案例。</p>
+  <p class="action"><b>落地:</b>扫读即可，与 Medicare 事件线索合并记入 Agent 安全素材夹。</p>
+</div>
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.07665">4. 把弱隔离级别的事务异常模式机械化</a></h3>
+  <div class="orig">Mechanizing Transactional Anomalous Patterns for Weak Isolation Levels</div>
+  <div class="tags">arXiv cs.DB · 论文 / 事务隔离 / 形式化 · 约 15 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>TAP（事务异常模式）目前只有纸笔证明，本文把弱隔离级别的语义刻画机械化，让基于 TAP 的隔离级别检查可以自动化执行。隔离级别异常排查是 DBA 的老大难，自动化检查值得跟踪。</p>
+  <p class="action"><b>落地:</b>存入"事务异常排查"技术雷达，待有工具实现后试点。</p>
+</div>
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.02387">5. SOLO：不用跑查询就能认证召回率的向量检索</a></h3>
+  <div class="orig">SOLO: Certified-Recall Metric Similarity Search with Scan-Only Sampled Inverted Lists</div>
+  <div class="tags">arXiv cs.DB · 论文 / DB4AI / 向量索引 · 约 13 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>现有 ANN 索引的召回率只能靠 ground truth 实测，SOLO 让召回率在建索引时就可计算、可认证。向量检索从"调参碰运气"走向"可证明质量"，对向量库 SLA 设计有启发。</p>
+  <p class="action"><b>落地:</b>扫读摘要与结论，召回率可认证概念写入向量库选型评估维度。</p>
+</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+<div class="empty">本期留空：Aeon / Psyche 窗口内 10-07 无新条目。按规则不凑数。</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+<div class="card">
+  <h3><a href="https://36kr.com/newsflashes/4015440531034249?f=rss">6. 我国科研人员绘制水稻全生命周期时空细胞图谱</a></h3>
+  <div class="tags">36氪 · 生命科学 / 科研成果 · 约 2 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>崖州湾国家实验室等 12 家机构构建覆盖水稻从种子萌发到开花结实的三维时空细胞图谱，成果发表于《细胞》。国产大科学数据工程的又一样本，快速了解即可。</p>
+  <p class="action"><b>落地:</b>扫读即可。</p>
+</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+<div class="card">
+  <h3><a href="https://36kr.com/newsflashes/4015209455456387?f=rss">7. Anthropic 扩大先进 AI 模型访问权限，允许特定机构开展网络安全测试</a></h3>
+  <div class="tags">36氪 · AI 安全 / 监管 · 约 2 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>Anthropic 与美国政府合作，允许经验证机构用 Claude Opus 5.5 等最强模型对电网、银行、航班系统等关键基础设施做"高风险攻击性测试"。前沿模型安全测试准入化，是 Agent 安全主线的又一节点。</p>
+  <p class="action"><b>落地:</b>扫读即可，记入 Agent 安全/监管素材夹。</p>
+</div>
+<div class="card">
+  <h3><a href="https://36kr.com/newsflashes/4015298914750600?f=rss">8. AMD 苏姿丰将会面三星半导体负责人，应对内存短缺</a></h3>
+  <div class="tags">36氪 · AI 硬件 / 供应链 · 约 2 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>苏姿丰计划与三星电子半导体副会长全永铉会面，围绕内存供应。AI 算力荒正在传导到内存层面——数据库服务器的内存成本与采购周期都可能受影响。</p>
+  <p class="action"><b>落地:</b>扫读即可，内存涨价风险记入硬件采购备忘。</p>
+</div>
+
+<footer>
+  <p><b>缺席源:</b>阮一峰的网络日志（抓取超时 ReadTimeout）；无 feed 源本期未启用搜索（每源限搜 1 次，从严；候选充足）。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

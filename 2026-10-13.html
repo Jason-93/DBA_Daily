@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-10-13</title>
+<meta name="description" content="每日晨报 · 2026-10-13：入选 9 条精选——AI4DB / DB4AI / 稳定性工程 / vibe coding / 哲学辩论 / 科学 / 热点，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-10-13.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-10-13">
+<meta property="og:description" content="每日晨报 · 2026-10-13：入选 9 条精选，附评分与摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-10-13.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-10-13">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 9 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-10-13",
+  "description": "每日晨报 · 2026-10-13：入选 9 条精选，附评分与摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-10-13.html",
+  "datePublished": "2026-10-13",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  .empty { background:var(--card); border-radius:12px; padding:16px 18px; color:var(--dim); font-size:14px; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-10-13 周二</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 33 条 · 入选 9 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 5</a>
+  <a href="#phil">🏛 哲学与辩论 1</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 2</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+<div class="card">
+  <h3><a href="https://www.percona.com/blog/thread-pool-in-percona-server-and-mysql-part-2/">1. Thread Pool in Percona Server and MySQL（下）</a></h3>
+  <div class="orig">Thread Pool in Percona Server and MySQL (Part 2)</div>
+  <div class="tags">Percona Blog · MySQL / 性能优化 / 并发控制 · 约 13 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>继 10-05 期 Part 1 讲清线程池理念后，Part 2 进入配置选项与实测分析。高并发场景的官方线程池实战手册补全，可以直接动手测了。</p>
+  <p class="action"><b>落地:</b>配合 Part 1 结论在测试库跑对比实验，数据写进调优 runbook。</p>
+</div>
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/understanding-the-differences-between-pgbouncer-and-amazon-rds-proxy-for-postgresql-connection-pooling/">2. PgBouncer 与 RDS Proxy 的 PostgreSQL 连接池之争</a></h3>
+  <div class="orig">Understanding the differences between PgBouncer and Amazon RDS Proxy for PostgreSQL connection pooling</div>
+  <div class="tags">AWS Database Blog · PostgreSQL / 连接池 / 选型 · 约 11 分钟 · <span class="score">★3.8</span></div>
+  <p class="abstract"><b>摘要:</b>AWS 系统对比 PgBouncer 与 RDS Proxy 在池化模式、认证、故障切换上的差异。连接池是 PG 高并发的第一道关口，这篇是现成的选型对照表。</p>
+  <p class="action"><b>落地:</b>抄进团队 PG 架构选型文档，对照现有连接层配置逐项核对。</p>
+</div>
+<div class="card">
+  <h3><a href="https://www.percona.com/blog/meet-mysql-26-7-a-new-versioning-era-begins/">3. 迎接 MySQL 26.7：版本号进入日历纪元</a></h3>
+  <div class="orig">Meet MySQL 26.7: A New Versioning Era Begins</div>
+  <div class="tags">Percona Blog · MySQL / 版本管理 / 行业动态 · 约 8 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>MySQL 从 8.0 到 9.7 LTS 之后切换为日历化版本模型，26.7 开启新纪元。版本号规则变化直接影响升级规划与兼容性矩阵的写法。</p>
+  <p class="action"><b>落地:</b>更新团队版本升级备忘，标注日历化版本规则与 LTS 节奏。</p>
+</div>
+<div class="card">
+  <h3><a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/">4. 教 Copilot 读懂你的代码库：自定义指令、技能与 MCP</a></h3>
+  <div class="orig">GitHub Copilot app for Beginners: How to teach Copilot about your codebase</div>
+  <div class="tags">GitHub Blog · vibe coding / Copilot / 工程实践 · 约 8 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>给仓库加自定义 instructions 和 skills、用自定义 Agent、接 Playwright 等 MCP server——把 Copilot 从通用助手调教成懂你代码库的队友。AI 编程落地最实的上手路径。</p>
+  <p class="action"><b>落地:</b>按文给团队仓库补一份 copilot-instructions，先在一个项目试点。</p>
+</div>
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/automated-blocking-and-query-alerts-for-amazon-rds-for-sql-server/">5. RDS for SQL Server 的自动阻塞与慢查询告警</a></h3>
+  <div class="orig">Automated blocking and query alerts for Amazon RDS for SQL Server</div>
+  <div class="tags">AWS Database Blog · 云数据库 / 监控告警 / SQL Server · 约 9 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>用 serverless 方案为 RDS SQL Server 搭建阻塞链与长查询的自动邮件告警。阻塞链是 SQL Server 稳定性的高频杀手，自动化告警思路可迁移到自建监控。</p>
+  <p class="action"><b>落地:</b>把阻塞链告警逻辑抄进团队监控清单，自建环境用巡检脚本复刻。</p>
+</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+<div class="card">
+  <h3><a href="https://aeon.co/essays/does-the-principle-of-sufficient-reason-make-panpsychism-true">6. 万物皆有意识？从充足理由律看泛心论</a></h3>
+  <div class="orig">Is everything conscious?</div>
+  <div class="tags">Aeon · 哲学 / 意识研究 / 长文 · 约 17 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>如果你觉得"万物有灵"不可理喻，作者建议先和充足理由律相处一会儿——泛心论可能比直觉认为的更有论证根基。AI 意识讨论升温背景下，这是绕不开的哲学地基。</p>
+  <p class="action"><b>落地:</b>扫读即可，观点入"AI 与意识"辩题素材夹。</p>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+<div class="card">
+  <h3><a href="https://www.quantamagazine.org/is-attention-the-essence-of-intelligence-20261012/">7. 「注意力」是智能的本质吗？</a></h3>
+  <div class="orig">Is 'Attention' the Essence of Intelligence?</div>
+  <div class="tags">Quanta Magazine · 科学长文 / AI / 认知 · 约 14 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>Quanta 专栏追问：让 AI 规模化处理语言的注意力机制，为何如此有效？它是否就是智能的本质？理解当下 AI 革命的数学地基，也校准对模型能力边界的直觉。</p>
+  <p class="action"><b>落地:</b>精读，作为理解 Transformer 能力边界的锚点文章存入素材库。</p>
+</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+<div class="card">
+  <h3><a href="https://36kr.com/newsflashes/4023757995495302?f=rss">8. 字节跳动 Seed 单独设立大模型安全与对齐部门</a></h3>
+  <div class="tags">36氪 · AI 安全 / 组织动态 · 约 2 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>字节 Seed 成立"Model-Alignment &amp; Preparedness"部门，整合 Responsible AI 等团队，由严林负责、汇报吴永辉。国内大厂把对齐从职能升级为一级部门，安全治理成建制化信号。</p>
+  <p class="action"><b>落地:</b>扫读即可，与 Anthropic 自查（10-11 期）合并记入 Agent 安全治理观察线。</p>
+</div>
+<div class="card">
+  <h3><a href="https://36kr.com/newsflashes/4023701788496000?f=rss">9. 1688 全面接入 AI 电商工作台 Accio</a></h3>
+  <div class="tags">36氪 · AI 应用 / Agent 商用 · 约 2 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>阿里 1688 接入全球电商 AI 工作台 Accio，买家可采购、卖家可一站式管店，"电商管家"智能体介入经营。Agent 从演示走向交易平台核心流程的实例。</p>
+  <p class="action"><b>落地:</b>扫读即可，记入"Agent 商用落地"素材夹。</p>
+</div>
+
+<footer>
+  <p><b>缺席源:</b>无——19 个 feed 源全部抓取成功；候选充足，无 feed 源本期未启用搜索。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

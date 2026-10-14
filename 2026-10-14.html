@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-10-14</title>
+<meta name="description" content="每日晨报 · 2026-10-14：入选 9 条精选——AI4DB / DB4AI / 稳定性工程 / vibe coding / 哲学辩论 / 科学 / 热点，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-10-14.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-10-14">
+<meta property="og:description" content="每日晨报 · 2026-10-14：入选 9 条精选，附评分与摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-10-14.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-10-14">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 9 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-10-14",
+  "description": "每日晨报 · 2026-10-14：入选 9 条精选，附评分与摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-10-14.html",
+  "datePublished": "2026-10-14",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-10-14 周三</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 34 条（19 源全部成功 / 0 源失败）· 入选 9 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 5</a>
+  <a href="#phil">🏛 哲学与辩论 1</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 2</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+<div class="card">
+  <h3><a href="https://www.tigerdata.com/blog/announcing-pg_vectorsearch-scalable-open-source-vector-search-postgresql">1. pg_vectorsearch 发布：PostgreSQL 里的可扩展开源向量搜索</a></h3>
+  <div class="orig">Announcing pg_vectorsearch: Scalable Open-Source Vector Search in PostgreSQL</div>
+  <div class="tags">Timescale Blog · PostgreSQL / 向量检索 / DB4AI · 约 12 分钟 · <span class="score">★4.2</span></div>
+  <p class="abstract"><b>摘要:</b>Timescale 开源新 PG 扩展 pg_vectorsearch，其 PRISM 索引在 1 亿向量上 6ms 返回、内存仅为 HNSW 的 1/4、构建时间不到 2 小时。PG 生态向量检索又多一个可自建选项，直接关系到团队 RAG/语义检索的选型与成本。</p>
+  <p class="action"><b>落地:</b>与 pgvector 做一组同数据集对比测试，结果记入向量检索选型备忘。</p>
+</div>
+<div class="card">
+  <h3><a href="https://qdrant.tech/blog/pplx-embed-v2/">2. Perplexity 视觉检索器的体积问题，Qdrant 出手修复</a></h3>
+  <div class="orig">Perplexity's New Visual Retriever Has a Size Problem. We Fixed It.</div>
+  <div class="tags">Qdrant Blog · 向量数据库 / 多模态检索 / DB4AI · 约 10 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>Qdrant 针对 Perplexity 新视觉检索模型在 PDF 场景（表格行列、图表标签上下文）的体积与精度问题给出优化方案。做文档类 RAG 的团队能直接借鉴其对视觉 embedding 的压缩与索引思路。</p>
+  <p class="action"><b>落地:</b>精读其量化与索引配置部分，对照团队文档检索链路的 embedding 成本。</p>
+</div>
+<div class="card">
+  <h3><a href="https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/">3. Anthropic 重新设计源码管理：当提交速率超过 Git 的假设</a></h3>
+  <div class="orig">Redesigning source control at Anthropic</div>
+  <div class="tags">Simon Willison · vibe coding / 工程基建 / AI 研发 · 约 8 分钟 · <span class="score">★3.8</span></div>
+  <p class="abstract"><b>摘要:</b>Anthropic 因 AI 编码使变更速率剧增，自建了 Git 的替代方案。这是「AI 改变工程基建」的一手样本，可作团队讨论 AI 时代工具链演进的引子，也是价值辩好素材。</p>
+  <p class="action"><b>落地:</b>存入素材库，团队周会可借此聊「AI 提效后哪些基建先扛不住」。</p>
+</div>
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/monitor-amazon-aurora-dsql-costs-with-the-aurora-dsql-console-and-cloudwatch-alarms/">4. 用 Aurora DSQL 控制台与 CloudWatch 告警监控成本</a></h3>
+  <div class="orig">Monitor Amazon Aurora DSQL costs with the Aurora DSQL console and CloudWatch alarms</div>
+  <div class="tags">AWS Database Blog · Aurora / 成本治理 / 稳定性 · 约 9 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>DSQL 无固定实例上限，DPU 与存储费用随负载静默增长，本文给出用量监控与告警的完整配置路径。对评估 Serverless 数据库的团队，成本可观测性是落地前提。</p>
+  <p class="action"><b>落地:</b>把 DPU 告警配置抄进云上数据库成本治理 checklist。</p>
+</div>
+<div class="card">
+  <h3><a href="https://simonwillison.net/2026/Oct/13/geoffrey-huntley/">5. 用 pre-commit 钩子防止 AGENTS.md 漂移</a></h3>
+  <div class="orig">Quoting Geoffrey Huntley</div>
+  <div class="tags">Simon Willison · vibe coding / 工程实践 · 约 4 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>Geoffrey Huntley 的实践：不写靠 agent 自觉的流程，而用 pre-commit 钩子检查 git diff 强制同步 AGENTS.md。「用钩子代替约定」是约束 AI 协作者行为的可复制手段。</p>
+  <p class="action"><b>落地:</b>在团队仓库挑一条最常漂移的约定，改造成 pre-commit 钩子试跑一周。</p>
+</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+<div class="card">
+  <h3><a href="https://aeon.co/essays/the-more-we-rely-on-tech-the-more-we-deskill-our-bodies">6. 身体去技能化：我们越依赖技术，身体越不会做事</a></h3>
+  <div class="orig">Deskilling the body</div>
+  <div class="tags">Aeon · 技术哲学 · 约 14 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>Aeon 长文论技术如何逐刻替代我们的感知、导航、记忆与选择，身体能力随之退化。AI 时代「技能外包」的边界在哪里——这是价值辩和职业判断都绕不开的底层议题。</p>
+  <p class="action"><b>落地:</b>精读并摘录 2-3 个论据入辩题素材库，对照 DBA 技能自动化趋势。</p>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+<div class="card">
+  <h3><a href="https://psyche.co/ideas/what-is-hidden-in-the-photographs-we-keep-of-each-other">7. 我们留存的照片里藏着什么？</a></h3>
+  <div class="orig">What is hidden in the photographs we keep of each other?</div>
+  <div class="tags">Psyche · 记忆与叙事 · 约 10 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>作者重返母亲东京公寓的家庭相册，被照片「没讲的故事」击中——影像留存的与遮蔽的同样多。对做数据留存与叙事的人，是关于「记录即选择」的温和提醒。</p>
+  <p class="action"><b>落地:</b>扫读即可，可留作写作与分享的叙事素材。</p>
+</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+<div class="card">
+  <h3><a href="https://36kr.com/newsflashes/4024927571267463?f=rss">8. OpenAI 办公室被植入精密录音设备，沙特籍员工被捕</a></h3>
+  <div class="tags">36氪 · AI 安全 / 行业热点 · 约 3 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>OpenAI 一处办公室发现员工植入的精密录音设备，FBI 已逮捕涉案沙特籍员工并将其解雇。AI 巨头内部安全威胁成真，对任何管敏感数据的团队都是警示。</p>
+  <p class="action"><b>落地:</b>扫读即可，可在团队安全例会提一句物理与内部威胁面。</p>
+</div>
+<div class="card">
+  <h3><a href="https://36kr.com/newsflashes/4024935070077064?f=rss">9. 甲骨文敦促监管机构加快审批数据中心天然气管道</a></h3>
+  <div class="tags">36氪 · AI 基建 / 数据中心 · 约 3 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>甲骨文为新墨西哥州大型数据中心项目供电，催促联邦能源监管委员会批准天然气管道，称延期将威胁项目进度。AI 数据中心的能源瓶颈正从芯片转向电力基建。</p>
+  <p class="action"><b>落地:</b>扫读即可，作为理解云厂商资源供给风险的背景素材。</p>
+</div>
+
+<footer>
+  <p><b>缺席源:</b>无。本次抓取 19 个源全部成功，0 失败。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

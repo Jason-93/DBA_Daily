@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-10-15</title>
+<meta name="description" content="每日晨报 · 2026-10-15：入选 9 条精选——AI4DB / DB4AI / 稳定性工程 / vibe coding / 哲学辩论 / 科学 / 热点，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-10-15.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-10-15">
+<meta property="og:description" content="每日晨报 · 2026-10-15：入选 9 条精选，附评分与摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-10-15.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-10-15">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 9 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-10-15",
+  "description": "每日晨报 · 2026-10-15：入选 9 条精选，附评分与摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-10-15.html",
+  "datePublished": "2026-10-15",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-10-15 周四</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 42 条（18 源成功 / 1 源失败：Qdrant Blog）· 入选 9 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 5</a>
+  <a href="#phil">🏛 哲学与辩论 1</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 2</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/reducing-storage-initialization-impact-in-amazon-rds-for-postgresql-after-snapshot-restore/">1. 降低 RDS for PostgreSQL 快照恢复后的存储初始化影响</a></h3>
+  <div class="orig">Reducing storage initialization impact in Amazon RDS for PostgreSQL after snapshot restore</div>
+  <div class="tags">AWS Database Blog · PostgreSQL / RDS / 稳定性 · 约 11 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>RDS PG 从快照恢复后 EBS 懒加载，早期查询慢 10-15 倍，本文给出 PG 原生的预热方法。任何用快照做灾备或克隆环境的团队都踩过这个坑，这篇是现成的预热手册。</p>
+  <p class="action"><b>落地:</b>把预热步骤抄进快照恢复 runbook，并在演练中验证效果。</p>
+</div>
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.15793">2. 云端单版本并发控制的理由</a></h3>
+  <div class="orig">The Case for Single-Version Concurrency Control in the Cloud</div>
+  <div class="tags">arXiv cs.DB · 并发控制 / 云原生数据库 / 论文 · 约 15 分钟 · <span class="score">★4.0</span></div>
+  <p class="abstract"><b>摘要:</b>论文论证云原生架构下 MVCC 的统治地位该被重新审视，单版本并发控制在分离存储场景更有优势。理解 CC 协议与存储架构的耦合，是判断新一代数据库设计的底层功。</p>
+  <p class="action"><b>落地:</b>精读核心论证，写一页备忘对照团队在用引擎的 CC 实现。</p>
+</div>
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.20527">3. JetStream：为现有数据库生成经过验证的查询加速器</a></h3>
+  <div class="orig">JetStream: Generating Verified Query Accelerators for Existing Database Systems</div>
+  <div class="tags">arXiv cs.DB · AI4DB / 查询加速 / 论文 · 约 14 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>LLM 不再整体替换 DBMS，而是为固定负载合成带验证的专用查询加速器，嵌进现有系统。AI4DB 从「重写数据库」转向「增强数据库」的务实路线，值得跟踪。</p>
+  <p class="action"><b>落地:</b>存入 AI4DB 素材库，关注其验证机制对生产可信度的启示。</p>
+</div>
+<div class="card">
+  <h3><a href="https://weaviate.io/blog/pathseer-filtered-vector-search">4. PathSeer：Weaviate 1.40 的自适应过滤向量搜索</a></h3>
+  <div class="orig">PathSeer: Adaptive Filtered Vector Search</div>
+  <div class="tags">Weaviate Blog · 向量检索 / 过滤查询 / DB4AI · 约 10 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>Weaviate 1.40 引入 SIGMOD 2026 论文作者亲自贡献的第三种 HNSW 过滤策略 PathSeer，并与 sweeping、ACORN 对比。带过滤条件的向量检索是 RAG 常态，这篇给了选型基准。</p>
+  <p class="action"><b>落地:</b>与昨天 pg_vectorsearch 的测试合并，纳入过滤场景的对比维度。</p>
+</div>
+<div class="card">
+  <h3><a href="https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/">5. 从 2500 次请求到 24 次：GitHub 重建 star 历史 API</a></h3>
+  <div class="orig">From 2,500 requests to 24: Rebuilding star history without the stargazers</div>
+  <div class="tags">GitHub Blog · 工程优化 / API 设计 / 隐私 · 约 9 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>GitHub 新 star 趋势 API 不再返回个体身份、避免无界数据库扫描，请求数从 2500 降到 24。这是「预聚合 + 隐私设计」降数据库负载的教科书案例。</p>
+  <p class="action"><b>落地:</b>抄进团队慢查询治理素材，对照一处重接口评估预聚合空间。</p>
+</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+<div class="card">
+  <h3><a href="https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/">6. AI 正在大规模反编译游戏：既美妙又可怕</a></h3>
+  <div class="orig">AI is mass decompiling games. That's both awesome and scary.</div>
+  <div class="tags">Simon Willison · AI 伦理 / 知识产权 / 辩论素材 · 约 6 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>AI 驱动的游戏反编译浪潮让老游戏被随意拆解重组，开发者 Popcar 既兴奋又担忧。AI 时代「逆向权」与版权的冲突是现成辩题，也折射代码资产保护的现实困境。</p>
+  <p class="action"><b>落地:</b>存入辩题素材库，可作「AI 降低逆向门槛利弊」的正反方引子。</p>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+<div class="card">
+  <h3><a href="https://www.quantamagazine.org/triplet-of-ghostly-galaxies-hints-at-what-dark-matter-is-and-isnt-20261014/">7. 三个「幽灵」星系暗示暗物质是什么——以及不是什么</a></h3>
+  <div class="orig">Triplet of 'Ghostly' Galaxies Hints at What Dark Matter Is — and Isn't</div>
+  <div class="tags">Quanta Magazine · 宇宙学 / 暗物质 · 约 12 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>一组几乎不含暗物质的星系三连体，可能源于碰撞剥离，给修正引力理论出了难题。观测如何一步步压缩理论空间，是科学方法论的好样本。</p>
+  <p class="action"><b>落地:</b>扫读即可，作科学方法论谈资留存。</p>
+</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+<div class="card">
+  <h3><a href="https://36kr.com/p/4026591408066432?f=rss">8. 总裁直管信息部：先声药业的 AI 试验</a></h3>
+  <div class="tags">36氪 · 企业 AI / 组织变革 · 约 8 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>先声药业总裁把信息部划归直管，要求管理层「必须」拥抱 AI 而非提倡。一把手工程如何落地 AI，对判断自家组织的 AI 推进节奏是直接参照。</p>
+  <p class="action"><b>落地:</b>精读其组织动作与考核提法，对照团队 AI 落地路径写一页备忘。</p>
+</div>
+<div class="card">
+  <h3><a href="https://36kr.com/p/4026385299165321?f=rss">9. 8点1氪：151 款应用拒绝豆包手机助手；苹果市值破 5 万亿</a></h3>
+  <div class="tags">36氪 · 行业热点 / AI 终端 · 约 5 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>微信、淘宝、美团等 151 款应用声明拒绝豆包手机助手的 GUI 屏幕自动化；苹果成为第二家 5 万亿美元公司。GUI Agent 与平台围墙的冲突刚刚开场。</p>
+  <p class="action"><b>落地:</b>扫读即可，关注 GUI 自动化权限博弈的后续走向。</p>
+</div>
+
+<footer>
+  <p><b>缺席源:</b>Qdrant Blog（连接被远端中断，feed 存在，明日自动重试）。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

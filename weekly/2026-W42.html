@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周日专题 · 2026-W42</title>
+<meta name="description" content="周日专题 2026-W42：本周 AI4DB/DB4AI/稳定性雷达、辩题素材包（老板可以命令你「必须」拥抱 AI 吗：先声药业的一把手工程）、论文精读推荐与反馈回顾。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/weekly/2026-W42.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="周日专题 · 2026-W42">
+<meta property="og:description" content="周日专题 2026-W42：本周 AI4DB/DB4AI/稳定性雷达、辩题素材包、论文精读推荐与反馈回顾。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/weekly/2026-W42.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="周日专题 · 2026-W42">
+<meta name="twitter:description" content="周日专题 2026-W42：本周 AI4DB/DB4AI/稳定性雷达、辩题素材包、论文精读推荐与反馈回顾。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "周日专题 · 2026-W42",
+  "description": "周日专题 2026-W42：本周 AI4DB/DB4AI/稳定性雷达、辩题素材包、论文精读推荐与反馈回顾。",
+  "url": "https://jason-93.github.io/DBA_Daily/weekly/2026-W42.html",
+  "inLanguage": "zh-CN",
+  "author": {
+    "@type": "Organization",
+    "name": "DBA Daily"
+  },
+  "datePublished": "2026-10-19"
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --radar:#4cc38a; --debate:#c792ea; --paper:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.radar { border-color:var(--radar); } h2.debate { border-color:var(--debate); }
+  h2.paper { border-color:var(--paper); }
+  h3 { font-size:15.5px; margin:18px 4px 8px; }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; font-size:14px; }
+  .card p { margin:6px 0; }
+  .judge { color:var(--radar); font-size:13.5px; }
+  .judge::before { content:"趋势判断："; font-weight:600; }
+  ul, ol { margin:6px 0 6px 22px; font-size:14px; }
+  li { margin:4px 0; }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; display:block; margin:3px 0; }
+  a.link::before { content:"🔗 "; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px; border-top:1px solid #262c38; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>周日专题 <small>2026-W42（10-12 ~ 10-18）</small></h1>
+  <div class="meta">补跑于 10-19 10:35（10-18 周日 08:17 定时未触发，手动补跑）· 素材：本周五期晨报（10-12 ~ 10-16，周末无刊）+ 200h 候选 90 条（19 源成功 / 0 失败）</div>
+</header>
+
+<nav>
+  <a href="../" class="home">← 主页</a>
+  <a href="#radar">📡 雷达 5</a>
+  <a href="#debate">⚖️ 辩题素材包</a>
+  <a href="#paper">📄 论文精读</a>
+  <a href="#feedback">💬 反馈回顾</a>
+</nav>
+
+<h2 class="radar" id="radar">一、本周 AI4DB / DB4AI / 稳定性雷达</h2>
+
+<div class="card">
+  <p><b>1. AI4DB 务实转向：从「重写数据库」到「增强现有数据库」。</b></p>
+  <p>三条独立线索同向：JetStream 让 LLM 为固定负载合成带验证的专用查询加速器、嵌进现有系统（10-15 晨报）、DataKernelBench 检验 LLM 生成高性能 GPU kernel 的能力（10-16 晨报）、MySQL 内嵌 V8 JavaScript 引擎定位是扩展 SQL 而非搬走应用（10-16 晨报）。</p>
+  <p class="judge">AI 进数据库的叙事正在降温收敛——不再许诺替换引擎，而是嵌进查询计划、kernel 层、存储过程层做增强；评估 AI4DB 方案时，「能否嵌进现有系统并给出可信验证」正在取代「效果是否惊艳」成为第一问。</p>
+</div>
+
+<div class="card">
+  <p><b>2. DB4AI 选型窗口收敛：向量检索进入「索引可扩展 × 过滤场景」正面交锋。</b></p>
+  <p>Timescale 开源 pg_vectorsearch，PRISM 索引在 1 亿向量上 6ms 返回、内存仅为 HNSW 的 1/4（10-14 晨报）；Weaviate 1.40 引入 SIGMOD 2026 论文作者贡献的自适应过滤策略 PathSeer（10-15 晨报）；Qdrant 出手修复 Perplexity 视觉检索器在 PDF 场景的体积与精度问题（10-14 晨报）；同期 Weaviate 修复 nearObject 跨集合向量泄露的中危漏洞（10-16 晨报）。</p>
+  <p class="judge">PG 扩展阵营与专用向量库阵营的代差在缩小，竞争点从「能不能用」移到「过滤场景性能与安全响应速度」——RAG 选型清单该加一列「安全 CVE 响应记录」，这周就是现成的提醒。</p>
+</div>
+
+<div class="card">
+  <p><b>3. 稳定性 runbook 素材周：云厂商把生产坑持续系统化为手册。</b></p>
+  <p>Thread Pool 配置与实测（下篇，10-13 晨报）、PgBouncer 与 RDS Proxy 选型对照（10-13 晨报）、RDS PG 快照恢复后的存储预热手册（10-15 晨报）、Aurora DSQL 成本监控告警配置（10-14 晨报）、RDS SQL Server 阻塞链自动告警（10-13 晨报）。</p>
+  <p class="judge">排查路径产品化没有放缓，一线 DBA 的差异化继续向「跨系统归因」与「变更前风险预判」集中——本周任何一篇都值得进 runbook，建议按与自己技术栈重合度排序先抄三篇。</p>
+</div>
+
+<div class="card">
+  <p><b>4. 云端并发控制的底层反思：MVCC 的默认地位开始被公开质疑。</b></p>
+  <p>arXiv 论文《The Case for Single-Version Concurrency Control in the Cloud》论证分离存储架构下多版本写放大、垃圾回收与长事务阻塞被放大，单版本并发控制重新占优（10-15 晨报）；同期 MySQL 宣布切换日历化版本模型，26.7 开启新纪元（10-13 晨报）。</p>
+  <p class="judge">当存储与计算分离成为默认，为共享磁盘时代设计的内核组件是下一个被逐个重写的对象——这类「重看默认设计」的论文是内功训练的优先精读项，比追新框架的边际收益高。</p>
+</div>
+
+<div class="card">
+  <p><b>5. AI 编码倒逼组织基建：竞争前沿从个人技巧上移到工程系统。</b></p>
+  <p>Anthropic 因 AI 编码使提交速率超过 Git 的假设，自建源码管理替代方案（10-14 晨报）；Ramp 与 Stripe 为非工程师搭内部 vibe-coding 平台并被快速采用（10-16 晨报）；Geoffrey Huntley 用 pre-commit 钩子强制同步 AGENTS.md，「用钩子代替约定」（10-14 晨报）；GitHub 官方教程教 Copilot 读懂代码库（instructions / skills / MCP，10-13 晨报）。</p>
+  <p class="judge">vibe coding 的分水岭已过个人提示词阶段，进入源码管理、约定强制、内部平台的组织基建层——团队该讨论的不是「用不用 AI 写代码」，而是「我们哪些基建会先扛不住」。</p>
+</div>
+
+<h2 class="debate" id="debate">二、辩题素材包：老板可以命令你「必须」拥抱 AI 吗？——先声药业的一把手工程</h2>
+
+<div class="card">
+  <p><b>案例（来自本周晨报，来源已核实）</b></p>
+  <p>36氪 10-15 报道：先声药业总裁把信息部划归直管，要求管理层「必须」拥抱 AI 而非「提倡」。这不是孤例——本周另有字节 Seed 成立大模型安全与对齐一级部门（10-13 晨报）、151 款应用联名拒绝豆包手机助手的 GUI 自动化（10-15 晨报），三起事件同周出现：组织一边自上而下地强推 AI，一边自下而上地抵制 AI 的越界。被命令「必须拥抱」的管理层与员工，正处在两股力量的夹缝里。</p>
+  <a class="link" href="https://36kr.com/p/4026591408066432?f=rss">36kr.com（36氪，10-15：先声药业总裁直管信息部）</a>
+  <a class="link" href="https://36kr.com/newsflashes/4023757995495302?f=rss">36kr.com（36氪快讯，10-13：字节 Seed 设立对齐部门）</a>
+  <a class="link" href="https://36kr.com/p/4026385299165321?f=rss">36kr.com（8点1氪，10-15：151 款应用拒绝豆包助手）</a>
+  <p><b>同一个星期的另一面</b>：Pragmatic Engineer 本周报道 Ramp 与 Stripe 的做法——给非工程师搭受控的内部 vibe-coding 平台，用工具与选择权而非行政命令，达到同样的 AI 落地结果（10-16 晨报）。同一个问题，「命令」与「赋能」两条路径同周摆在桌上，正是本期辩题矛盾的中心。</p>
+  <a class="link" href="https://blog.pragmaticengineer.com/the-pulse-new-trend-of-building-internal-vibe-coding-apps-at-tech-companies/">pragmaticengineer.com（内部 vibe-coding 应用潮）</a>
+</div>
+
+<div class="card">
+  <p><b>正方立论框架（组织有权强制拥抱 AI）</b></p>
+  <ol>
+    <li><b>变革卡在协调困境，强制打破均衡</b>：AI 转型是组织级协调博弈，等自愿采纳会永远停在「早期多数」之前；安全带、合规培训、安全生产都是先例——凡收益在集体层面而成本在个人习惯处的变革，最终都靠强制完成。</li>
+    <li><b>权责对称</b>：一把手对经营结果负全责，就有权重置资源优先级；「必须」只是把一直存在的资源排序说透，比「提倡」式的模糊信号更诚实。</li>
+    <li><b>技能窗口期不等人</b>：先用者获得复利，组织不推动等于把员工的未来竞争力让给竞争对手；「为你好」的父权逻辑在这里有真实成分——市场不会等待慢慢想通的人。</li>
+  </ol>
+</div>
+
+<div class="card">
+  <p><b>反方立论框架（理解不能被命令）</b></p>
+  <ol>
+    <li><b>KPI 化即能力空心化</b>：「必须拥抱」产出的是表演性顺从——员工学会的是把 AI 用量演给考核看。阿伦特区分行动与顺从：被命令的「学习」替代了主动的理解，组织得到合规的姿势，失去真实的判断。</li>
+    <li><b>认知强制的悖论</b>：理解恰恰是不能被强制的善；恐惧驱动的表面合规会抑制真实探索——员工不敢承认不会、不敢质疑工具的输出，反而制造新的风险面。</li>
+    <li><b>权力没有内置刹车</b>：今天以效率为名强制拥抱，明天就可以强制别的什么；当「是否使用工具」都变成行政命令的对象，组织成员的自主空间被侵蚀得没有底线可引用（海德格尔的座架：一切被强求为「就绪的存货」）。</li>
+  </ol>
+</div>
+
+<div class="card">
+  <p><b>关联哲学文本</b></p>
+  <ul>
+    <li><b>阿伦特《人的境况》行动 vs 顺从</b>：反方第 1 条的理论基石——行动始于自发的开端，顺从命令的「开始」不是行动；可对照你在读的《艾希曼在耶路撒冷》理解「不思考的服从」如何制度化。</li>
+    <li><b>伯林《两种自由概念》积极自由的暴政</b>：正方第 3 条本质是积极自由逻辑（「真正的你其实想要拥抱 AI」）——伯林本人对这种论证的批判可直接拆招；这也是本场最锋利的交锋点。</li>
+    <li><b>海德格尔《技术的追问》座架（Gestell）</b>：反方第 3 条——当效率成为唯一尺度，人和组织都被强求为「就绪的存货」；配合你的书单顺序，此文本就排期在读。</li>
+    <li><b>SEP 词条方向</b>：Hannah Arendt（action / labor / obedience）；Positive and Negative Liberty（积极自由的家长主义论证与批判）；Paternalism（家长主义）；Philosophy of Technology（技术哲学导论）。</li>
+  </ul>
+</div>
+
+<h2 class="paper" id="paper">三、论文精读推荐</h2>
+
+<div class="card">
+  <p><b>The Case for Single-Version Concurrency Control in the Cloud（arXiv 2610.15793）</b></p>
+  <a class="link" href="https://arxiv.org/abs/2610.15793">arxiv.org/abs/2610.15793</a> · v1 提交于 2026-10 上旬（10-15 晨报技术层，评分 4.0）
+  <p><b>导读：</b>MVCC 是过去三十年数据库的默认答案——每个写操作产生新版本，读不加锁，隔离级别靠版本可见性实现。但论文指出：这套设计隐含「存储与计算共处一室」的假设；在云原生分离存储架构下，多版本带来的写放大、版本垃圾回收成本、长事务对清理的阻塞被同步放大，而共享存储让「单版本 + 集中式冲突仲裁」的古老方案重新变得划算。全文是一份完整的「默认设计重审」样本：先拆 MVCC 在云架构下的三条隐性成本曲线，再给单版本 CC 在分离存储上的可行性论证与代价边界。对 DBA 的价值不在「该不该换方案」，而在训练一种内功：你每天在用的隔离级别、锁等待、快照读行为，底层假设是可以被公开质疑的——本周 MySQL 日历化版本（10-13 晨报）与这篇论文同时出现，说明内核层的「重看默认」正在成批发生。</p>
+  <p><b>怎么读：</b>先读引言对 MVCC 三条成本的拆解（15 分钟，这是全文问题意识的根），再读单版本方案在分离存储上的可行性论证（20 分钟）。建议对照团队在用引擎（Aurora / RDS PG）的实现文档，写一页备忘：「我们系统里哪些设计是共享磁盘时代的遗产、分离存储下各自的代价是什么」——这页备忘就是本期雷达第 4 条的落地动作。</p>
+</div>
+
+<h2 id="feedback">四、反馈回顾</h2>
+
+<div class="note">feedback.md 自 09-16 以来仍无新反馈，本期不调整权重，RUBRIC.md「权重变更日志」无追加。提醒：回复「晨报反馈：条目序号 + 有用/无用 + 一句话」，或直接编辑 feedback.md。本周五期晨报共 36 条入选条目，哪怕只标记「哪几条真读了」也是有效信号——09-16 的反馈（「充满实用性」）至今仍是落地建议字段的主要依据；对周日专题本身也欢迎反馈（如「雷达太长」「辩题素材好用」），直接影响下期结构。</div>
+
+<footer>DBA Daily · 周日专题由 Kimi Work 生成</footer>
+
+</body>
+</html>

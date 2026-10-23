@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-10-23</title>
+<meta name="description" content="每日晨报 · 2026-10-23：入选 8 条精选——AI4DB / DB4AI / 稳定性工程 / vibe coding / 哲学辩论 / 热点，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-10-23.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-10-23">
+<meta property="og:description" content="每日晨报 · 2026-10-23：入选 8 条精选，附评分与摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-10-23.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-10-23">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性工程 / vibe coding 每日精选 8 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-10-23",
+  "description": "每日晨报 · 2026-10-23：入选 8 条精选，附评分与摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-10-23.html",
+  "datePublished": "2026-10-23",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-10-23 周五</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 43 条（17 源成功 / 2 源失败）· 入选 8 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 5</a>
+  <a href="#phil">🏛 哲学与辩论 1</a>
+  <a href="#sci">🔬 科学 0</a>
+  <a href="#news">⚡ 热点 2</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+<div class="card">
+  <h3><a href="https://blog.pragmaticengineer.com/the-pulse-anthropic-builds-its-own-source-control-system/">1. Anthropic 自建源码管理系统 Scion 始末</a></h3>
+  <div class="orig">The Pulse: Anthropic builds its own source control system</div>
+  <div class="tags">The Pragmatic Engineer · 工程基建 / vibe coding / 深度报道 · 约 13 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>Git 在每天 3 万个 PR 下性能崩了，Anthropic 遂自建 Scion；作者直接采访团队，包括为何不开源。比 10-14 期的转述深入得多，是 AI 提效倒逼基建的一手细节。</p>
+  <p class="action"><b>落地:</b>精读性能瓶颈与不开源理由两节，存入「AI 时代工程基建」素材库。</p>
+</div>
+<div class="card">
+  <h3><a href="https://www.tigerdata.com/blog/we-built-three-memory-systems-most-expressive-wasnt-most-useful">2. 我们建了三种记忆系统，最有表达力的那个最没用</a></h3>
+  <div class="orig">We built three memory systems. The most expressive one wasn't the most useful.</div>
+  <div class="tags">Timescale Blog · AI 记忆 / 知识图谱 / DB4AI · 约 11 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>Timescale 依次实现事实表、知识图谱、树三种 agent 记忆，结论是表达力最强的不如最好用的，教训直接塑造了 searchgres.js。给做 agent 记忆的团队一份难得的反面教材对照。</p>
+  <p class="action"><b>落地:</b>精读三方案取舍矩阵，对照团队 agent 记忆设计写一页备忘。</p>
+</div>
+<div class="card">
+  <h3><a href="https://qdrant.tech/blog/qdrant-1.20.x/">3. Qdrant 1.20：全文检索大升级</a></h3>
+  <div class="orig">Qdrant 1.20 - Full-Text Search Improvements</div>
+  <div class="tags">Qdrant Blog · 向量数据库 / BM25 / 全文检索 · 约 8 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>Qdrant 1.20 支持对 payload 文本直接做 BM25 排序，无需生成 embedding，另有代码搜索增强。向量库补全文检索短板，混合检索选型天平又动了一格。</p>
+  <p class="action"><b>落地:</b>与 searchgres.js 对照，更新团队混合检索选型对比表。</p>
+</div>
+<div class="card">
+  <h3><a href="https://simonwillison.net/2026/Oct/22/donating-agent-skills/">4. Anthropic 把 Agent Skills 捐给 Agentic AI 基金会</a></h3>
+  <div class="orig">Donating Agent Skills to the Agentic AI Foundation</div>
+  <div class="tags">Simon Willison · Agent 标准 / 行业动态 · 约 5 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>Anthropic 将 Agent Skills 标准捐出，承诺保持开放、社区驱动、厂商中立。团队写的 SKILL 类资产未来可跨厂商复用，现在投入的心智不会锁死。</p>
+  <p class="action"><b>落地:</b>关注标准治理进展，团队内部 skill 写法尽量向公共规范靠拢。</p>
+</div>
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2608.13384">5. 先结构化再查询：在非结构化文档上做精确分析查询</a></h3>
+  <div class="orig">Structure then Query: Enabling Precise Analytical Queries over Unstructured Documents</div>
+  <div class="tags">arXiv cs.DB · AI4DB / 非结构化数据 / 论文 · 约 12 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>先把非结构化文档抽成结构、再跑精确分析查询，避免端到端 LLM 问答的不可控。「文档→表→SQL」路线对做文档分析的团队是直接可借鉴的架构。</p>
+  <p class="action"><b>落地:</b>存入 AI4DB 素材库，评估团队文档问答链路是否该加结构化中间层。</p>
+</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+<div class="card">
+  <h3><a href="https://aeon.co/essays/living-in-community-is-where-self-illusions-go-to-die">6. 他人即解药：共同生活如何杀死自我幻觉</a></h3>
+  <div class="orig">Other people</div>
+  <div class="tags">Aeon · 社群 / 生活方式 · 约 13 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>作者夫妇选择公社式共同生活，论证「断裂」是当代危机的核心而连接是解药。远程与 AI 协作加深的时代，「孤独 vs 连接」是价值辩与团队文化都可用的素材。</p>
+  <p class="action"><b>落地:</b>扫读并摘 1-2 个论点入辩题素材库。</p>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+<div class="note">本窗口内 Quanta 等科学源无新文章入候选，本层留空不凑数。</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+<div class="card">
+  <h3><a href="https://36kr.com/p/4037778327720835?f=rss">7. AI 房产经纪人，第一单成交了</a></h3>
+  <div class="tags">36氪 · AI Agent / 落地案例 · 约 6 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>珠海一套 195 万二手房由 AI 经纪人主导完成挂牌、匹配、验真、议价全流程且不收佣金，真人只负责带看与过户。Agent 接管高客单价交易核心环节的首个实证。</p>
+  <p class="action"><b>落地:</b>精读 AI 与真人的分工边界，作团队 Agent 落地讨论的参照。</p>
+</div>
+<div class="card">
+  <h3><a href="https://36kr.com/newsflashes/4037888301486976?f=rss">8. AI 投资疑虑升温，全球信用利差升至 17 个月高位</a></h3>
+  <div class="tags">36氪 · AI 行业 / 市场 · 约 3 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>AI 概念股遭抛售，全球公司债信用利差走阔至 129 个基点、创 2025 年 5 月以来新高。AI 叙事的资金面前排开始松动，值得持续跟踪。</p>
+  <p class="action"><b>落地:</b>扫读即可，记入 AI 行业景气度跟踪。</p>
+</div>
+
+<footer>
+  <p><b>缺席源:</b>AWS Database Blog、PingCAP Blog（均读取超时，feed 正常，明日自动重试）。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

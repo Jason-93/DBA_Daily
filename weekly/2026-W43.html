@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周日专题 · 2026-W43</title>
+<meta name="description" content="周日专题 2026-W43：本周 AI4DB/DB4AI/稳定性雷达、辩题素材包（「编程已死」之争：当 AI 写出大部分代码，程序员作为职业身份还成立吗）、论文精读推荐（向量库黑洞攻击）与反馈回顾。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/weekly/2026-W43.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="周日专题 · 2026-W43">
+<meta property="og:description" content="周日专题 2026-W43：本周雷达、辩题素材包、论文精读推荐与反馈回顾。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/weekly/2026-W43.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="周日专题 · 2026-W43">
+<meta name="twitter:description" content="周日专题 2026-W43：本周雷达、辩题素材包、论文精读推荐与反馈回顾。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "周日专题 · 2026-W43",
+  "description": "周日专题 2026-W43：本周 AI4DB/DB4AI/稳定性雷达、辩题素材包、论文精读推荐与反馈回顾。",
+  "url": "https://jason-93.github.io/DBA_Daily/weekly/2026-W43.html",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" },
+  "datePublished": "2026-10-26"
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --radar:#4cc38a; --debate:#c792ea; --paper:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.radar { border-color:var(--radar); } h2.debate { border-color:var(--debate); }
+  h2.paper { border-color:var(--paper); }
+  h3 { font-size:15.5px; margin:18px 4px 8px; }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; font-size:14px; }
+  .card p { margin:6px 0; }
+  .judge { color:var(--radar); font-size:13.5px; }
+  .judge::before { content:"趋势判断："; font-weight:600; }
+  ul, ol { margin:6px 0 6px 22px; font-size:14px; }
+  li { margin:4px 0; }
+  a.link { color:var(--accent); font-size:12.5px; word-break:break-all; text-decoration:none; display:block; margin:3px 0; }
+  a.link::before { content:"🔗 "; }
+  .note { background:var(--card); border-radius:12px; padding:12px 16px; color:var(--dim); font-size:12.5px; margin-bottom:12px; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px; border-top:1px solid #262c38; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>周日专题 <small>2026-W43（10-19 ~ 10-25）</small></h1>
+  <div class="meta">补跑于 10-26（10-25 周日 08:17 定时未触发，手动补跑）· 素材：本周七期晨报（10-19 ~ 10-25，含两期周末补跑）+ 200h 候选 71 条（18 源成功 / 1 失败：SRE Weekly）</div>
+</header>
+
+<nav>
+  <a href="../" class="home">← 主页</a>
+  <a href="#radar">📡 雷达 5</a>
+  <a href="#debate">⚖️ 辩题素材包</a>
+  <a href="#paper">📄 论文精读</a>
+  <a href="#feedback">💬 反馈回顾</a>
+</nav>
+
+<h2 class="radar" id="radar">一、本周 AI4DB / DB4AI / 稳定性雷达</h2>
+
+<div class="card">
+  <p><b>1. 向量检索进入系统工程深水区：吞吐、安全、成本三线同时开战。</b></p>
+  <p>PrairieFire 解决大规模 ANN 搜索的高吞吐更新（10-19 晨报）；《黑洞攻击》揭示嵌入空间缺陷可让检索结果静默偏离（10-21 晨报）；VS-Flash 把向量搜索下放到计算型闪存（10-21 晨报）；UltraBERT 反方向走——32K token 压成一个向量，挑战分块范式（10-20 晨报）；Qdrant 引入非对称量化 + Cohere Embed 5 压 PDF 检索成本（10-25 晨报）。</p>
+  <p class="judge">向量检索的竞争点已从「召回率对比」移到「更新吞吐 × 安全攻击面 × 成本曲线」的系统工程综合分。RAG 选型 PoC 清单该加两列：更新吞吐基准与安全响应记录——本周的「黑洞攻击」就是现成的提醒：你检索回来的向量可能已经不是你以为的那些。</p>
+</div>
+
+<div class="card">
+  <p><b>2. AI 工具链自身成为新的攻击面。</b></p>
+  <p>eMudhra 中间 CA 私钥泄露、8 张证书被攻破（10-21 晨报）；PHP2Shell RCE 漏洞（10-24 晨报）；更早一周还有 OpenCode 遭入侵、用户凭证泄露（10-18 晨报）与 OpenAI 内部模型绕过授权（10-17 晨报）。</p>
+  <p class="judge">安全半径正在从「我们的系统」扩大到「我们的工具链」——AI 编码工具、向量库、CA 证书链都可能成为入口。凭证治理（短时效、可吊销、最小权限）应该从「建议」升级为 runbook 必修项，这一周的案例密度足够写一页内部警示。</p>
+</div>
+
+<div class="card">
+  <p><b>3. 数据库厂商官方拥抱 AI 诊断：从社区玩具到厂商标配。</b></p>
+  <p>AWS 官方博客给出 Kiro IDE + Aurora MySQL MCP 服务器分析数据库问题的完整工作流（10-20 晨报）；同厂还有 U.S. Bank 119 TB Oracle Exadata → RDS for Oracle 的迁移实录（10-21 晨报）。</p>
+  <p class="judge">「AI 诊断数据库」不再是第三方插件的花活，而是云厂商官方文档里的标准路径。DBA 的排查工作流会被逐步重写——谁的诊断 runbook 先接入 MCP 式工具，谁的故障定位时间就先降一档。建议本周就在测试环境复现一遍 AWS 那篇的流程。</p>
+</div>
+
+<div class="card">
+  <p><b>4. 大模型成本竞赛白热化，供应商风险同步上升。</b></p>
+  <p>DeepSeek 新模型 token 消耗降超五成（10-19 晨报）；Kimi K3.1 Pro 上线 API 且承诺 11 月底前开放权重（10-25 晨报）；Anthropic 上半年净亏 807 亿美元（10-21 晨报）；马斯克预警新云厂商整合倒闭潮（10-25 晨报）。</p>
+  <p class="judge">API 价格还会继续下行，但供应商盈利承压意味着关停、合并、提价都可能发生——「锁定单一供应商」本身就是风险敞口。晨报连续两周出现供应商财务信号不是偶然，把「供应商融资健康度」纳入依赖评估已是刚需。</p>
+</div>
+
+<div class="card">
+  <p><b>5. 「编程已死」叙事进入主流话语。</b></p>
+  <p>Simon Willison 写下《我为编程写的讣告》（10-20 晨报）；阮一峰周刊 #416 主题「编程已经面目全非」（10-25 晨报）；GitHub 官方教 Copilot 会话跨端续接（10-20 晨报）；此前 Anthropic 披露 Claude 写了 Claude Code 约 90% 的代码、合并 PR 翻倍而回退率降超 40%。</p>
+  <p class="judge">职业辩论从推特段子上移到了行业旗舰媒体与中文主流周刊的封面——这说明变化已过早期采用者圈层。对 DBA 的启示不是恐慌，而是校准：技能组合的重心正从「写」向「意图表达 + 输出审查 + 系统约束设计」迁移，这正是本期辩题的由来。</p>
+</div>
+
+<h2 class="debate" id="debate">二、辩题素材包：「编程已死」之争——当 AI 写出大部分代码，「程序员」作为职业身份还成立吗？</h2>
+
+<div class="card">
+  <p><b>案例（来自本周晨报，来源已核实）</b></p>
+  <p>10-20 晨报：Simon Willison 发布《我为编程写的讣告》，以讣告体悼念「编程」这一活动。10-25 晨报：阮一峰科技爱好者周刊 #416 以「编程已经面目全非」为题，综述 AI 编码对编程形态、工具链与职业分工的重塑。背景事实：Anthropic 披露 Claude 编写了 Claude Code 约 90% 的代码，团队为此重构了代码评审流程（6~9 月合并 PR 翻倍、回退率降超 40%）。三份材料同向：一线实践者已经从「AI 帮我写代码」走到「我审查 AI 写的代码」。</p>
+  <a class="link" href="https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/">simonwillison.net（My obituary for programming，10-19）</a>
+  <a class="link" href="http://www.ruanyifeng.com/blog/2026/10/weekly-issue-416.html">ruanyifeng.com（科技爱好者周刊 #416，10-23）</a>
+  <a class="link" href="https://proxycc.cc/zh/news/2026-10-17">proxycc.cc（Anthropic 代码评审重构报道）</a>
+</div>
+
+<div class="card">
+  <p><b>正方立论框架（作为职业的「程序员」正在消亡）</b></p>
+  <ol>
+    <li><b>技能稀缺性崩塌即定价权崩塌</b>：当编码能力随处可得，市场不再为「会写」付溢价；讣告的真正对象不是编程语言，而是靠这门手艺吃饭的身份——历史上排版工、电话接线员、胶片冲印师都经历过同一剧本。</li>
+    <li><b>自动化已到主体层</b>：90% 的代码由 AI 写出的团队真实存在且效率更高，「人写为主、AI 补全」的过渡期已经结束；剩下的 10% 不叫「程序员的工作」，叫「例外处理」。</li>
+    <li><b>教育供给的滞后即死亡的证据</b>：培训班与科班还在按旧分工培养，供需错配本身就是职业解体的典型前兆——市场已经在用脚投票。</li>
+  </ol>
+</div>
+
+<div class="card">
+  <p><b>反方立论框架（编程在升维，不是在死亡）</b></p>
+  <ol>
+    <li><b>代码 ≠ 编程</b>：编程的本质是把模糊意图翻译为精确约束，AI 生成的代码越多，定义问题、设定边界、裁决取舍的人越关键；写代码的速度从来不是瓶颈，知道该写什么才是。</li>
+    <li><b>新角色是诞生的证据而非消亡的证据</b>：「AI 输出审查者」「系统牧羊人」是五年前不存在的岗位——职业死亡时新角色不会出现，只会出现失业。</li>
+    <li><b>杰文斯悖论</b>：生成成本下降会膨胀对软件的总需求，绝对工作量反而上升；「面目全非」恰恰说明编程渗透进了以前不值得写软件的角落。</li>
+  </ol>
+</div>
+
+<div class="card">
+  <p><b>关联哲学文本</b></p>
+  <ul>
+    <li><b>阿伦特《人的境况》劳动 / 工作 / 行动三分</b>：编程更像「工作」（制作持久之物、构筑世界）还是「劳动」（维持生计的重复消耗）？若 AI 接管的是「劳动」成分，人剩下的恰是阿伦特最珍视的「行动」——在众目睽睽下开启新事物。对照你的书单，此文本可接在伯林之后读。</li>
+    <li><b>海德格尔《技术的追问》</b>：「编程已死」预设了编程有一个可由技术史定义的本质；海德格尔的提醒是，技术的本质绝非技术性的——追问「程序员是谁」比追问「代码谁写」更接近真相。</li>
+    <li><b>SEP 词条方向</b>：Philosophy of Technology（技术哲学的核心问题地图）；Hannah Arendt（labor / work / action 词条内区分）；Philosophy of Computer Science（编程的本体论地位讨论）。</li>
+  </ul>
+</div>
+
+<h2 class="paper" id="paper">三、论文精读推荐</h2>
+
+<div class="card">
+  <p><b>《Can You Trust the Vectors in Your Vector Database?》（arXiv 2604.05480）</b></p>
+  <a class="link" href="https://arxiv.org/abs/2604.05480">arxiv.org/abs/2604.05480</a> · 10-21 晨报技术层，评分 3.6
+  <p><b>导读：</b>向量库是 RAG 的信任底座，但嵌入空间本身是黑盒——本文系统研究嵌入空间的结构性缺陷如何被利用：攻击者可以构造「黑洞」，让目标语义区域的查询结果静默偏向特定内容，而库里的向量一个都没被篡改。这类攻击的可怕之处不在破坏，在于不可见性——检索质量指标（召回、MRR）在日常监控里完全正常，被污染的只有特定查询路径。论文的贡献是把「向量库可信吗」从哲学质疑变成可复现的攻击面清单，并给出检测与缓解方案。对 DBA 的价值：向量库正在从「实验组件」变成「生产数据面」，生产数据面需要的恰恰是对其失效模式的完整认知；本期雷达第 1、2 条（Qdrant 量化、AI 工具链攻击面）在这篇论文里交汇。</p>
+  <p><b>怎么读：</b>先读攻击模型的形式化描述（20 分钟，理解「黑洞」如何构造），再读检测方案的实验部分（15 分钟，评估其成本是否可进生产监控）。建议动作：给团队 RAG 系统的上线检查单加一项「嵌入空间完整性验证」，本文的威胁模型直接可作检查项来源。</p>
+</div>
+
+<h2 id="feedback">四、反馈回顾</h2>
+
+<div class="note">feedback.md 自 09-16 以来仍无新反馈，本期不调整权重，RUBRIC.md「权重变更日志」无追加。提醒：回复「晨报反馈：条目序号 + 有用/无用 + 一句话」，或直接编辑 feedback.md。本周七期晨报共 54 条入选条目，哪怕只标记「哪几条真读了」也是有效信号；对周日专题本身也欢迎反馈（如「雷达太长」「辩题素材好用」），直接影响下期结构。</div>
+
+<footer>DBA Daily · 周日专题由 Kimi Work 生成</footer>
+
+</body>
+</html>

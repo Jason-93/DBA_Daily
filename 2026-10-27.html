@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-10-27</title>
+<meta name="description" content="每日晨报 · 2026-10-27：入选 9 条精选——纽约时报 AI 加速 Oracle 迁移 / MariaDB 蓝绿升级 / Weaviate 弃用 GraphQL / MetaDB / PolyMemDB / 投票拓扑 / Anthropic 算力承诺，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-10-27.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-10-27">
+<meta property="og:description" content="每日晨报 · 2026-10-27：入选 9 条精选，附评分与摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-10-27.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-10-27">
+<meta name="twitter:description" content="AI4DB / DB4AI / 稳定性 / 哲学 / 科学 / 热点 每日精选 9 条。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-10-27",
+  "description": "每日晨报 · 2026-10-27：入选 9 条精选，附评分与摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-10-27.html",
+  "datePublished": "2026-10-27",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+  :root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-10-27 周二</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 35 条（19 源全部成功 / 0 源失败）· 入选 9 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a>
+  <a href="#tech">🛠 技术 5</a>
+  <a href="#phil">🏛 哲学与辩论 1</a>
+  <a href="#sci">🔬 科学 1</a>
+  <a href="#news">⚡ 热点 2</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2>
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/the-new-york-times-cut-oracle-migration-time-from-18-to-5-months/">1. 纽约时报把 Oracle 迁移从 18 个月压到 5 个月</a></h3>
+  <div class="orig">The New York Times cut Oracle migration time from 18 to 5 months</div>
+  <div class="tags">AWS Database Blog · AI4DB / 数据库迁移 / 案例 · 约 13 分钟 · <span class="score">★4.2</span></div>
+  <p class="abstract"><b>摘要:</b>纽约时报用 Amazon Bedrock 上的 AI-agent-native 方法，把订阅营收引擎从 Oracle 迁到 Aurora PostgreSQL，工期从 18 个月缩到 5 个月。AI 加速数据库迁移的旗舰案例，直接可对标团队迁移项目。</p>
+  <p class="action"><b>落地:</b>精读 AI agent 在评估、转换、验证各环节的分工，写一页迁移提效备忘。</p>
+</div>
+<div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/how-vestiaire-collective-achieved-near-zero-downtime-rds-for-mariadb-upgrades-with-amazon-rds-blue-green-deployments/">2. Vestiaire Collective 用蓝绿部署实现 MariaDB 近零停机升级</a></h3>
+  <div class="orig">How Vestiaire Collective achieved near-zero downtime RDS for MariaDB upgrades with Amazon RDS Blue/Green Deployments</div>
+  <div class="tags">AWS Database Blog · MariaDB / 升级 / 稳定性 · 约 10 分钟 · <span class="score">★3.8</span></div>
+  <p class="abstract"><b>摘要:</b>Vestiaire 用 RDS 蓝绿部署把 MariaDB 舰队连升两个大版本且近零停机。大版本升级是 DBA 最紧张的操作之一，这是现成的流程模板。</p>
+  <p class="action"><b>落地:</b>把蓝绿升级步骤抄进团队升级 runbook，安排一次演练。</p>
+</div>
+<div class="card">
+  <h3><a href="https://weaviate.io/blog/graphql-api-deprecation">3. Weaviate 弃用 GraphQL API：时间线与迁移路径</a></h3>
+  <div class="orig">Deprecating the GraphQL API: timeline and migration paths</div>
+  <div class="tags">Weaviate Blog · 向量数据库 / API 演进 · 约 7 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>Weaviate GraphQL API 于 2026-10-26 起弃用，官方给出 Cloud 与自建的时间线和迁移指引。依赖该 API 的团队有明确的行动窗口。</p>
+  <p class="action"><b>落地:</b>核对团队向量库调用面，若用 GraphQL 即刻排期迁移。</p>
+</div>
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.32247">4. MetaDB：把文件系统结构放回分布式数据库</a></h3>
+  <div class="orig">MetaDB: Putting File-System Structure Back into Distributed Databases</div>
+  <div class="tags">arXiv cs.DB · 元数据 / 分布式数据库 / 百度实践 · 约 13 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>百度生产经验：把通用分布式数据库直接当文件系统元数据管会踩坑，MetaDB 针对性做了结构化改造。元数据管理的规模教训对大集群团队有直接参照。</p>
+  <p class="action"><b>落地:</b>存入素材库，对照团队元数据/命名空间服务的架构假设。</p>
+</div>
+<div class="card">
+  <h3><a href="https://arxiv.org/abs/2608.25577">5. PolyMemDB：面向 AI 记忆管理的多模态数据库系统</a></h3>
+  <div class="orig">PolyMemDB: A Polyglot Database System for AI Memory Management</div>
+  <div class="tags">arXiv cs.DB · AI 记忆 / DB4AI / 论文 · 约 12 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>个人智能体长期交互产生海量异构数据，PolyMemDB 用多模态（polyglot）存储统一管理 agent 记忆。接续 10-23 期 Timescale 记忆系统教训，这是系统化的一条路线。</p>
+  <p class="action"><b>落地:</b>存入 AI 记忆选型素材库，与 Timescale 三方案对照读。</p>
+</div>
+
+<h2 class="phil" id="phil">🏛 哲学与辩论</h2>
+<div class="card">
+  <h3><a href="https://aeon.co/essays/what-cooperatives-for-an-anticapitalist-peace-look-like">6. 如何建设真正的和平：合作社而非资本逻辑</a></h3>
+  <div class="orig">How to build real peace</div>
+  <div class="tags">Aeon · 社会经济 / 辩论素材 · 约 13 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>作者从哥伦比亚到叙利亚的观察出发，主张战后重建靠合作社而非资本逻辑。「市场机制是不是万能解」是组织与激励设计讨论的现成切口。</p>
+  <p class="action"><b>落地:</b>扫读并摘论点入辩题素材库。</p>
+</div>
+
+<h2 class="sci" id="sci">🔬 科学</h2>
+<div class="card">
+  <h3><a href="https://www.quantamagazine.org/how-voting-is-like-a-klein-bottle-20261026/">7. 投票悖论与克莱因瓶：拓扑学给投票系统建模</a></h3>
+  <div class="orig">How Voting Is Like a Klein Bottle</div>
+  <div class="tags">Quanta Magazine · 数学 / 拓扑 · 约 11 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>新拓扑模型把几百年的投票悖论与「没有内外之分」的克莱因瓶连起来。反直觉系统的形式化，是理解「规则产生怪结果」的漂亮案例。</p>
+  <p class="action"><b>落地:</b>扫读即可，可作方法论谈资。</p>
+</div>
+
+<h2 class="news" id="news">⚡ 热点保底</h2>
+<div class="card">
+  <h3><a href="https://36kr.com/newsflashes/4042857391740040?f=rss">8. Anthropic 招股书披露巨额算力承诺：谷歌 1145 亿、亚马逊 1100 亿、微软 449 亿美元</a></h3>
+  <div class="tags">36氪 · AI 行业 / 算力 · 约 4 分钟 · <span class="score">★3.8</span></div>
+  <p class="abstract"><b>摘要:</b>Anthropic 招股书披露到 2036 年的算力采购承诺，三家合计约 2694 亿美元且原则上不随用量减少取消。头部模型厂商的资本锁定程度，是判断 AI 供应链风险的硬数字。</p>
+  <p class="action"><b>落地:</b>摘录三组数字入 AI 供应商评估备忘。</p>
+</div>
+<div class="card">
+  <h3><a href="https://36kr.com/p/4036882782573449?f=rss">9. 具身智能狂潮背后的国资们：抢项目、抬上轿、跟着文件猜未来</a></h3>
+  <div class="tags">36氪 · 具身智能 / 产业观察 · 约 9 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>地方国资招商团队蜂拥具身智能赛道，「政策说啥我们就弄啥」者不在少数。热潮下的资金结构，是判断赛道真实景气度的重要侧面。</p>
+  <p class="action"><b>落地:</b>精读，作为评估具身智能泡沫成分的背景素材。</p>
+</div>
+
+<footer>
+  <p><b>缺席源:</b>无。本次抓取 19 个源全部成功，0 失败。</p>
+  <p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

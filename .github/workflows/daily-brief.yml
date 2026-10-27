@@ -20,6 +20,9 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    outputs:
+      found: ${{ steps.detect.outputs.found }}
+      slug: ${{ steps.detect.outputs.slug }}
     steps:
       - uses: actions/checkout@v4
 
@@ -72,10 +75,28 @@ jobs:
           git commit -m "brief: ${{ steps.detect.outputs.slug }} (cloud)"
           git push
 
+  deploy:
+    needs: generate
+    if: needs.generate.outputs.found == 'true'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - uses: actions/deploy-pages@v4
+        id: deployment
       - name: Verify live page
-        if: steps.detect.outputs.found == 'true'
         run: |
-          sleep 60
-          CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://jason-93.github.io/DBA_Daily/${{ steps.detect.outputs.slug }}.html")
+          sleep 90
+          CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://jason-93.github.io/DBA_Daily/${{ needs.generate.outputs.slug }}.html")
           echo "live status: $CODE"
           test "$CODE" = "200"

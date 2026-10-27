@@ -1,0 +1,80 @@
+name: weekly-special
+
+on:
+  schedule:
+    # 每周日 09:20 Asia/Shanghai = 01:20 UTC
+    - cron: "20 1 * * 0"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "周日日期 YYYY-MM-DD（默认今天，Asia/Shanghai）"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-special
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install requests pyyaml beautifulsoup4
+
+      - name: Generate weekly special (idempotent)
+        env:
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+        run: |
+          ARGS="--mode weekly"
+          if [ -n "${{ inputs.date }}" ]; then ARGS="$ARGS --date ${{ inputs.date }}"; fi
+          python cloud/gen.py $ARGS
+
+      - name: Detect generated page
+        id: detect
+        run: |
+          SLUG="${{ inputs.date }}"
+          if [ -z "$SLUG" ]; then SLUG=$(TZ=Asia/Shanghai date +%F); fi
+          WID=$(TZ=Asia/Shanghai date -d "$SLUG" +%G-W%V)
+          echo "slug=$WID" >> "$GITHUB_OUTPUT"
+          GEN=""
+          if [ -f .generated ]; then GEN=$(cat .generated); fi
+          if [ "$GEN" = "$WID" ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "title=$(grep -m1 '^## 二、辩题素材包：' "weekly/$WID.md" | sed 's/^## 二、辩题素材包：//' | head -c 40)" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Update site index & sitemap
+        if: steps.detect.outputs.found == 'true'
+        run: |
+          python cloud/site_update.py --mode weekly \
+            --slug "${{ steps.detect.outputs.slug }}" \
+            --label "${{ steps.detect.outputs.slug }}" \
+            --title "辩题：${{ steps.detect.outputs.title }}"
+
+      - name: Commit & push
+        if: steps.detect.outputs.found == 'true'
+        run: |
+          git config user.name "Jason-93"
+          git config user.email "jason-93@users.noreply.github.com"
+          git add -A
+          git commit -m "weekly: ${{ steps.detect.outputs.slug }} (cloud)"
+          git push
+
+      - name: Verify live page
+        if: steps.detect.outputs.found == 'true'
+        run: |
+          sleep 60
+          CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://jason-93.github.io/DBA_Daily/weekly/${{ steps.detect.outputs.slug }}.html")
+          echo "live status: $CODE"
+          test "$CODE" = "200"

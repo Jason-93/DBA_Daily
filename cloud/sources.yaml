@@ -1,0 +1,303 @@
+# 信息初筛 · 信息源配置
+# tier: tech(技术) / phil(哲学·辩论) / sci(科学) / news(热点保底)
+# lang: zh / en
+# feed: RSS/Atom 地址;没有可靠 RSS 的源不写 feed,由运行时的代理用搜索兜底(可选、限时)
+# weight: 信源权重 0-5,计入打分
+# 修改此文件后,下一次晨报/专题自动生效
+
+sources:
+  # ---------------- 技术层 ----------------
+  - name: Percona Blog
+    tier: tech
+    lang: en
+    feed: https://www.percona.com/blog/feed/
+    site: https://www.percona.com/blog/
+    tags: [数据库, MySQL, PostgreSQL, 性能优化]
+    weight: 4
+
+  - name: AWS Database Blog
+    tier: tech
+    lang: en
+    feed: https://aws.amazon.com/blogs/database/feed/
+    site: https://aws.amazon.com/blogs/database/
+    tags: [云数据库, AI4DB, 托管服务]
+    weight: 4
+
+  - name: CMU Database Group Blog
+    tier: tech
+    lang: en
+    feed: https://db.cs.cmu.edu/feed/
+    site: https://db.cs.cmu.edu/
+    tags: [数据库研究, AI4DB, 行业评论]
+    weight: 5
+
+  - name: arXiv cs.DB
+    tier: tech
+    lang: en
+    feed: https://arxiv.org/rss/cs.DB
+    site: https://arxiv.org/list/cs.DB/recent
+    tags: [论文, 数据库, AI4DB]
+    weight: 4
+
+  - name: PingCAP Blog
+    tier: tech
+    lang: en
+    feed: https://www.pingcap.com/feed/
+    site: https://www.pingcap.com/blog/
+    tags: [分布式数据库, TiDB, 云原生]
+    weight: 3
+
+  - name: SRE Weekly
+    tier: tech
+    lang: en
+    feed: https://sreweekly.com/feed/
+    site: https://sreweekly.com/
+    tags: [稳定性, SRE, 故障复盘]
+    weight: 4
+
+  - name: The Pragmatic Engineer
+    tier: tech
+    lang: en
+    feed: https://blog.pragmaticengineer.com/feed/
+    site: https://blog.pragmaticengineer.com/
+    tags: [职业发展, 行业观察, 工程文化]
+    weight: 4
+
+  - name: 阮一峰的网络日志
+    tier: tech
+    lang: zh
+    feed: https://www.ruanyifeng.com/blog/atom.xml
+    site: https://www.ruanyifeng.com/blog/
+    tags: [科技周刊, 杂食]
+    weight: 3
+
+  # ---- vibe coding / AI 工具链(2026-09-16 应用户要求新增) ----
+  - name: GitHub Blog
+    tier: tech
+    lang: en
+    feed: https://github.blog/feed/
+    site: https://github.blog/
+    tags: [vibe coding, AI 编程, Copilot, 开发者工具]
+    weight: 4
+
+  - name: Simon Willison's Weblog
+    tier: tech
+    lang: en
+    feed: https://simonwillison.net/atom/everything/
+    site: https://simonwillison.net/
+    tags: [vibe coding, AI 工具, LLM 实践, prompt 工程]
+    weight: 5
+
+  - name: Anthropic Engineering
+    tier: tech
+    lang: en
+    site: https://www.anthropic.com/engineering
+    tags: [vibe coding, Claude Code, agent, LLM 工程]
+    weight: 4
+    note: 无公开 RSS,搜索兜底
+
+  - name: OpenAI News
+    tier: tech
+    lang: en
+    site: https://openai.com/news/
+    tags: [vibe coding, Codex, GPT, AI 工具]
+    weight: 3
+    note: 无稳定公开 RSS,搜索兜底
+
+  - name: Cursor Blog
+    tier: tech
+    lang: en
+    site: https://cursor.com/blog
+    tags: [vibe coding, AI 编程, IDE]
+    weight: 3
+    note: 无公开 RSS,搜索兜底
+
+  - name: 量子位
+    tier: tech
+    lang: zh
+    site: https://www.qbitai.com/
+    tags: [AI 行业, AI 工具, 中文资讯]
+    weight: 3
+    note: 无稳定 RSS,搜索兜底
+
+  # ---- DB4AI / 向量数据库 / RAG 底座(2026-09-20 应用户要求新增,RSS 均已实测可用) ----
+  - name: Qdrant Blog
+    tier: tech
+    lang: en
+    feed: https://qdrant.tech/blog/index.xml
+    site: https://qdrant.tech/blog/
+    tags: [DB4AI, 向量数据库, RAG, 检索]
+    weight: 4
+
+  - name: Weaviate Blog
+    tier: tech
+    lang: en
+    feed: https://weaviate.io/blog/rss.xml
+    site: https://weaviate.io/blog/
+    tags: [DB4AI, 向量数据库, RAG]
+    weight: 3
+
+  - name: Vespa Blog
+    tier: tech
+    lang: en
+    feed: https://blog.vespa.ai/feed.xml
+    site: https://blog.vespa.ai/
+    tags: [DB4AI, 向量检索, 排序, 大规模在线服务]
+    weight: 4
+
+  - name: Timescale Blog
+    tier: tech
+    lang: en
+    feed: https://www.timescale.com/blog/feed/
+    site: https://www.timescale.com/blog/
+    tags: [DB4AI, pgvector, PostgreSQL, 时序]
+    weight: 4
+
+  - name: Elastic Blog
+    tier: tech
+    lang: en
+    feed: https://www.elastic.co/blog/feed
+    site: https://www.elastic.co/blog/
+    tags: [DB4AI, 向量检索, Elasticsearch, 可观测性]
+    weight: 3
+
+  # ---- 无 feed,搜索兜底 ----
+  - name: 墨天轮
+    tier: tech
+    lang: zh
+    site: https://www.modb.pro/
+    tags: [国产数据库, 行业动态, DBA]
+    weight: 3
+    note: 无公开 RSS,搜索兜底
+
+  - name: OceanBase 技术博客
+    tier: tech
+    lang: zh
+    site: https://www.oceanbase.com/blog
+    tags: [分布式, 云原生, AI4DB]
+    weight: 3
+    note: 无公开 RSS,搜索兜底
+
+  - name: dbaplus社群
+    tier: tech
+    lang: zh
+    site: https://dbaplus.cn/
+    tags: [稳定性, DBA, 金融科技]
+    weight: 3
+    note: 公众号为主,搜索兜底
+
+  - name: 晚点LatePost
+    tier: tech
+    lang: zh
+    site: https://www.latepost.com/
+    tags: [技术商业, 深度报道]
+    weight: 4
+    note: 公众号为主,搜索兜底
+
+  # ---------------- 哲学与辩论层 ----------------
+  - name: Aeon
+    tier: phil
+    lang: en
+    feed: https://aeon.co/feed.rss
+    site: https://aeon.co/
+    tags: [哲学, 思想, 长文]
+    weight: 5
+
+  - name: Psyche
+    tier: phil
+    lang: en
+    feed: https://psyche.co/feed
+    site: https://psyche.co/
+    tags: [心理学, 哲学, 具体的人]
+    weight: 4
+
+  - name: 南方周末
+    tier: phil
+    lang: zh
+    site: https://www.infzm.com/
+    tags: [特稿, 公共议题, 具体的人]
+    weight: 3
+    note: 搜索兜底
+
+  - name: 人物
+    tier: phil
+    lang: zh
+    tags: [特稿, 具体的人, 两难处境]
+    weight: 4
+    note: 公众号为主,搜索兜底
+
+  - name: 冰点周刊
+    tier: phil
+    lang: zh
+    tags: [特稿, 公共议题, 具体的人]
+    weight: 4
+    note: 中国青年报深度报道,搜索兜底
+
+  - name: 正面连接
+    tier: phil
+    lang: zh
+    tags: [特稿, 具体的人]
+    weight: 4
+    note: 公众号为主,搜索兜底
+
+  - name: 看理想
+    tier: phil
+    lang: zh
+    tags: [哲学, 文化, 思想]
+    weight: 3
+    note: 公众号为主,搜索兜底
+
+  - name: 哲学园
+    tier: phil
+    lang: zh
+    tags: [哲学, 译文]
+    weight: 3
+    note: 公众号为主,搜索兜底
+
+  # ---------------- 科学层 ----------------
+  - name: Quanta Magazine
+    tier: sci
+    lang: en
+    feed: https://www.quantamagazine.org/feed/
+    site: https://www.quantamagazine.org/
+    tags: [科学长文, 物理, 数学, 生物]
+    weight: 5
+
+  - name: Nature News
+    tier: sci
+    lang: en
+    site: https://www.nature.com/news
+    tags: [科学新闻, 论文]
+    weight: 4
+    note: 搜索兜底;遇到科学条目尽量附原始论文链接
+
+  - name: 返朴
+    tier: sci
+    lang: zh
+    tags: [科学长文, 物理, 深度]
+    weight: 4
+    note: 公众号为主,搜索兜底
+
+  - name: 知识分子
+    tier: sci
+    lang: zh
+    tags: [科学新闻, 科学政策]
+    weight: 3
+    note: 公众号为主,搜索兜底
+
+  # ---------------- 热点保底(克制,每天≤5条) ----------------
+  - name: 36氪
+    tier: news
+    lang: zh
+    feed: https://www.36kr.com/feed
+    site: https://www.36kr.com/
+    tags: [科技商业, 热点]
+    weight: 2
+
+  - name: 虎嗅
+    tier: news
+    lang: zh
+    site: https://www.huxiu.com/
+    tags: [科技商业, 热点]
+    weight: 2
+    note: 原 RSS(https://www.huxiu.com/rss/0.xml)2026-09 中旬起持续超时,已确认接口失效,转为搜索兜底

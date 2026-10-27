@@ -23,6 +23,7 @@ jobs:
     outputs:
       found: ${{ steps.detect.outputs.found }}
       slug: ${{ steps.detect.outputs.slug }}
+      sha: ${{ steps.push.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
 
@@ -67,6 +68,7 @@ jobs:
             --title "晨报 · ${{ steps.detect.outputs.slug }}（${{ steps.detect.outputs.weekday }}）"
 
       - name: Commit & push
+        id: push
         if: steps.detect.outputs.found == 'true'
         run: |
           git config user.name "Jason-93"
@@ -74,6 +76,7 @@ jobs:
           git add -A
           git commit -m "brief: ${{ steps.detect.outputs.slug }} (cloud)"
           git push
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
   deploy:
     needs: generate
@@ -88,6 +91,8 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.generate.outputs.sha }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

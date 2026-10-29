@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-10-29</title>
+<meta name="description" content="每日晨报 · 2026-10-29：入选 5 条精选，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-10-29.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-10-29">
+<meta property="og:description" content="每日晨报 · 2026-10-29：入选 5 条精选，附相关度评分与内容摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-10-29.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-10-29">
+<meta name="twitter:description" content="每日晨报 · 2026-10-29：入选 5 条精选，附相关度评分与内容摘要。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-10-29",
+  "description": "每日晨报 · 2026-10-29：入选 5 条精选，附相关度评分与内容摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-10-29.html",
+  "datePublished": "2026-10-29",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+:root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-10-29 周四</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 43 条 · 入选 5 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a> <a href="#tech">🛠 5</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2><div class="card">
+  <h3><a href="https://www.percona.com/blog/how-to-extract-data-from-innodb-myisam-and-myrocks-files-without-a-running-server/">1. 无需运行服务器即可从 InnoDB、MyISAM 和 MyRocks 文件中提取数据</a></h3>
+  <div class="orig">How to Extract Data from InnoDB, MyISAM, and MyRocks Files Without a Running Server</div>
+  <div class="tags">Percona Blog · MySQL / 数据恢复 / SRE · 约 8 分钟 · <span class="score">★4.3</span></div>
+  <p class="abstract"><b>摘要:</b>Percona发布离线数据提取工具，支持直接从MySQL/MariaDB数据文件中恢复表结构与内容，绕过实例启动失败场景。对途虎DBA团队而言，可将此方案纳入灾难恢复runbook，作为标准备份失效时的兜底手段，同时补充9年老兵在稳定性工程上的工具箱深度。</p>
+  <p class="action"><b>落地:</b>评估percona工具在途虎MySQL实例上的兼容性，制定一份「实例无法启动时的离线提取SOP」并同步值班手册。</p>
+</div><div class="card">
+  <h3><a href="https://www.percona.com/blog/why-you-should-stop-using-arbiters-in-mongodb/">2. 为何应在 MongoDB 中停用仲裁节点</a></h3>
+  <div class="orig">Why you should stop using ARBITERS in MongoDB</div>
+  <div class="tags">Percona Blog · MongoDB / 高可用 / 分布式数据库 · 约 6 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>Percona基于真实案例分析指出，MongoDB仲裁节点在现代部署中已弊大于利，可能引发脑裂与一致性风险。对读者而言，这是分布式高可用设计中的真实两难案例，可直接评估途虎现有MongoDB架构，也为辩论中「技术债与稳定性」议题提供具体切口。</p>
+  <p class="action"><b>落地:</b>梳理途虎现存MongoDB集群的仲裁节点配置，在下次架构评审中提出替换为数据节点的迁移方案。</p>
+</div><div class="card">
+  <h3><a href="https://simonwillison.net/2026/Oct/28/github-octoverse-2026/">3. GitHub Octoverse 2026：开发者与智能体共筑代码新高</a></h3>
+  <div class="orig">GitHub Octoverse 2026</div>
+  <div class="tags">Simon Willison's Weblog · AI工具链 / Agent / 开发者生态 · 约 5 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>GitHub年度报告显示，2026年代码提交与推送量创历史新高，agentic engineering已成为主流开发模式。对处于ramp up期的资深DBA而言，此数据是判断AI工具链渗透速度的锚点，可据此决定团队内部AI辅助诊断与自动化脚本投入的优先级，避免技术视野盲区。</p>
+  <p class="action"><b>落地:</b>提取报告中agent使用增速数据，写一页「AI4DB团队采纳节奏」备忘，供下周技术规划会引用。</p>
+</div><div class="card">
+  <h3><a href="https://simonwillison.net/2026/Oct/28/vibe-game-development/">4. Vibe 游戏开发的十月拐点</a></h3>
+  <div class="orig">The October inflection point for vibe game development</div>
+  <div class="tags">Simon Willison's Weblog · Vibe Coding / AI工具链 · 约 6 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>作者指出2026年10月vibe coding在游戏开发领域跨越可靠性临界点，标志着非传统程序员也能通过自然语言驱动完整项目交付。对关注vibe coding/AI工具链的读者，这是判断「提示工程即编程」趋势的关键信号，可用于评估途虎内部低代码自动化运维工具的可行性。</p>
+  <p class="action"><b>落地:</b>选取一个途虎内部低优先级的DBA小工具（如慢查询可视化），用cursor/windsurf在30分钟内尝试vibe coding重写并记录卡点。</p>
+</div><div class="card">
+  <h3><a href="https://www.elastic.co/blog/forrester-wave-aiops-platforms-2026">5. Elastic 获评 Forrester AIOps 平台 Wave 强劲表现者</a></h3>
+  <div class="orig">Elastic is a Strong Performer in The Forrester Wave™ for AIOps Platforms, Q4 2026</div>
+  <div class="tags">Elastic Blog · AIOps / 可观测 / SRE · 约 6 分钟 · <span class="score">★3.4</span></div>
+  <p class="abstract"><b>摘要:</b>Elastic在Forrester Q4 AIOps平台评测中获Strong Performer评级，其基于完整上下文、可解释证据与学习能力的AI运维方案被重点提及。对负责稳定性工程的DBA而言，可作为评估现有可观测平台AI能力的对标参照，也可用于推动团队AIOps升级时的选型论证。</p>
+  <p class="action"><b>落地:</b>下载Forrester报告全文，精读Elastic在根因分析与证据链展示部分的评分，对比途虎现有监控体系差距。</p>
+</div>
+
+<footer>
+<p><b>缺席说明:</b>哲学层与科学层无达标候选：前者可用条目偏历史叙事与人物专访（触碰负面清单），后者唯一候选虽属生命科学但距DBA工作场景过远且缺乏可操作性，均低于3.4分数线；热点层36氪条目均为财经快讯或产业八卦，与读者技术主线偏离，故技术层精选5条达标文章，不强行凑数。</p>
+<p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

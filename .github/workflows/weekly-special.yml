@@ -2,8 +2,10 @@ name: weekly-special
 
 on:
   schedule:
-    # 每周日 09:20 Asia/Shanghai = 01:20 UTC
+    # 主: 每周日 09:20 Asia/Shanghai = 01:20 UTC
     - cron: "20 1 * * 0"
+    # 兜底: 每周日 12:20 Asia/Shanghai = 04:20 UTC
+    - cron: "20 4 * * 0"
   workflow_dispatch:
     inputs:
       date:

@@ -2,8 +2,10 @@ name: daily-brief
 
 on:
   schedule:
-    # 每天 08:25 Asia/Shanghai = 00:25 UTC
+    # 主: 每天 08:25 Asia/Shanghai = 00:25 UTC
     - cron: "25 0 * * *"
+    # 兜底: 每天 11:25 Asia/Shanghai = 03:25 UTC(GitHub 高峰期限流时主时段可能延迟数小时,幂等保证重复触发安全)
+    - cron: "25 3 * * *"
   workflow_dispatch:
     inputs:
       date:

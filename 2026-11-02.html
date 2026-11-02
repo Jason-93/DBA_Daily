@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-11-02</title>
+<meta name="description" content="每日晨报 · 2026-11-02：入选 6 条精选，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-11-02.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-11-02">
+<meta property="og:description" content="每日晨报 · 2026-11-02：入选 6 条精选，附相关度评分与内容摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-11-02.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-11-02">
+<meta name="twitter:description" content="每日晨报 · 2026-11-02：入选 6 条精选，附相关度评分与内容摘要。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-11-02",
+  "description": "每日晨报 · 2026-11-02：入选 6 条精选，附相关度评分与内容摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-11-02.html",
+  "datePublished": "2026-11-02",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+:root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-11-02 周一</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 35 条 · 入选 6 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a> <a href="#tech">🛠 6</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2><div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.41407">1. Fidelity Synopses：面向近似向量搜索的预执行计划选择</a></h3>
+  <div class="orig">Fidelity Synopses: Pre-Execution Plan Selection for Approximate Vector Search</div>
+  <div class="tags">arXiv cs.DB · DB4AI / 向量搜索 · 约 12 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>论文提出预执行计划选择框架，通过成本-召回率权衡为近似向量搜索自动匹配物理实现。途虎DBA可将此思路引入向量检索调优，建立索引选型决策树而非依赖经验试错。</p>
+  <p class="action"><b>落地:</b>组织团队精读论文第3节fidelity建模，为现有向量检索场景输出一页cost-recall权衡备忘。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.41669">2. 面向知识图谱相似查询的监督与LLM增强基数估计</a></h3>
+  <div class="orig">Supervised and LLM-Augmented Cardinality Estimation for Similarity Queries on Knowledge Graphs</div>
+  <div class="tags">arXiv cs.DB · AI4DB / 查询优化 · 约 12 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>论文将监督学习与LLM结合用于知识图谱相似查询的基数估计，显著提升优化器代价模型精度。对处于ramp up阶段的DBA，这是把大模型接入查询优化器的可复现路径，可直接评估在MySQL/PostgreSQL中落地的可行性。</p>
+  <p class="action"><b>落地:</b>精读实验章节，整理LLM增强基数估计与现有直方图/采样方案的精度对比表，用于下周团队内部分享。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.41755">3. CypherGuard：面向可靠Text-to-Cypher的数据库驱动纠错</a></h3>
+  <div class="orig">CypherGuard: Database-Grounded Correction for Reliable Text-to-Cypher</div>
+  <div class="tags">arXiv cs.DB · AI4DB / Text2SQL · 约 10 分钟 · <span class="score">★4.0</span></div>
+  <p class="abstract"><b>摘要:</b>CypherGuard通过数据库模式与执行反馈构建Grounded纠错层，显著提升Text-to-Cypher可靠性。途虎若探索自然语言查数接口，可直接借鉴其“生成-校验-重写”三阶段流水线，降低幻觉导致的生产事故风险。</p>
+  <p class="action"><b>落地:</b>将论文3.2节的数据库grounded correction机制抽象为SQL生成校验checklist，写入团队Text2SQL runbook草案。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.40620">4. Tessera：数据库引擎中面向倾斜稀疏关系的快速Join-Aggregate</a></h3>
+  <div class="orig">Tessera: Fast Join-Aggregates over Skewed Sparse Relations in Database Engines</div>
+  <div class="tags">arXiv cs.DB · 分布式数据库 / 查询优化 · 约 12 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>Tessera针对倾斜稀疏关系提出快速Join-Aggregate算法，避免中间结果物化爆炸。途虎业务数据分布多呈长尾，该工作可直接指导分布式数仓或分库分表场景下的聚合查询优化。</p>
+  <p class="action"><b>落地:</b>精读第4节skew-handling策略，对比现有TiDB/ClickHouse执行计划，输出倾斜Join优化一页备忘。</p>
+</div><div class="card">
+  <h3><a href="https://sreweekly.com/sre-weekly-issue-541/">5. SRE Weekly 第 541 期</a></h3>
+  <div class="orig">SRE Weekly Issue #541</div>
+  <div class="tags">SRE Weekly · 稳定性工程 / SRE · 约 8 分钟 · <span class="score">★3.8</span></div>
+  <p class="abstract"><b>摘要:</b>本期汇总了事件响应自动化、可观测平台ROI评估及agent工具链安全边界等最新实践。对稳定性团队是高效信息枢纽，可快速定位与途虎当前故障治理体系可对接的具体手段。</p>
+  <p class="action"><b>落地:</b>用15分钟扫读全期，将incident.io Extensions showcase的agent权限设计思路抄入团队故障响应runbook。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.22731">6. Accelerated Dataflow：高效流式数据分析中的推理扩展</a></h3>
+  <div class="orig">Accelerated Dataflow: scaling inference in streaming data analytics with efficiency</div>
+  <div class="tags">arXiv cs.DB · DB4AI / 流式计算 · 约 12 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>论文设计高效流式数据流引擎，将LLM推理无缝嵌入实时分析管道并优化吞吐。对关注稳定性的DBA而言，这是构建“可观测+LLM诊断”流式架构的参考实现，可避免粗暴套壳带来的延迟失控。</p>
+  <p class="action"><b>落地:</b>扫读即可，重点摘录其流控与背压机制，用于评估现有Flink/Spark流式管道集成LLM时的瓶颈点。</p>
+</div>
+
+<footer>
+<p><b>缺席源:</b>本期候选中哲学与科学领域无≥3.4分的达标条目，两层均留空。；36kr等热点源条目与途虎DBA技术栈相关度及深度不足，未达入选门槛。。</p>
+<p><b>缺席说明:</b>技术层6篇均来自arXiv与SRE Weekly，未重复近8期已选条目（已剔除重复的Percona未使用索引验证文章）；哲学与科学层无达标候选故留空；热点层宁缺毋滥。</p>
+<p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

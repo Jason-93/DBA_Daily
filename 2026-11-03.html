@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-11-03</title>
+<meta name="description" content="每日晨报 · 2026-11-03：入选 3 条精选，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-11-03.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-11-03">
+<meta property="og:description" content="每日晨报 · 2026-11-03：入选 3 条精选，附相关度评分与内容摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-11-03.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-11-03">
+<meta name="twitter:description" content="每日晨报 · 2026-11-03：入选 3 条精选，附相关度评分与内容摘要。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-11-03",
+  "description": "每日晨报 · 2026-11-03：入选 3 条精选，附相关度评分与内容摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-11-03.html",
+  "datePublished": "2026-11-03",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+:root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-11-03 周二</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 32 条 · 入选 3 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a> <a href="#tech">🛠 3</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2><div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/aws-contributes-a-large-transaction-binary-log-optimization-to-mysql/">1. AWS 向 MySQL 贡献大事务二进制日志优化 BOLT</a></h3>
+  <div class="orig">AWS contributes a large-transaction binary log optimization to MySQL</div>
+  <div class="tags">AWS Database Blog · 稳定性工程 / MySQL 内核 / 云原生 · 约 12 分钟 · <span class="score">★4.7</span></div>
+  <p class="abstract"><b>摘要:</b>AWS提交BOLT补丁，将MySQL大事务binlog提交延迟与事务大小解耦，避免分钟级全库阻塞。这是线上大事务稳定性治理的硬性锚点，可为团队评估社区版升级或补丁引入提供直接依据，亦是AI自治场景需先消除的确定性阻塞样本。</p>
+  <p class="action"><b>落地:</b>将BOLT机制与版本适配路径抄入团队MySQL runbook，评估测试环境压测验证计划。</p>
+</div><div class="card">
+  <h3><a href="https://qdrant.tech/blog/qdrant-1.20-performance/">2. Qdrant 1.20：量化原生数据类型与嵌套索引实现更快更省的向量搜索</a></h3>
+  <div class="orig">Faster and Cheaper Search With Qdrant 1.20</div>
+  <div class="tags">Qdrant Blog · DB4AI / 向量数据库 / RAG 底座 · 约 10 分钟 · <span class="score">★4.4</span></div>
+  <p class="abstract"><b>摘要:</b>Qdrant 1.20发布turbo8/turbo16量化原生类型与嵌套字段元数据索引，官方benchmark显示搜索成本与延迟显著下降。对向量检索infra选型有直接参考意义，可带回团队评估现有RAG底座的存储成本压缩与索引重构空间。</p>
+  <p class="action"><b>落地:</b>拉取官方benchmark数据，在团队向量检索runbook中新增Qdrant 1.20量化选型一页备忘，对比现有方案成本。</p>
+</div><div class="card">
+  <h3><a href="https://www.percona.com/blog/an-alternative-to-sharding-a-mongodb-replica-set-that-outgrew-its-memory-a-proof-of-concept/">3. MongoDB 副本集内存超限不分片：一种替代方案的 PoC</a></h3>
+  <div class="orig">An alternative to sharding a MongoDB replica set that outgrew its memory: a proof of concept</div>
+  <div class="tags">Percona Blog · 分布式数据库 / MongoDB / 云原生 · 约 10 分钟 · <span class="score">★4.2</span></div>
+  <p class="abstract"><b>摘要:</b>Percona提出当MongoDB工作集超出WiredTiger缓存时，在分片前通过只读副本与路由策略重组的POC方案，给出数据与验证过程。为团队在“扩容-分片-归档”三角决策中提供新权衡点，可直接用于评估现有集群是否必须进入分片复杂度。</p>
+  <p class="action"><b>落地:</b>精读POC中的缓存命中与延迟数据，将“不分片替代方案”写入团队MongoDB扩容决策checklist。</p>
+</div>
+
+<footer>
+<p><b>缺席源:</b>哲学层缺席：候选条目多为纯概念游戏（“什么是现在”）或生物学史（拉马克），与读者偏好伯林-阿伦特-加缪-海德格尔谱系及“真实两难案例”契合度低，评分均低于3.4。；科学层缺席：仅冷聚变一篇候选，相关度与深度不足且未附原始论文链接，加权分低于3.4。；热点层缺席：36氪条目多为融资快讯与宏观动态，深度与可操作性不足，加权分均低于3.4。。</p>
+<p><b>缺席说明:</b>去重说明：已排除与近8期晨报重复的SRE Weekly Issue #541（同一URL）。技术层仅3条候选达到≥3.4分线，哲学、科学、热点层均无达标候选，按宁缺毋滥原则留空，未凑数。</p>
+<p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

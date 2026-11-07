@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-11-07</title>
+<meta name="description" content="每日晨报 · 2026-11-07：入选 7 条精选，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-11-07.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-11-07">
+<meta property="og:description" content="每日晨报 · 2026-11-07：入选 7 条精选，附相关度评分与内容摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-11-07.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-11-07">
+<meta name="twitter:description" content="每日晨报 · 2026-11-07：入选 7 条精选，附相关度评分与内容摘要。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-11-07",
+  "description": "每日晨报 · 2026-11-07：入选 7 条精选，附相关度评分与内容摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-11-07.html",
+  "datePublished": "2026-11-07",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+:root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-11-07 周六</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 44 条 · 入选 7 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a> <a href="#tech">🛠 6</a> <a href="#sci">🔬 1</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2><div class="card">
+  <h3><a href="https://arxiv.org/abs/2611.07339">1. DiagDBench：面向交互式数据库诊断与异常修复的智能体LLM评估基准</a></h3>
+  <div class="orig">DiagDBench: Evaluating Agentic LLMs on Interactive Database Diagnosis and Anomaly Remediation</div>
+  <div class="tags">arXiv cs.DB · AI4DB / 自治数据库 · 约 15 分钟 · <span class="score">★4.5</span></div>
+  <p class="abstract"><b>摘要:</b>构建交互式数据库诊断基准DiagDBench，评估Agentic LLM在真实异常修复中的能力。对途虎DBA而言，这是验证团队内部LLM运维agent效果的标尺，可直接作为选型与迭代锚点。</p>
+  <p class="action"><b>落地:</b>下载论文并提取评估维度，为团队正在评估的数据库智能诊断工具设计POC验收清单。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2611.07579">2. 动态向量数据库中近似最近邻搜索的逐查询召回率保证</a></h3>
+  <div class="orig">Per-Query Recall Guarantees for Approximate Nearest Neighbor Search in Dynamic Vector Databases</div>
+  <div class="tags">arXiv cs.DB · DB4AI / 向量数据库 · 约 12 分钟 · <span class="score">★4.2</span></div>
+  <p class="abstract"><b>摘要:</b>提出动态向量数据库中近似最近邻搜索的逐查询召回率保证机制，解决ANN索引仅优化平均召回导致的下游算子错误。为途虎RAG底座选型提供理论依据，避免向量召回波动引发的检索增强幻觉。</p>
+  <p class="action"><b>落地:</b>将论文中召回率方差测量方法抄入团队向量数据库runbook，作为Milvus/PGVector索引调优的验收指标之一。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2606.00734">3. EMA：支持通用属性过滤与动态更新的近似最近邻搜索</a></h3>
+  <div class="orig">EMA: Approximate Nearest Neighbor Search with General Attribute Filtering and Dynamic Updates</div>
+  <div class="tags">arXiv cs.DB · DB4AI / 混合检索 · 约 10 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>支持通用属性过滤与动态更新的近似最近邻搜索框架EMA，面向RAG与LLM Agent记忆场景。弥补现有向量索引在属性约束和实时更新上的短板，对途虎构建混合检索管线具有直接参考价值。</p>
+  <p class="action"><b>落地:</b>精读算法3与实验部分，评估EMA是否适合接入团队现有RAG链路以替换静态向量索引。</p>
+</div><div class="card">
+  <h3><a href="https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/">4. 超越代码生成：开发者Agentic工程实践指南</a></h3>
+  <div class="orig">Beyond code generation: A developer’s guide to agentic engineering</div>
+  <div class="tags">GitHub Blog · AI工具链 / Agentic工程 · 约 8 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>GitHub提出从代码生成迈向Agentic工程的实践框架，涵盖规划、编码、审查与线上排障的Copilot工作流。帮助资深DBA快速建立AI辅助工程的全局workflow，减少单点提效带来的上下文碎片化。</p>
+  <p class="action"><b>落地:</b>对照文中Agentic workflow图，梳理当前团队SQL review和故障日志分析中可嵌入Copilot Agent的3个断点并写一页备忘。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2611.06952">5. 递归测试与Vibe调试：对Google AI Studio生成的Vibe编码数据库应用的研究</a></h3>
+  <div class="orig">Recursively Testing and Vibe Debugging a Google AI Studio Generated Vibe-Coded Database Software Application</div>
+  <div class="tags">arXiv cs.DB · vibe coding / AI工具链 · 约 10 分钟 · <span class="score">★3.7</span></div>
+  <p class="abstract"><b>摘要:</b>扩展vibe coding定义至非英语与泛开发者群体，提出vibe debugging及完备最优算法。对处于ramp up期的DBA具有启发：可将自然语言需求直接转化为数据库运维工具原型，降低内部工具开发门槛。</p>
+  <p class="action"><b>落地:</b>用Google AI Studio复现文中数据库应用生成流程，记录从自然语言描述到可运行SQL诊断工具的prompt链并入库。</p>
+</div><div class="card">
+  <h3><a href="https://www.tigerdata.com/blog/need-separate-time-series-database">6. 时序即Postgres：不拆分架构的收益与代价</a></h3>
+  <div class="orig">Time-Series Is Just Postgres: What You Get When You Don't Split the Architecture</div>
+  <div class="tags">Timescale Blog · 云原生数据库 / 架构选型 · 约 6 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>TimescaleDB论证时序数据无需拆分独立架构，基于Postgres的单一引擎即可承载。为途虎DBA在技术视野上提供反共识锚点，评估车辆Telemetry与订单时序数据是否必须引入专用时序库。</p>
+  <p class="action"><b>落地:</b>基于文中对比维度，输出一页途虎现有Postgres集群支撑时序场景的gap分析并同步架构组。</p>
+</div>
+<h2 class="sci" id="sci">🔬 科学</h2><div class="card">
+  <h3><a href="https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106/">7. 一项奇异的量子定理摧毁了爱因斯坦的实在论</a></h3>
+  <div class="orig">A Strange Quantum Theorem Has Killed Einstein’s Reality</div>
+  <div class="tags">Quanta Magazine · 量子物理 / 科学哲学 · 约 10 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>报道一项新量子定理如何进一步瓦解爱因斯坦的定域实在论，实验与理论并进。满足读者对基础科学的深度饥渴，其中的「观测与实在」张力可作为价值辩中技术决定论vs认知局限的素材。</p>
+  <p class="action"><b>落地:</b>扫读即可，重点收藏文中提及的原始论文链接以备辩题引用。</p>
+</div>
+
+<footer>
+<p><b>缺席说明:</b>哲学层现有素材偏概念游戏或心理自助，未触及读者关注的「矛盾处境中的具体的人」及伯林-阿伦特脉络，评分不足3.4故留空；新闻层36氪短讯深度与可操作性双低，不符合「深度饥渴」定位，宁缺毋滥。技术层优选6篇，覆盖AI4DB、DB4AI、AI工具链与架构选型，无重复链接。</p>
+<p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

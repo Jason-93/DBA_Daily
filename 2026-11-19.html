@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-11-19</title>
+<meta name="description" content="每日晨报 · 2026-11-19：入选 5 条精选，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-11-19.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-11-19">
+<meta property="og:description" content="每日晨报 · 2026-11-19：入选 5 条精选，附相关度评分与内容摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-11-19.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-11-19">
+<meta name="twitter:description" content="每日晨报 · 2026-11-19：入选 5 条精选，附相关度评分与内容摘要。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-11-19",
+  "description": "每日晨报 · 2026-11-19：入选 5 条精选，附相关度评分与内容摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-11-19.html",
+  "datePublished": "2026-11-19",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+:root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-11-19 周四</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 47 条 · 入选 5 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a> <a href="#tech">🛠 5</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2><div class="card">
+  <h3><a href="https://arxiv.org/abs/2611.21645">1. 交互式Text2SQL的歧义检测：让大模型在有限轮次内问对问题</a></h3>
+  <div class="orig">Asking What Matters: Disagreement-Guided Ambiguity Detection for Interactive Text-to-SQL</div>
+  <div class="tags">arXiv cs.DB · AI4DB / Text2SQL · 约 8 分钟 · <span class="score">★4.3</span></div>
+  <p class="abstract"><b>摘要:</b>本文提出基于分歧引导的模糊性检测框架，使Text2SQL智能体在有限交互预算内主动澄清关键歧义，而非表面语义。对读者的价值：为途虎内部AI DBA助手或自然语言查数接口提供「何时提问、问什么」的决策框架，可直接转化为交互式诊断产品的澄清策略。</p>
+  <p class="action"><b>落地:</b>精读第3节「Disagreement-Guided Ambiguity Detection」算法，将三步消歧流程（分歧检测→效用排序→预算分配）写成一页备忘，供团队讨论NL2SQL交互设计时对照。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2611.22474">2. Errpedia：你的「精确」k-NN向量搜索真的精确吗？</a></h3>
+  <div class="orig">Errpedia: Is Your Exact $k$-NN Vector Search Really Exact?</div>
+  <div class="tags">arXiv cs.DB · DB4AI / 向量检索 / 稳定性 · 约 8 分钟 · <span class="score">★4.1</span></div>
+  <p class="abstract"><b>摘要:</b>论文揭露主流向量库与数据库的「精确」k-NN搜索因浮点精度误差、距离函数实现差异和边界条件，实际结果并非真正精确。对读者的价值：提醒团队现有RAG底座召回阶段存在隐形正确性陷阱，可作为向量检索SLO定义和回归测试的辩题切口与工程锚点。</p>
+  <p class="action"><b>落地:</b>用论文附带的测试模式对团队在用的Milvus/Qdrant/pgvector跑一遍exactness校验，将结果差异写入向量检索Runbook的「已知限制」章节。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2611.22159">3. Pelorus：面向双曲空间的扭曲积图索引</a></h3>
+  <div class="orig">Pelorus: Warped-Product Graph Indexing for Hyperbolic Vector Search</div>
+  <div class="tags">arXiv cs.DB · DB4AI / 向量索引 / RAG底座 · 约 8 分钟 · <span class="score">★4.0</span></div>
+  <p class="abstract"><b>摘要:</b>提出扭曲积图索引Pelorus，在双曲嵌入空间实现百万级近似最近邻搜索，兼顾测地线保真与内存效率，实验显示召回率显著优于欧氏平面索引。对读者的价值：为需要表达层次化数据（如分类体系、组织架构）的RAG场景提供新的索引选型视角，拓宽技术视野至非欧几何检索。</p>
+  <p class="action"><b>落地:</b>扫读即可，重点记录表3对比数据；若团队未来接入含层级语义的向量化知识库，再复现其开源代码评估Recall@10。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2611.22079">4. SIMQ：面向ColBERT多向量表示的单一图索引</a></h3>
+  <div class="orig">SIMQ: A Single Graph-based Index for Multi-Vector Query</div>
+  <div class="tags">arXiv cs.DB · DB4AI / 多向量检索 / RAG · 约 8 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>针对ColBERT类多向量文档表示，提出单一图索引SIMQ，将MaxSim多向量匹配转化为图上的联合最近邻搜索，降低存储与计算开销。对读者的价值：为途虎构建高精度RAG底座时提供替代传统两阶段检索的方案，尤其在长尾技术文档召回上有工程借鉴意义。</p>
+  <p class="action"><b>落地:</b>精读摘要与第4节实验，将SIMQ与当前团队在用的Dense+Sparse混合检索方案列一页对比备忘，标注适用数据规模与延迟阈值。</p>
+</div><div class="card">
+  <h3><a href="https://www.percona.com/blog/why-mysql-or-is-slower-than-in/">5. 为何MySQL中OR比IN慢：Percona根因分析与改写策略</a></h3>
+  <div class="orig">Why MySQL OR is slower than IN</div>
+  <div class="tags">Percona Blog · MySQL / 查询优化 / 稳定性 · 约 5 分钟 · <span class="score">★3.8</span></div>
+  <p class="abstract"><b>摘要:</b>Percona通过CPU profile揭示MySQL中OR条件查询比IN慢一个数量级的根因：优化器对OR的Range扫描与Rowid排序策略导致99% CPU消耗在冗余比较。对读者的价值：可直接带回团队SQL Review规范，将业务常见OR改写为IN/UNION，作为性能治理的低成本手段。</p>
+  <p class="action"><b>落地:</b>将文中案例与改写规则抄进团队MySQL Runbook的「高危SQL模式」章节，本周Review现有慢查询日志中OR条件出现频率。</p>
+</div>
+
+<footer>
+<p><b>缺席说明:</b>1. 技术层已剔除与第7期重复的《Use query statistics to find slow and expensive queries in Aurora DSQL》（同URL）。2. 哲学、科学、热点三层无评分≥3.4的候选条目：哲学素材虽有个体叙事但缺乏可直接支撑价值辩的哲学框架；科学条目深度与相关性不足；热点类均为财经商业资讯，与读者技术画像偏离过大，故均留空。</p>
+<p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

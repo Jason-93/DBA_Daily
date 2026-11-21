@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>晨报 · 2026-11-21</title>
+<meta name="description" content="每日晨报 · 2026-11-21：入选 5 条精选，附相关度评分与内容摘要。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://jason-93.github.io/DBA_Daily/2026-11-21.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DBA Daily">
+<meta property="og:title" content="晨报 · 2026-11-21">
+<meta property="og:description" content="每日晨报 · 2026-11-21：入选 5 条精选，附相关度评分与内容摘要。">
+<meta property="og:url" content="https://jason-93.github.io/DBA_Daily/2026-11-21.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="晨报 · 2026-11-21">
+<meta name="twitter:description" content="每日晨报 · 2026-11-21：入选 5 条精选，附相关度评分与内容摘要。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "晨报 · 2026-11-21",
+  "description": "每日晨报 · 2026-11-21：入选 5 条精选，附相关度评分与内容摘要。",
+  "url": "https://jason-93.github.io/DBA_Daily/2026-11-21.html",
+  "datePublished": "2026-11-21",
+  "inLanguage": "zh-CN",
+  "author": { "@type": "Organization", "name": "DBA Daily" }
+}
+</script>
+<style>
+:root { --bg:#0f1115; --card:#1a1e26; --text:#e8eaf0; --dim:#9aa3b2;
+          --accent:#6ea8fe; --tech:#4cc38a; --phil:#c792ea; --news:#f78c6c; --sci:#82aaff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+         line-height:1.7; padding:16px; max-width:720px; margin:0 auto; }
+  header { padding:18px 4px 10px; }
+  h1 { font-size:22px; } h1 small { font-size:13px; color:var(--dim); font-weight:normal; }
+  .meta { color:var(--dim); font-size:12.5px; margin-top:6px; }
+  nav { background:var(--card); border-radius:12px; padding:12px 16px; margin:14px 0 20px; font-size:14px; }
+  nav a { color:var(--accent); text-decoration:none; margin-right:16px; }
+  nav a.home { color:var(--text); font-weight:600; }
+  h2 { font-size:16px; margin:26px 4px 12px; padding-left:10px; border-left:3px solid var(--accent); }
+  h2.tech { border-color:var(--tech); } h2.phil { border-color:var(--phil); }
+  h2.news { border-color:var(--news); } h2.sci { border-color:var(--sci); }
+  .card { background:var(--card); border-radius:12px; padding:16px 18px; margin-bottom:12px; }
+  .card h3 { font-size:15.5px; line-height:1.5; }
+  .card h3 a { color:var(--text); text-decoration:none; }
+  .card h3 a:hover { color:var(--accent); text-decoration:underline; }
+  .orig { color:var(--dim); font-size:12.5px; font-style:italic; margin-top:2px; }
+  .tags { margin:8px 0; font-size:12px; color:var(--dim); }
+  .score { color:#ffd479; font-weight:600; }
+  .abstract { font-size:13px; margin:6px 0 2px; color:#c9cfda; }
+  .abstract b { color:var(--accent); }
+  .action { font-size:13px; margin:2px 0 2px; color:#c9cfda; }
+  .action b { color:#7ee0a3; }
+  footer { color:var(--dim); font-size:12.5px; margin-top:28px; padding:14px 4px 30px;
+           border-top:1px solid #262c38; }
+  footer p { margin:6px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>每日晨报 <small>2026-11-21 周六</small></h1>
+  <div class="meta">抓取窗口 30 小时 · 候选 42 条 · 入选 5 条 · 已对照近期晨报去重</div>
+</header>
+
+<nav>
+  <a href="./" class="home">← 主页</a> <a href="#tech">🛠 4</a> <a href="#sci">🔬 1</a>
+</nav>
+
+<h2 class="tech" id="tech">🛠 技术（AI4DB / DB4AI / 稳定性 / vibe coding）</h2><div class="card">
+  <h3><a href="https://arxiv.org/abs/2508.03471">1. 可更新的学习型自适应索引</a></h3>
+  <div class="orig">Learned Adaptive Indexing with Updatable Learned Index</div>
+  <div class="tags">arXiv cs.DB · AI4DB / 自治数据库 / 学习型索引 · 约 10 分钟 · <span class="score">★4.0</span></div>
+  <p class="abstract"><b>摘要:</b>论文提出支持实时更新的学习型自适应索引，在动态工作负载下避免传统索引重建开销。对途虎DBA而言，这是AI4DB的前沿落点，可为线上自治索引策略提供算法储备与团队技术纵深。</p>
+  <p class="action"><b>落地:</b>精读第3-4节更新机制与代价模型，整理一页备忘对比传统B+树与学习型索引在途虎工单场景下的适用边界。</p>
+</div><div class="card">
+  <h3><a href="https://aws.amazon.com/blogs/database/from-instant-aurora-postgresql-databases-to-production-ready-in-your-vpc/">2. 将即时创建的Aurora PostgreSQL数据库迁入VPC生产就绪</a></h3>
+  <div class="orig">From instant Aurora PostgreSQL databases to production-ready in your VPC</div>
+  <div class="tags">AWS Database Blog · 云原生 / Aurora / 网络架构 · 约 6 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>Aurora PostgreSQL快速配置现支持一键迁入VPC并保留端点与数据。对管理混合环境的基础设施团队，该能力可直接缩减环境对齐的Toil，Ramp-up期快速搭建隔离测试域。</p>
+  <p class="action"><b>落地:</b>在测试账号复现单条modify迁入VPC操作，验证端点不变性并写入团队Aurora runbook的扩容章节。</p>
+</div><div class="card">
+  <h3><a href="https://simonwillison.net/2026/Nov/19/postgresql-19/">3. PostgreSQL 19发布：应对AI报告漏洞风暴的延期版本</a></h3>
+  <div class="orig">PostgreSQL 19 Released</div>
+  <div class="tags">Simon Willison's Weblog · PostgreSQL / 稳定性工程 / AI工具链 · 约 5 分钟 · <span class="score">★3.9</span></div>
+  <p class="abstract"><b>摘要:</b>PG19延迟两月发布，核心原因是团队需处理大量AI报告的漏洞。对稳定性工程而言，这揭示了AI辅助安全审计的双刃剑效应，可作为评估自动化漏洞扫描工具误报治理的锚点案例。</p>
+  <p class="action"><b>落地:</b>建立PG19升级预检清单，重点核对AI报告涉及的CVE修复范围，并在团队周会分享误报过滤策略。</p>
+</div><div class="card">
+  <h3><a href="https://arxiv.org/abs/2610.02363">4. ArrivalBench：Agent生成的数据管道在对抗性时间调度下失效</a></h3>
+  <div class="orig">ArrivalBench: Agent-Generated Data Pipelines Are Correct Once and Wrong Under Time</div>
+  <div class="tags">arXiv cs.DB · AI4DB / Agent / 稳定性工程 / 数据管道 · 约 10 分钟 · <span class="score">★3.5</span></div>
+  <p class="abstract"><b>摘要:</b>论文提出对抗性时间重放基准，揭示Agent生成的一次性正确管道在乱序、延迟、重复到达时极易崩溃。对DBA团队，这是将时间扰动测试引入ETL与归档Job稳定性治理的直接切口。</p>
+  <p class="action"><b>落地:</b>选取一条核心归档Agent脚本，在测试环境注入延迟与重复到达事件，验证其幂等性与容错边界并记录结果。</p>
+</div>
+<h2 class="sci" id="sci">🔬 科学</h2><div class="card">
+  <h3><a href="https://www.quantamagazine.org/network-researchers-nail-down-theory-of-perfect-resilience-20261120/">5. 网络科学家确立“完美韧性”理论：四种结构导致路由循环</a></h3>
+  <div class="orig">Network Researchers Nail Down Theory of ‘Perfect Resilience’</div>
+  <div class="tags">Quanta Magazine · 网络科学 / 分布式系统 / 稳定性理论 · 约 8 分钟 · <span class="score">★3.6</span></div>
+  <p class="abstract"><b>摘要:</b>研究者严格证明通信网络中仅四种简单结构会导致链路故障下的路由循环，为完美韧性划定理论边界。对分布式数据库稳定性工程，该框架可转化为网络分区场景下循环依赖的排查思维模型。</p>
+  <p class="action"><b>落地:</b>将四种故障结构整理进团队网络故障排查手册，与数据库集群脑裂场景做类比映射。</p>
+</div>
+
+<footer>
+<p><b>缺席源:</b>哲学：本期Aeon与Psyche素材侧重神话叙事与家庭情感回忆，缺乏针对技术伦理或价值两难的真实案例与哲学框架，未达3.4分阈值；热点：36氪条目集中于资本市场与娱乐八卦，偏离DBA技术视野且触及负面清单，未予入选。。</p>
+<p><b>缺席说明:</b>技术层仅4条达标，哲学与热点层因候选质量不足留空；未达3.4分的云原生、图数据库等条目已按宁缺毋滥原则剔除。无重复入选。</p>
+<p><b>反馈:</b>回复"晨报反馈:条目序号 + 有用/无用 + 一句话"</p>
+</footer>
+
+</body>
+</html>

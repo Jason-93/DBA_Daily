@@ -14,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: daily-brief
@@ -22,11 +23,6 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    outputs:
-      found: ${{ steps.detect.outputs.found }}
-      generated: ${{ steps.detect.outputs.generated }}
-      slug: ${{ steps.detect.outputs.slug }}
-      sha: ${{ steps.push.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
 
@@ -78,7 +74,6 @@ jobs:
             --title "晨报 · ${{ steps.detect.outputs.slug }}（${{ steps.detect.outputs.weekday }}）"
 
       - name: Commit & push
-        id: push
         if: steps.detect.outputs.found == 'true'
         run: |
           git config user.name "Jason-93"
@@ -89,32 +84,10 @@ jobs:
             git commit -m "brief: ${{ steps.detect.outputs.slug }} (cloud)"
             git push
           fi
-          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-  deploy:
-    needs: generate
-    if: needs.generate.outputs.found == 'true'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ needs.generate.outputs.sha }}
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-      - uses: actions/deploy-pages@v4
-        id: deployment
-      - name: Verify live page
-        run: |
-          sleep 90
-          CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://jason-93.github.io/DBA_Daily/${{ needs.generate.outputs.slug }}.html")
-          echo "live status: $CODE"
-          test "$CODE" = "200"
+      - name: Deploy through Pages workflow
+        if: steps.detect.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # 新生成与已有成品都走独立部署流程，避免内置部署失败后无法自愈。
+        run: gh workflow run pages.yml

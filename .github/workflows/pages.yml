@@ -29,6 +29,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+      - name: Wait for artifact metadata
+        run: sleep 20
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

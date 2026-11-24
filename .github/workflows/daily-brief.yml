@@ -24,6 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       found: ${{ steps.detect.outputs.found }}
+      generated: ${{ steps.detect.outputs.generated }}
       slug: ${{ steps.detect.outputs.slug }}
       sha: ${{ steps.push.outputs.sha }}
     steps:
@@ -44,7 +45,7 @@ jobs:
           if [ -n "${{ inputs.date }}" ]; then ARGS="$ARGS --date ${{ inputs.date }}"; fi
           python cloud/gen.py $ARGS
 
-      - name: Detect generated page
+      - name: Detect generated or existing page
         id: detect
         run: |
           SLUG="${{ inputs.date }}"
@@ -52,17 +53,24 @@ jobs:
           echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
           GEN=""
           if [ -f .generated ]; then GEN=$(cat .generated); fi
-          if [ "$GEN" = "$SLUG" ]; then
+          # 已生成但未部署成功时，兜底场也要继续发布现有成品。
+          if [ "$GEN" = "$SLUG" ] || { [ -f "briefs/$SLUG.md" ] && [ -f "$SLUG.html" ]; }; then
             WD=$(TZ=Asia/Shanghai date -d "$SLUG" +%u)
             NAMES=(周一 周二 周三 周四 周五 周六 周日)
             echo "weekday=${NAMES[$((WD-1))]}" >> "$GITHUB_OUTPUT"
             echo "found=true" >> "$GITHUB_OUTPUT"
+            if [ "$GEN" = "$SLUG" ]; then
+              echo "generated=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "generated=false" >> "$GITHUB_OUTPUT"
+            fi
           else
             echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "generated=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Update site index & sitemap
-        if: steps.detect.outputs.found == 'true'
+        if: steps.detect.outputs.generated == 'true'
         run: |
           python cloud/site_update.py --mode daily \
             --slug "${{ steps.detect.outputs.slug }}" \
@@ -76,8 +84,11 @@ jobs:
           git config user.name "Jason-93"
           git config user.email "jason-93@users.noreply.github.com"
           git add -A
-          git commit -m "brief: ${{ steps.detect.outputs.slug }} (cloud)"
-          git push
+          # 兜底发布已有成品时没有新改动，不能把空提交视为失败。
+          if ! git diff --cached --quiet; then
+            git commit -m "brief: ${{ steps.detect.outputs.slug }} (cloud)"
+            git push
+          fi
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
   deploy:
